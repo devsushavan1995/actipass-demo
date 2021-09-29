@@ -1,0 +1,2597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="/assets/vendors/bootstrap-4.6.0-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Actipass | Home</title>
+  </head>
+  <body>
+    <!-- header-->
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="header__top-wrapper">
+            <!-- logo -->
+            <a href="" class="header__brand d-none d-lg-block">
+              <img src="./assets/images/logo-dark.png" alt="logo" class="brand__logo" />
+            </a>
+            <!-- search -->
+            <div class="header__search">
+              <form action="" class="search-form d-none d-lg-block">
+                <div class="form__container d-flex">
+                  <input type="text" name="activity" class="form__input--text" placeholder="Search activites" />
+                  <select class="search__category--activities">
+                    <option selected>All Activities</option>
+                    <option value="Activity 1">Activity 1</option>
+                    <option value="Activity 2">Activity 2</option>
+                    <option value="Activity 3">Activity 3</option>
+                  </select>
+                  <button type="submit" class="search-form__button--submit">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- user action links -->
+            <div class="header__user-actions text-right">
+              <ul class="user-actions__list d-flex align-items-center">
+                <!-- choose currency -->
+                <li class="list__item d-inline-block">
+                  <select class="user-action--currency">
+                    <option selected>INR</option>
+                    <option value="USD">USD</option>
+                  </select>
+                </li>
+                <!-- Choose location -->
+                <li class="list__item d-inline-block mx-4">
+                  <select class="user-action--location">
+                    <option selected>Select City</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Chennai">Chennai</option>
+                  </select>
+                </li>
+                <!-- login or sign up -->
+                <li class="list__item d-inline-block">
+                  <button class="user-action--login">
+                    <i class="bi bi-person-circle"></i>
+                    Login/Register
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">
+          <div class="nav__wrapper-mobile d-flex justify-content-between d-lg-none">
+            <a href="" class="header__brand">
+              <img src="./assets/images/logo-dark.png" alt="logo" class="brand__logo" />
+            </a>
+            <div class="d-flex align-items-center">
+              <!-- search button for mobile -->
+              <button class="nav__button--mobile-search mr-3">
+                <i class="bi bi-search"></i>
+              </button>
+              <!-- mobile search form starts -->
+              <div class="search-form__wrapper">
+                <div class="search-form__wrapper-inner d-flex align-items-center justify-content-center">
+                  <button class="search-form__button--close">
+                    <i class="bi bi-x"></i>
+                  </button>
+                  <form action="#" class="search-form" id="searchFormMobile">
+                    <div class="input__container d-flex">
+                      <input type="text" name="search-input" placeholder="Search activities" required />
+                      <button type="submit" class="search-form__button--submit">
+                        <i class="bi bi-search"></i>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- mobile search form ends -->
+              <button class="nav__button--toggler" id="mainNavToggler">
+                <i class="bi bi-list"></i>
+              </button>
+            </div>
+            <div class="bg__overlay"></div>
+            <!-- nav mobile menu starts -->
+            <nav class="nav-main__mobile">
+              <ul class="nav-main__menu">
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link"><span class="link__wrapper">Group Classes</span></a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link"><span class="link__wrapper">Online Classes</span></a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link"><span class="link__wrapper">Workshop</span></a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link"><span class="link__wrapper">Events</span></a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link"><span class="link__wrapper">Blog</span></a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link"><span class="link__wrapper">Book Demo</span></a>
+                </li>
+              </ul>
+            </nav>
+            <!-- nav mobile menu ends -->
+          </div>
+          <!-- nav mega menu starts -->
+          <nav class="nav-main d-none d-lg-flex">
+            <ul class="nav-main__menu">
+              <li class="menu__item">
+                <a href="#" class="menu__item--link"><span class="link__wrapper">Group Classes</span></a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__item--link"><span class="link__wrapper">Online Classes</span></a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__item--link"><span class="link__wrapper">Workshop</span></a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__item--link"><span class="link__wrapper">Events</span></a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__item--link"><span class="link__wrapper">Blog</span></a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__item--link"><span class="link__wrapper">Book Demo</span></a>
+              </li>
+            </ul>
+          </nav>
+          <!-- nav mega menu ends -->
+        </div>
+      </div>
+    </header>
+    <!-- Hero section -->
+    <section class="hero-section">
+      <!-- Slider main container -->
+      <div class="swiper swiper-hero">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides single starts -->
+          <div class="swiper-slide" style="background-image: url(./assets/images/banner/banner1.jpg)">
+            <div class="slide__bg-overlay"></div>
+            <div class="slide__content text-center">
+              <h4 class="slide__subheading">Lorem Ipsum</h4>
+              <h1 class="slide__heading">Lorem ipsum dolor sit</h1>
+              <p class="slide__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, aliquid.</p>
+              <div class="slide__cta-wrapper">
+                <a href="#" class="button button__secondary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Slides single ends -->
+          <!-- Slides single starts -->
+          <div class="swiper-slide" style="background-image: url(./assets/images/banner/banner2.jpg)">
+            <div class="slide__bg-overlay"></div>
+            <div class="slide__content text-center">
+              <h4 class="slide__subheading">Lorem Ipsum</h4>
+              <h1 class="slide__heading">Lorem ipsum dolor sit</h1>
+              <p class="slide__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, aliquid.</p>
+              <div class="slide__cta-wrapper">
+                <a href="#" class="button button__secondary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Slides single ends -->
+          <!-- Slides single starts -->
+          <div class="swiper-slide" style="background-image: url(./assets/images/banner/banner3.jpg)">
+            <div class="slide__bg-overlay"></div>
+            <div class="slide__content text-center">
+              <h4 class="slide__subheading">Lorem Ipsum</h4>
+              <h1 class="slide__heading">Lorem ipsum dolor sit</h1>
+              <p class="slide__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, aliquid.</p>
+              <div class="slide__cta-wrapper">
+                <a href="#" class="button button__secondary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Slides single ends -->
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+    <!-- Top rated tutors section -->
+    <section class="section toprated-tutor section__padding">
+      <div class="container">
+        <div class="section__header text-center">
+          <h2 class="section__title text--primary">Top Rated Tutor</h2>
+          <div class="section__title--divider">
+            <img src="./assets/images/divider-icon.png" class="mx-auto" alt="divider-icon" />
+          </div>
+          <p class="section__description text--para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos saepe nam reiciendis blanditiis, porro accusamus.</p>
+        </div>
+        <div class="section__content">
+          <nav>
+            <div class="nav nav-tabs d-flex justify-content-center border-0" id="nav-tab" role="tablist">
+              <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-sports" role="tab" aria-controls="nav-sports" aria-selected="true">Sports</a>
+              <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-wellness" role="tab" aria-controls="nav-wellness" aria-selected="false">Wellness</a>
+              <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-performing-arts" role="tab" aria-controls="nav-performing-arts" aria-selected="false">Performing Arts</a>
+              <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-education" role="tab" aria-controls="nav-education" aria-selected="false">Education</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <!-- top rated tutor - sports -->
+            <div class="tab-pane fade show active" id="nav-sports" role="tabpanel" aria-labelledby="nav-sports-tab">
+              <!-- Slider main container -->
+              <div class="swiper swiper-top-rated-tutor">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/tutor/tutor1.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <div class="tutor">
+                      <div class="tutor__image">
+                        <img src="./assets/images/tutor/tutor2.png" alt="tutor-image" />
+                      </div>
+                      <div class="tutor__content">
+                        <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                        <div class="tutor__feedback">
+                          <div class="tutor__reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <div class="tutor__top-5">
+                            <span>Top 5</span>
+                            <i class="bi bi-heart"></i>
+                          </div>
+                        </div>
+                        <div class="tutor__cta-wrapper">
+                          <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                        </div>
+                        <div class="tutor__badge--verified">
+                          <span>Actipass Verified</span>
+                          <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <div class="tutor">
+                      <div class="tutor__image">
+                        <img src="./assets/images/tutor/tutor3.png" alt="tutor-image" />
+                      </div>
+                      <div class="tutor__content">
+                        <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                        <div class="tutor__feedback">
+                          <div class="tutor__reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <div class="tutor__top-5">
+                            <span>Top 5</span>
+                            <i class="bi bi-heart"></i>
+                          </div>
+                        </div>
+                        <div class="tutor__cta-wrapper">
+                          <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                        </div>
+                        <div class="tutor__badge--verified">
+                          <span>Actipass Verified</span>
+                          <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/tutor/tutor4.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/tutor/tutor5.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/tutor/tutor6.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-wellness" role="tabpanel" aria-labelledby="nav-wellness-tab">
+              <!-- Slider main container -->
+              <div class="swiper swiper-top-rated-tutor">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <div class="tutor">
+                      <div class="tutor__image">
+                        <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                      </div>
+                      <div class="tutor__content">
+                        <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                        <div class="tutor__feedback">
+                          <div class="tutor__reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <div class="tutor__top-5">
+                            <span>Top 5</span>
+                            <i class="bi bi-heart"></i>
+                          </div>
+                        </div>
+                        <div class="tutor__cta-wrapper">
+                          <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                        </div>
+                        <div class="tutor__badge--verified">
+                          <span>Actipass Verified</span>
+                          <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <div class="tutor">
+                      <div class="tutor__image">
+                        <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                      </div>
+                      <div class="tutor__content">
+                        <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                        <div class="tutor__feedback">
+                          <div class="tutor__reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <div class="tutor__top-5">
+                            <span>Top 5</span>
+                            <i class="bi bi-heart"></i>
+                          </div>
+                        </div>
+                        <div class="tutor__cta-wrapper">
+                          <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                        </div>
+                        <div class="tutor__badge--verified">
+                          <span>Actipass Verified</span>
+                          <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-performing-arts" role="tabpanel" aria-labelledby="nav-performing-arts-tab">
+              <!-- Slider main container -->
+              <div class="swiper swiper-top-rated-tutor">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <div class="tutor">
+                      <div class="tutor__image">
+                        <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                      </div>
+                      <div class="tutor__content">
+                        <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                        <div class="tutor__feedback">
+                          <div class="tutor__reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <div class="tutor__top-5">
+                            <span>Top 5</span>
+                            <i class="bi bi-heart"></i>
+                          </div>
+                        </div>
+                        <div class="tutor__cta-wrapper">
+                          <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                        </div>
+                        <div class="tutor__badge--verified">
+                          <span>Actipass Verified</span>
+                          <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <div class="tutor">
+                      <div class="tutor__image">
+                        <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                      </div>
+                      <div class="tutor__content">
+                        <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                        <div class="tutor__feedback">
+                          <div class="tutor__reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <div class="tutor__top-5">
+                            <span>Top 5</span>
+                            <i class="bi bi-heart"></i>
+                          </div>
+                        </div>
+                        <div class="tutor__cta-wrapper">
+                          <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                        </div>
+                        <div class="tutor__badge--verified">
+                          <span>Actipass Verified</span>
+                          <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-education" role="tabpanel" aria-labelledby="nav-education-tab">
+              <!-- Slider main container -->
+              <div class="swiper swiper-top-rated-tutor">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <div class="tutor">
+                      <div class="tutor__image">
+                        <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                      </div>
+                      <div class="tutor__content">
+                        <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                        <div class="tutor__feedback">
+                          <div class="tutor__reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <div class="tutor__top-5">
+                            <span>Top 5</span>
+                            <i class="bi bi-heart"></i>
+                          </div>
+                        </div>
+                        <div class="tutor__cta-wrapper">
+                          <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                        </div>
+                        <div class="tutor__badge--verified">
+                          <span>Actipass Verified</span>
+                          <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <div class="tutor">
+                      <div class="tutor__image">
+                        <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                      </div>
+                      <div class="tutor__content">
+                        <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                        <div class="tutor__feedback">
+                          <div class="tutor__reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <div class="tutor__top-5">
+                            <span>Top 5</span>
+                            <i class="bi bi-heart"></i>
+                          </div>
+                        </div>
+                        <div class="tutor__cta-wrapper">
+                          <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                        </div>
+                        <div class="tutor__badge--verified">
+                          <span>Actipass Verified</span>
+                          <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/dummy-600x400.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="random__icons-wrapper">
+        <img src="./assets/images/random-icons/idea.png" alt="" class="random__icons pos--right-bottom" data-aos="zoom-in-right" />
+        <img src="./assets/images/random-icons/microphone.png" alt="" class="random__icons pos--left-top" data-aos="zoom-in-left" />
+      </div>
+    </section>
+    <!-- Trending activities section -->
+    <section class="section trending-activities-section bg--light2 section__padding">
+      <div class="container">
+        <div class="section__header text-center">
+          <h2 class="section__title">Trending Activities</h2>
+          <div class="section__title--divider">
+            <img src="./assets/images/divider-icon.png" class="mx-auto" alt="divider-icon" />
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-3">
+              <!-- single card starts -->
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front bg--randomPurple">
+                    <img src="./assets/images/trending-activity/ball.png" class="mx-auto mb-4" alt="Avatar" />
+                    <h4 class="card__title text--light mb-2">Sports</h4>
+                    <p class="card__description text--gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, maxime.</p>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="card__content sports">
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/cricket-bat.png" alt="" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Cricket</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/soccer-ball-variant.png" alt="football-icon" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Football</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/karate.png" alt="" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Karate</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/basketball-ball-variant.png" alt="" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Basket Ball</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/tennis-racket.png" alt="" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Tennis</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- single card ends -->
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <!-- single card starts -->
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front bg--randomGreen">
+                    <img src="./assets/images/trending-activity/wellness.png" class="mx-auto mb-4" alt="Avatar" />
+                    <h4 class="card__title text--light mb-2">Wellness</h4>
+                    <p class="card__description text--gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, maxime.</p>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="card__content wellness">
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/yoga.png" alt="" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Yoga</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/gymnast-somersault.png" alt="football-icon" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Gymnastic</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/chef.png" alt="" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Cooking</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/hula-hoop.png" alt="" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Hula Hoop</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/nutrition.png" alt="" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Kids Nutrition</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- single card ends -->
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <!-- single card starts -->
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front bg--randomPink">
+                    <img src="./assets/images/trending-activity/canvas.png" class="mx-auto mb-4" alt="Avatar" />
+                    <h4 class="card__title text--light mb-2">Performing Arts</h4>
+                    <p class="card__description text--gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, maxime.</p>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="card__content arts">
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/ballet.png" alt="" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Classical Dance</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/actor.png" alt="football-icon" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Acting Class</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/guitar.png" alt="" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Guitar</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/tablas.png" alt="" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Tabla</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/ballet2.png" alt="" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Ballet</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- single card ends -->
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <!-- single card starts -->
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front bg--randomSkyblue">
+                    <img src="./assets/images/trending-activity/graduation-cap.png" class="mx-auto mb-4" alt="Avatar" />
+                    <h4 class="card__title text--light mb-2">Education</h4>
+                    <p class="card__description text--gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, maxime.</p>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="card__content education">
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/french.png" alt="" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">French Learning</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/art.png" alt="football-icon" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Art & Craft</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/microphone.png" alt="" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Story Telling</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/web-development.png" alt="" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Computer Coding</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                      <!-- single content starts -->
+                      <div class="content__item d-flex">
+                        <div class="item__icon">
+                          <img src="./assets/images/trending-activity/experiment.png" alt="" />
+                        </div>
+                        <h4 class="item__description">
+                          <a href="#">Science Experiments</a>
+                        </h4>
+                      </div>
+                      <!-- single content ends -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- single card ends -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Best Sellers courses -->
+    <section class="section toprated-tutor bestsellers section__padding">
+      <div class="container">
+        <div class="section__header text-center">
+          <h2 class="section__title text--primary">Bestsellers</h2>
+          <div class="section__title--divider">
+            <img src="./assets/images/divider-icon.png" class="mx-auto" alt="divider-icon" />
+          </div>
+          <p class="section__description text--para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos saepe nam reiciendis blanditiis, porro accusamus.</p>
+        </div>
+        <div class="section__content">
+          <nav>
+            <div class="nav nav-tabs d-flex justify-content-center border-0" id="nav-tab" role="tablist">
+              <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-bestsellers-sports" role="tab" aria-controls="nav-bestsellers-sports" aria-selected="true">Sports</a>
+              <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-bestsellers-wellness" role="tab" aria-controls="nav-bestsellers-wellness" aria-selected="false">Wellness</a>
+              <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-bestsellers-performing-arts" role="tab" aria-controls="nav-bestsellers-performing-arts" aria-selected="false">Performing Arts</a>
+              <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-bestsellers-education" role="tab" aria-controls="nav-bestsellers-education" aria-selected="false">Education</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <!-- top rated tutor - sports -->
+            <div class="tab-pane fade show active" id="nav-bestsellers-sports" role="tabpanel" aria-labelledby="nav-sports-tab">
+              <!-- Slider main container -->
+              <div class="swiper swiper-top-rated-tutor">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/courses/course6.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <div class="tutor">
+                      <div class="tutor__image">
+                        <img src="./assets/images/courses/course1.png" alt="tutor-image" />
+                      </div>
+                      <div class="tutor__content">
+                        <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                        <div class="tutor__feedback">
+                          <div class="tutor__reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <div class="tutor__top-5">
+                            <span>Top 5</span>
+                            <i class="bi bi-heart"></i>
+                          </div>
+                        </div>
+                        <div class="tutor__cta-wrapper">
+                          <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                        </div>
+                        <div class="tutor__badge--verified">
+                          <span>Actipass Verified</span>
+                          <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <div class="tutor">
+                      <div class="tutor__image">
+                        <img src="./assets/images/courses/course2.png" alt="tutor-image" />
+                      </div>
+                      <div class="tutor__content">
+                        <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                        <div class="tutor__feedback">
+                          <div class="tutor__reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <div class="tutor__top-5">
+                            <span>Top 5</span>
+                            <i class="bi bi-heart"></i>
+                          </div>
+                        </div>
+                        <div class="tutor__cta-wrapper">
+                          <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                        </div>
+                        <div class="tutor__badge--verified">
+                          <span>Actipass Verified</span>
+                          <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/courses/course3.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/courses/course4.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/courses/course5.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-bestsellers-wellness" role="tabpanel" aria-labelledby="nav-wellness-tab">
+              <!-- Slider main container -->
+              <div class="swiper swiper-top-rated-tutor">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/courses/course1.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <div class="tutor">
+                      <div class="tutor__image">
+                        <img src="./assets/images/courses/course2.png" alt="tutor-image" />
+                      </div>
+                      <div class="tutor__content">
+                        <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                        <div class="tutor__feedback">
+                          <div class="tutor__reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <div class="tutor__top-5">
+                            <span>Top 5</span>
+                            <i class="bi bi-heart"></i>
+                          </div>
+                        </div>
+                        <div class="tutor__cta-wrapper">
+                          <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                        </div>
+                        <div class="tutor__badge--verified">
+                          <span>Actipass Verified</span>
+                          <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <div class="tutor">
+                      <div class="tutor__image">
+                        <img src="./assets/images/courses/course6.png" alt="tutor-image" />
+                      </div>
+                      <div class="tutor__content">
+                        <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                        <div class="tutor__feedback">
+                          <div class="tutor__reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <div class="tutor__top-5">
+                            <span>Top 5</span>
+                            <i class="bi bi-heart"></i>
+                          </div>
+                        </div>
+                        <div class="tutor__cta-wrapper">
+                          <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                        </div>
+                        <div class="tutor__badge--verified">
+                          <span>Actipass Verified</span>
+                          <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/courses/course3.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/courses/course4.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/courses/course5.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-bestsellers-performing-arts" role="tabpanel" aria-labelledby="nav-performing-arts-tab">
+              <!-- Slider main container -->
+              <div class="swiper swiper-top-rated-tutor">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/courses/course1.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <div class="tutor">
+                      <div class="tutor__image">
+                        <img src="./assets/images/courses/course2.png" alt="tutor-image" />
+                      </div>
+                      <div class="tutor__content">
+                        <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                        <div class="tutor__feedback">
+                          <div class="tutor__reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <div class="tutor__top-5">
+                            <span>Top 5</span>
+                            <i class="bi bi-heart"></i>
+                          </div>
+                        </div>
+                        <div class="tutor__cta-wrapper">
+                          <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                        </div>
+                        <div class="tutor__badge--verified">
+                          <span>Actipass Verified</span>
+                          <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <div class="tutor">
+                      <div class="tutor__image">
+                        <img src="./assets/images/courses/course3.png" alt="tutor-image" />
+                      </div>
+                      <div class="tutor__content">
+                        <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                        <div class="tutor__feedback">
+                          <div class="tutor__reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <div class="tutor__top-5">
+                            <span>Top 5</span>
+                            <i class="bi bi-heart"></i>
+                          </div>
+                        </div>
+                        <div class="tutor__cta-wrapper">
+                          <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                        </div>
+                        <div class="tutor__badge--verified">
+                          <span>Actipass Verified</span>
+                          <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/courses/course4.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/courses/course5.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/courses/course6.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-bestsellers-education" role="tabpanel" aria-labelledby="nav-education-tab">
+              <!-- Slider main container -->
+              <div class="swiper swiper-top-rated-tutor">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/courses/course1.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <div class="tutor">
+                      <div class="tutor__image">
+                        <img src="./assets/images/courses/course2.png" alt="tutor-image" />
+                      </div>
+                      <div class="tutor__content">
+                        <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                        <div class="tutor__feedback">
+                          <div class="tutor__reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <div class="tutor__top-5">
+                            <span>Top 5</span>
+                            <i class="bi bi-heart"></i>
+                          </div>
+                        </div>
+                        <div class="tutor__cta-wrapper">
+                          <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                        </div>
+                        <div class="tutor__badge--verified">
+                          <span>Actipass Verified</span>
+                          <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <div class="tutor">
+                      <div class="tutor__image">
+                        <img src="./assets/images/courses/course3.png" alt="tutor-image" />
+                      </div>
+                      <div class="tutor__content">
+                        <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                        <div class="tutor__feedback">
+                          <div class="tutor__reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <div class="tutor__top-5">
+                            <span>Top 5</span>
+                            <i class="bi bi-heart"></i>
+                          </div>
+                        </div>
+                        <div class="tutor__cta-wrapper">
+                          <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                        </div>
+                        <div class="tutor__badge--verified">
+                          <span>Actipass Verified</span>
+                          <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/courses/course4.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/courses/course5.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide">
+                    <a href="#" class="d-block w-100">
+                      <div class="tutor">
+                        <div class="tutor__image">
+                          <img src="./assets/images/courses/course6.png" alt="tutor-image" />
+                        </div>
+                        <div class="tutor__content">
+                          <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                          <div class="tutor__feedback">
+                            <div class="tutor__reviews">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-half"></i>
+                            </div>
+                            <div class="tutor__top-5">
+                              <span>Top 5</span>
+                              <i class="bi bi-heart"></i>
+                            </div>
+                          </div>
+                          <div class="tutor__cta-wrapper">
+                            <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                          </div>
+                          <div class="tutor__badge--verified">
+                            <span>Actipass Verified</span>
+                            <i class="bi bi-hand-thumbs-up"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- single tutor ends -->
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="section testimonial-section section__padding--top bg--light1">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="section__header text-center text-lg-left">
+              <h2 class="section__title text--primary">Testimonial</h2>
+              <div class="section__title--divider">
+                <img src="./assets/images/divider-icon.png" alt="divider-icon" />
+              </div>
+            </div>
+            <div class="section__content">
+              <!-- Slider main container -->
+              <div class="swiper testimonial-swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <!--single testimonial slide started -->
+                    <div class="testimonial">
+                      <div class="testimonial__body text-center text-lg-left">
+                        <div class="author__image">
+                          <img src="./assets/images/testimonial-profiles/profile1.png" alt="dummy-profile" />
+                        </div>
+                        <h6 class="testimonial__comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque omnis quisquam culpa quam voluptatum?</h6>
+                        <div class="testimonial__review-stars">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                      <div class="testimonial__author text-center text-lg-left">
+                        <div class="author__profile">
+                          <p class="author__name">Sunita Sen</p>
+                          <p class="author__designation">Aryan's Mom</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--single testimonial slide ends -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!--single testimonial slide started -->
+                    <div class="testimonial">
+                      <div class="testimonial__body text-center text-lg-left">
+                        <div class="author__image">
+                          <img src="./assets/images/testimonial-profiles/profile2.png" alt="dummy-profile" />
+                        </div>
+                        <h6 class="testimonial__comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque omnis quisquam culpa quam voluptatum?</h6>
+                        <div class="testimonial__review-stars">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                      <div class="testimonial__author text-center text-lg-left">
+                        <div class="author__profile">
+                          <p class="author__name">Sunita Sen</p>
+                          <p class="author__designation">Aryan's Mom</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--single testimonial slide ends -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!--single testimonial slide started -->
+                    <div class="testimonial">
+                      <div class="testimonial__body text-center text-lg-left">
+                        <div class="author__image">
+                          <img src="./assets/images/testimonial-profiles/profile3.png" alt="dummy-profile" />
+                        </div>
+                        <h6 class="testimonial__comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque omnis quisquam culpa quam voluptatum?</h6>
+                        <div class="testimonial__review-stars">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                      <div class="testimonial__author text-center text-lg-left">
+                        <div class="author__profile">
+                          <p class="author__name">Sunita Sen</p>
+                          <p class="author__designation">Aryan's Mom</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--single testimonial slide ends -->
+                  </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev d-none"></div>
+                <div class="swiper-button-next d-none"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 d-flex align-items-end">
+            <div class="testimonial__bg">
+              <img src="./assets/images/kids-png-23974.png" alt="happy kids" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="random__icons-wrapper">
+        <img src="./assets/images/random-icons/quotation.png" alt="" class="random__icons pos--right-top" data-aos="zoom-in-left" />
+        <img src="./assets/images/random-icons/smile.png" alt="" class="random__icons pos--left-bottom" data-aos="zoom-in-right" />
+      </div>
+    </section>
+    <!-- Latest Articles -->
+    <section class="section blog-section section__padding">
+      <div class="container">
+        <div class="section__header text-center">
+          <h2 class="section__title text--primary">Latest Articles</h2>
+          <div class="section__title--divider">
+            <img src="./assets/images/divider-icon.png" class="mx-auto" alt="divider-icon" />
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+              <!-- single article starts -->
+              <article class="article">
+                <div class="article__image">
+                  <img src="./assets/images/blog/blog1.png" alt="article image" />
+                </div>
+                <div class="article__header">
+                  <div class="article__categories">
+                    <span class="prefix">Categories:</span>
+                    <span class="category">
+                      <a href="#">Sports</a>,
+                      <a href="#">Cricket</a>
+                    </span>
+                  </div>
+                  <h5 class="article__title">Lorem ipsum dolor sit amet consectetur.</h5>
+                </div>
+                <div class="article__body">
+                  <p class="article__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, pariatur error soluta eaque quidem repellendus?</p>
+                  <a href="#" class="article__cta--link">
+                    <span class="link___wrapper">Read More</span>
+                    <i class="bi bi-arrow-right-circle-fill"></i>
+                  </a>
+                </div>
+              </article>
+              <!-- single article ends -->
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <!-- single article starts -->
+              <article class="article">
+                <div class="article__image">
+                  <img src="./assets/images/blog/blog2.png" alt="article image" />
+                </div>
+                <div class="article__header">
+                  <div class="article__categories">
+                    <span class="prefix">Categories:</span>
+                    <span class="category">
+                      <a href="#">Sports</a>,
+                      <a href="#">Cricket</a>
+                    </span>
+                  </div>
+                  <h5 class="article__title">Lorem ipsum dolor sit amet consectetur.</h5>
+                </div>
+                <div class="article__body">
+                  <p class="article__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, pariatur error soluta eaque quidem repellendus?</p>
+                  <a href="#" class="article__cta--link">
+                    <span class="link___wrapper">Read More</span>
+                    <i class="bi bi-arrow-right-circle-fill"></i>
+                  </a>
+                </div>
+              </article>
+              <!-- single article ends -->
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <!-- single article starts -->
+              <article class="article">
+                <div class="article__image">
+                  <img src="./assets/images/blog/blog3.png" alt="article image" />
+                </div>
+                <div class="article__header">
+                  <div class="article__categories">
+                    <span class="prefix">Categories:</span>
+                    <span class="category">
+                      <a href="#">Sports</a>,
+                      <a href="#">Cricket</a>
+                    </span>
+                  </div>
+                  <h5 class="article__title">Lorem ipsum dolor sit amet consectetur.</h5>
+                </div>
+                <div class="article__body">
+                  <p class="article__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, pariatur error soluta eaque quidem repellendus?</p>
+                  <a href="#" class="article__cta--link">
+                    <span class="link___wrapper">Read More</span>
+                    <i class="bi bi-arrow-right-circle-fill"></i>
+                  </a>
+                </div>
+              </article>
+              <!-- single article ends -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer bg--primary">
+      <div class="footer__top bg--skyblue">
+        <div class="container">
+          <div class="subscribe-form__wrapper text-center">
+            <h3 class="subscribe-form__heading mb-2">Join now and get 30% off<br />on your first course</h3>
+            <h6 class="subscribe-form__description mb-4">Subscribe to the weekly newsletter for all the latest updates</h6>
+            <form action="#" class="subscribe-form">
+              <div class="input__container">
+                <input type="email" name="email" placeholder="Your Email" required />
+                <button class="button button__primary">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="subscribe__bg">
+          <img src="./assets/images/email-box.png" alt="email-box" />
+        </div>
+      </div>
+      <div class="footer__main">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="footer__about">
+                <div class="about__logo d-flex justify-content-center justify-content-md-start">
+                  <a href="#" class="d-inline-block">
+                    <img src="./assets/images/logo-light.png" alt="logo-light" />
+                  </a>
+                </div>
+                <p class="about__description mb-3 mt-3 text--gray text-center text-md-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iure qui blanditiis consequatur unde architecto repudiandae at amet nam aperiam?</p>
+                <div class="about__social d-flex align-items-center justify-content-center justify-content-lg-start">
+                  <ul class="social-icons d-flex justify-content-center justify-content-md-start">
+                    <li class="social-icons__item">
+                      <a href="#" class="social-icons__item--link">
+                        <i class="bi bi-facebook"></i>
+                      </a>
+                    </li>
+                    <li class="social-icons__item">
+                      <a href="#" class="social-icons__item--link">
+                        <i class="bi bi-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="social-icons__item">
+                      <a href="#" class="social-icons__item--link">
+                        <i class="bi bi-instagram"></i>
+                      </a>
+                    </li>
+                    <!-- <li class="social-icons__item">
+                      <a href="#" class="social-icons__item--link">
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                    </li> -->
+                  </ul>
+                  <a href="#" class="button button__light">Know More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <h4 class="footer__block-heading text--light text-center text-md-left">Popular Category</h4>
+              <ul class="footer__menu text-center text-md-left">
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">Sports</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">Wellness</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">Performing Arts</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">Education</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <h4 class="footer__block-heading text--light text-center text-md-left">Useful Links</h4>
+              <ul class="footer__menu text-center text-md-left">
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">About Us</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">Blogs</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">Events</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">Become a Partner</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-2">
+              <h4 class="footer__block-heading text--light text-center text-md-left">Help</h4>
+              <ul class="footer__menu text-center text-md-left">
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">Help Center</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">Contact Us</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">FAQs</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">Ask Experts</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <p class="footer__copyright-text text-center text--gray">©2021 Actipass Website. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- all vendors js scripts-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="/assets/vendors/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendors/lightbox2-2.11.3/dist/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- custom js script -->
+    <script src="/js/script.js"></script>
+  </body>
+</html>
