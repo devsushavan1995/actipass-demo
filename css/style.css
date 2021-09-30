@@ -1258,6 +1258,7 @@ h6 {
 }
 
 /* admin dashboard styles */
+/* dashboard sidebar starts */
 .dashboard-wrapper .dashboard__sidebar {
   width: 250px;
   z-index: 10;
@@ -1303,6 +1304,30 @@ h6 {
 .dashboard-wrapper .dashboard__sidebar .sidebar__menu .menu__item--link .link__icon {
   margin-right: 0.5rem;
 }
+.dashboard__sidebar.dashboard__sidebar--shrinked {
+  width: 70px;
+}
+.dashboard__sidebar.dashboard__sidebar--shrinked .sidebar__logo-wrapper {
+  width: 70px;
+  padding: 1.25rem;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+.dashboard__sidebar.dashboard__sidebar--shrinked .logo--linked {
+  display: none;
+}
+.dashboard-wrapper .dashboard__sidebar.dashboard__sidebar--shrinked .sidebar__menu .menu__item--link {
+  padding: 0.625rem 1.25rem;
+  text-align: center;
+}
+.dashboard__sidebar.dashboard__sidebar--shrinked .sidebar__menu .menu__item--link .link__title {
+  display: none;
+}
+.dashboard-wrapper .dashboard__sidebar.dashboard__sidebar--shrinked .sidebar__menu .menu__item--link .link__icon {
+  margin-right: 0;
+}
+/* dashboard content area */
 .dashboard-wrapper .dashboard__content-area {
   margin-left: 250px;
   overflow: hidden;
@@ -1414,29 +1439,6 @@ h6 {
   top:-7px;
   right: 8px;
 } */
-.dashboard__sidebar.dashboard__sidebar--shrinked {
-  width: 70px;
-}
-.dashboard__sidebar.dashboard__sidebar--shrinked .sidebar__logo-wrapper {
-  width: 70px;
-  padding: 1.25rem;
-  -webkit-box-pack: center !important;
-  -ms-flex-pack: center !important;
-  justify-content: center !important;
-}
-.dashboard__sidebar.dashboard__sidebar--shrinked .logo--linked {
-  display: none;
-}
-.dashboard-wrapper .dashboard__sidebar.dashboard__sidebar--shrinked .sidebar__menu .menu__item--link {
-  padding: 0.625rem 1.25rem;
-  text-align: center;
-}
-.dashboard__sidebar.dashboard__sidebar--shrinked .sidebar__menu .menu__item--link .link__title {
-  display: none;
-}
-.dashboard-wrapper .dashboard__sidebar.dashboard__sidebar--shrinked .sidebar__menu .menu__item--link .link__icon {
-  margin-right: 0;
-}
 .dashboard-wrapper .dashboard__content-area .dashboard__content {
   padding: 1.25rem 0;
 }
@@ -1444,11 +1446,7 @@ h6 {
   width: 100%;
   padding: 1.875rem 1.15rem;
 }
-.dashboard-wrapper .dashboard__content-area .dashboard__content .addChildModal .form__addChild-bg {
-  /* background-image: url(/assets/images/undraw_children_4rtb.svg);
-  background-position: center left;
-  background-size: contain;
-  background-repeat: no-repeat; */
+.dashboard-wrapper .dashboard__content-area .dashboard__content .modal__child-add .form__addChild-bg {
   width: 100%;
   border-radius: 0 10px 10px 0;
   display: -webkit-box;
@@ -1459,7 +1457,7 @@ h6 {
   align-items: center;
   padding: 1.875rem 1.15rem;
 }
-.dashboard-wrapper .dashboard__content-area .dashboard__content .addChildModal .addChildModal__button--close {
+.dashboard-wrapper .dashboard__content-area .dashboard__content .modal__child-add .modal__button--close {
   position: absolute;
   top: -2px;
   right: 2px;
@@ -1469,7 +1467,7 @@ h6 {
   font-size: 1.5rem;
   padding: 0.75rem;
 }
-.dashboard-wrapper .dashboard__content-area .dashboard__content .addChildModal .modal-dialog .modal-content {
+.dashboard-wrapper .dashboard__content-area .dashboard__content .modal__child-add .modal-dialog .modal-content {
   border-radius: 10px;
   border: none;
 }
@@ -1493,30 +1491,23 @@ h6 {
   padding: 0.75rem;
   border-radius: 10px;
 }
-.dashboard-wrapper .dashboard__content-area .dashboard__content .addChildModal .child-profile__container {
+.dashboard-wrapper .dashboard__content-area .dashboard__content .modal__child-add .child-profile__container {
   padding: 1.5rem 0;
   border-top: 1px solid var(--colorPrimary);
 }
-/* .dashboard-wrapper .dashboard__content-area .dashboard__content .addChildModal.selectChildModal .form__addChild-bg {
-  background-image: url(/assets/images/selectchild-bg.svg);
-} */
-.dashboard-wrapper .dashboard__content-area .dashboard__content .addChildModal.selectChildModal .child-profile__image img {
+.dashboard-wrapper .dashboard__content-area .dashboard__content .modal__child-add.modal__child-select .child-profile__image img {
   width: 40px;
   border-radius: 50%;
 }
 @media (min-width: 768px) {
-  .dashboard-wrapper .dashboard__content-area .dashboard__content .addChildModal .modal-dialog {
+  .dashboard-wrapper .dashboard__content-area .dashboard__content .modal__child-add .modal-dialog {
     max-width: 700px;
   }
   .dashboard-wrapper .dashboard__content-area .dashboard__content .form__addChild-container {
     width: 55%;
     padding: 1.875rem;
   }
-  .dashboard-wrapper .dashboard__content-area .dashboard__content .addChildModal .form__addChild-bg {
-    /* background-image: url(/assets/images/undraw_children_4rtb.svg);
-    background-position: center left;
-    background-size: contain;
-    background-repeat: no-repeat; */
+  .dashboard-wrapper .dashboard__content-area .dashboard__content .modal__child-add .form__addChild-bg {
     width: 45%;
     padding: 1.875rem 1.875rem 1.875rem 0;
   }
