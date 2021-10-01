@@ -470,8 +470,15 @@ h6 {
   padding: 0.25rem 0.25rem;
   background: transparent;
   border: none;
+  outline: none;
   color: var(--colorLightBg1);
   font-size: 0.9rem;
+}
+.header .header__top .header__user-actions .user-action--currency option,
+.header .header__top .header__user-actions .user-action--location option {
+  background: #fff;
+  color: var(--colorPrimary);
+  border: none;
 }
 .header .header__top .header__user-actions .user-action--login {
   background: transparent;
@@ -564,8 +571,8 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
   z-index: 10;
 }
 .header .nav__wrapper .nav__button--toggler {
