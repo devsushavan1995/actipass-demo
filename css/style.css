@@ -381,7 +381,7 @@ h6 {
 }
 .section .random__icons {
   position: absolute;
-  width: 100px;
+  width: 70px;
 }
 .section .random__icons.random__icons--rotate-30 {
   -webkit-transform: rotate(30deg) !important;
@@ -420,6 +420,10 @@ h6 {
 @media (min-width: 768px) {
   .section .random__icons {
     width: 110px;
+  }
+  .section .random__icons.pos--right-bottom {
+    top: 80%;
+    right: 3%;
   }
 }
 @media (min-width: 992px) {
@@ -760,6 +764,12 @@ h6 {
   padding: 0 0 1.5rem 0;
   z-index: 12;
 }
+.footer .footer__about .about__logo {
+  margin: 0 0 1.25rem 0;
+}
+.footer .footer__about .about__description {
+  margin: 1.25rem 0;
+}
 .footer .footer__about .about__social .social-icons .social-icons__item {
   display: inline-block;
   margin-right: 0.5rem;
@@ -826,14 +836,17 @@ h6 {
   .footer .footer__top .subscribe-form .input__container {
     background: #fff;
     border-radius: 30px;
-    padding: 0.25rem 0.25rem 0.75rem 0.25rem;
+    padding: 0.25rem;
+    padding: 0.5rem 0.25rem;
   }
   .footer .footer__top .subscribe-form input {
     width: 320px;
-    padding: 0.85rem;
     border: none;
     border-radius: 30px 0 0 30px;
     margin-bottom: 0;
+  }
+  .footer .footer__top .subscribe-form button {
+    margin-top: -0.5rem;
   }
   .footer .footer__block-heading {
     margin: 1.5rem 0;
@@ -909,7 +922,7 @@ h6 {
 }
 .learning-step-section .step-container .step {
   width: 100%;
-  padding: 1.25rem;
+  padding: 2rem 1.25rem;
   text-align: center;
 }
 .learning-step-section .step-container .step__title {
