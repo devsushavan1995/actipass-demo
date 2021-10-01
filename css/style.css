@@ -709,6 +709,10 @@ h6 {
   color: #fff;
   border-radius: 0 10px 10px 0;
 }
+.header .nav__wrapper .cta__button--link {
+  display: block;
+  margin-top: -0.5rem;
+}
 @media (min-width: 768px) {
   .header .header__user-actions {
     -webkit-box-pack: end;
