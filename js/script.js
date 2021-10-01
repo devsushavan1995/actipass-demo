@@ -15,7 +15,7 @@ $(document).ready(function () {
   // navbar toggle function for mobile */
   var navTogglerBtnEl = $('.nav__button--toggler');
   var navMainMenuWrapperEl = $('.nav-main__mobile');
-  var overlayBgEl = $('.header .nav__wrapper-mobile .bg__overlay');
+  var overlayBgEl = $('.header .nav__wrapper .bg__overlay');
   navTogglerBtnEl.on('click', function () {
     navMainMenuWrapperEl.addClass('nav-main__mobile--active');
     overlayBgEl.addClass('bg__overlay--active');
@@ -27,9 +27,9 @@ $(document).ready(function () {
     }
   });
   //search form for mobile version
-  var searchTriggerEl = $('.header .nav__wrapper-mobile .nav__button--mobile-search');
-  var searchFormWrapperEl = $('.header .nav__wrapper-mobile .search-form__wrapper');
-  var searchFormBtnCloseEl = $('.header .nav__wrapper-mobile .search-form__button--close');
+  var searchTriggerEl = $('.header .nav__wrapper .nav__button--mobile-search');
+  var searchFormWrapperEl = $('.header .nav__wrapper .search-form__wrapper');
+  var searchFormBtnCloseEl = $('.header .nav__wrapper .search-form__button--close');
   searchTriggerEl.on('click', function () {
     searchFormWrapperEl.addClass('search-form__wrapper--active');
     if (searchFormWrapperEl.hasClass('search-form__wrapper--active')) {
@@ -78,6 +78,9 @@ $(document).ready(function () {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
+    autoplay: true,
+    delay: 5000,
+    pauseOnMouseEnter: true,
     slidesPerView: 1,
     spaceBetween: 10,
     breakpoints: {
@@ -86,7 +89,7 @@ $(document).ready(function () {
         spaceBetween: 15,
       },
       992: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 15,
       },
     },
@@ -128,6 +131,18 @@ $(document).ready(function () {
     autoplay: true,
     delay: 5000,
     pauseOnMouseEnter: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+    },
     //If we need pagination
     pagination: {
       el: '.swiper-pagination',

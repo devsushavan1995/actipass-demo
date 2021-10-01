@@ -24,31 +24,33 @@
   <body>
     <!-- header-->
     <header class="header">
-      <div class="header__top">
+      <!-- header top starts -->
+      <div class="header__top bg--primary">
         <div class="container">
-          <div class="header__top-wrapper">
-            <!-- logo -->
-            <a href="" class="header__brand d-none d-lg-block">
-              <img src="./assets/images/logo-dark.png" alt="logo" class="brand__logo" />
-            </a>
-            <!-- search -->
-            <div class="header__search">
-              <form action="" class="search-form d-none d-lg-block">
-                <div class="form__container d-flex">
-                  <input type="text" name="activity" class="form__input--text" placeholder="Search activites" />
-                  <select class="search__category--activities">
-                    <option selected>All Activities</option>
-                    <option value="Activity 1">Activity 1</option>
-                    <option value="Activity 2">Activity 2</option>
-                    <option value="Activity 3">Activity 3</option>
-                  </select>
-                  <button type="submit" class="search-form__button--submit">
-                    <i class="bi bi-search"></i>
-                  </button>
-                </div>
-              </form>
-            </div>
+          <div class="header__top-wrapper d-flex justify-content-center justify-content-lg-between align-items-center">
             <!-- user action links -->
+            <div class="header__contact-wrapper d-none d-lg-flex align-items-center">
+              <!-- single icon box started -->
+              <div class="contact__icon-box d-flex align-items-center mr-4">
+                <div class="contact__icon mr-2">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div class="contact__text">
+                  <a href="mailto:contact@domain.com">mailto:contact@domain.com</a>
+                </div>
+              </div>
+              <!-- single icon box ends -->
+              <!-- single icon box started -->
+              <div class="contact__icon-box d-flex align-items-center">
+                <div class="contact__icon mr-2">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div class="contact__text">
+                  <a href="tel:contact@domain.com">+123 4567890</a>
+                </div>
+              </div>
+              <!-- single icon box ends -->
+            </div>
             <div class="header__user-actions text-right">
               <ul class="user-actions__list d-flex align-items-center">
                 <!-- choose currency -->
@@ -70,26 +72,55 @@
                 <!-- login or sign up -->
                 <li class="list__item d-inline-block">
                   <button class="user-action--login">
-                    <i class="bi bi-person-circle"></i>
+                    <i class="bi bi-person-circle mr-2"></i>
                     Login/Register
                   </button>
                 </li>
               </ul>
             </div>
+            <!-- user action links ends -->
           </div>
         </div>
       </div>
+      <!-- header top ends -->
       <div class="header__bottom">
         <div class="container">
-          <div class="nav__wrapper-mobile d-flex justify-content-between d-lg-none">
+          <div class="nav__wrapper d-flex justify-content-between align-items-center">
             <a href="" class="header__brand">
               <img src="./assets/images/logo-dark.png" alt="logo" class="brand__logo" />
             </a>
             <div class="d-flex align-items-center">
+              <!-- nav menu for desktop starts -->
+              <nav class="nav-main d-none d-lg-flex">
+                <ul class="nav-main__menu">
+                  <li class="menu__item">
+                    <a href="#" class="menu__item--link active-link"><span class="link__wrapper">Home</span></a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__item--link"><span class="link__wrapper">Courses</span></a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__item--link"><span class="link__wrapper">Workshop</span></a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__item--link"><span class="link__wrapper">Events</span></a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__item--link"><span class="link__wrapper">Blog</span></a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__item--link"><span class="link__wrapper">Contact</span></a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- nav menu for desktop ends -->
               <!-- search button for mobile -->
               <button class="nav__button--mobile-search mr-3">
                 <i class="bi bi-search"></i>
               </button>
+              <div class="header__cta-wrapper d-none d-lg-inline-block">
+                <a href="#" class="button button__primary cta__button--link">Book a Demo</a>
+              </div>
               <!-- mobile search form starts -->
               <div class="search-form__wrapper">
                 <div class="search-form__wrapper-inner d-flex align-items-center justify-content-center">
@@ -107,19 +138,19 @@
                 </div>
               </div>
               <!-- mobile search form ends -->
-              <button class="nav__button--toggler" id="mainNavToggler">
+              <button class="nav__button--toggler d-lg-none" id="mainNavToggler">
                 <i class="bi bi-list"></i>
               </button>
             </div>
             <div class="bg__overlay"></div>
             <!-- nav mobile menu starts -->
             <nav class="nav-main__mobile">
-              <ul class="nav-main__menu">
+              <ul class="nav-main__menu pb-5">
                 <li class="menu__item">
-                  <a href="#" class="menu__item--link"><span class="link__wrapper">Group Classes</span></a>
+                  <a href="#" class="menu__item--link link-active"><span class="link__wrapper">Home</span></a>
                 </li>
                 <li class="menu__item">
-                  <a href="#" class="menu__item--link"><span class="link__wrapper">Online Classes</span></a>
+                  <a href="#" class="menu__item--link"><span class="link__wrapper">Courses</span></a>
                 </li>
                 <li class="menu__item">
                   <a href="#" class="menu__item--link"><span class="link__wrapper">Workshop</span></a>
@@ -131,91 +162,72 @@
                   <a href="#" class="menu__item--link"><span class="link__wrapper">Blog</span></a>
                 </li>
                 <li class="menu__item">
-                  <a href="#" class="menu__item--link"><span class="link__wrapper">Book Demo</span></a>
+                  <a href="#" class="menu__item--link"><span class="link__wrapper">Contact</span></a>
+                </li>
+                <li class="menu__item">
+                  <div class="header__cta-wrapper mt-2">
+                    <a href="#" class="button button__primary cta__button--link d-block">Book a Demo</a>
+                  </div>
                 </li>
               </ul>
             </nav>
             <!-- nav mobile menu ends -->
           </div>
-          <!-- nav mega menu starts -->
-          <nav class="nav-main d-none d-lg-flex">
-            <ul class="nav-main__menu">
-              <li class="menu__item">
-                <a href="#" class="menu__item--link"><span class="link__wrapper">Group Classes</span></a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item--link"><span class="link__wrapper">Online Classes</span></a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item--link"><span class="link__wrapper">Workshop</span></a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item--link"><span class="link__wrapper">Events</span></a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item--link"><span class="link__wrapper">Blog</span></a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item--link"><span class="link__wrapper">Book Demo</span></a>
-              </li>
-            </ul>
-          </nav>
-          <!-- nav mega menu ends -->
         </div>
       </div>
     </header>
     <!-- Hero section -->
-    <section class="hero-section">
-      <!-- Slider main container -->
-      <div class="swiper swiper-hero">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides single starts -->
-          <div class="swiper-slide" style="background-image: url(./assets/images/banner/banner1.jpg)">
-            <div class="slide__bg-overlay"></div>
-            <div class="slide__content text-center">
-              <h4 class="slide__subheading">Lorem Ipsum</h4>
-              <h1 class="slide__heading">Lorem ipsum dolor sit</h1>
-              <p class="slide__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, aliquid.</p>
-              <div class="slide__cta-wrapper">
-                <a href="#" class="button button__secondary">Learn More</a>
+    <section class="section hero-section d-flex align-items-center bg--light1">
+      <div class="hero-section__bg-overlay d-none d-md-none d-lg-block"></div>
+      <div class="container">
+        <div class="row d-flex align-items-center">
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="hero-section__content text-center text-md-left">
+              <h4 class="hero-section__subheading">Actipass 2021</h4>
+              <h1 class="hero-section__heading">Lorem ipsum dolor sit.</h1>
+              <div class="hero-section__button-wrapper">
+                <a href="#" class="button button__primary">Explore More</a>
               </div>
             </div>
           </div>
-          <!-- Slides single ends -->
-          <!-- Slides single starts -->
-          <div class="swiper-slide" style="background-image: url(./assets/images/banner/banner2.jpg)">
-            <div class="slide__bg-overlay"></div>
-            <div class="slide__content text-center">
-              <h4 class="slide__subheading">Lorem Ipsum</h4>
-              <h1 class="slide__heading">Lorem ipsum dolor sit</h1>
-              <p class="slide__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, aliquid.</p>
-              <div class="slide__cta-wrapper">
-                <a href="#" class="button button__secondary">Learn More</a>
-              </div>
-            </div>
+          <div class="col-12 col-md-6 col-lg-6">
+            <img src="/assets/images/banner/kids-png-23991.png" class="hero-section__image" alt="kids-image" />
           </div>
-          <!-- Slides single ends -->
-          <!-- Slides single starts -->
-          <div class="swiper-slide" style="background-image: url(./assets/images/banner/banner3.jpg)">
-            <div class="slide__bg-overlay"></div>
-            <div class="slide__content text-center">
-              <h4 class="slide__subheading">Lorem Ipsum</h4>
-              <h1 class="slide__heading">Lorem ipsum dolor sit</h1>
-              <p class="slide__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, aliquid.</p>
-              <div class="slide__cta-wrapper">
-                <a href="#" class="button button__secondary">Learn More</a>
-              </div>
-            </div>
-          </div>
-          <!-- Slides single ends -->
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+    <!-- learning step section -->
+    <section class="section learning-step-section">
+      <div class="container">
+        <div class="step-container d-flex flex-wrap w-100 align-items-center">
+          <!-- single step starts -->
+          <div class="step bg--randomPurple">
+            <div class="step__image-container d-flex justify-content-center">
+              <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_n2m0isqh.json" background="transparent" speed="1" style="width: 150px; height: 150px" loop autoplay></lottie-player>
+            </div>
+            <h3 class="step__title">Explore</h3>
+            <h6 class="step__subtitle">your interests</h6>
+          </div>
+          <!-- single step ends -->
+          <!-- single step starts -->
+          <div class="step bg--randomPink">
+            <div class="step__image-container d-flex justify-content-center">
+              <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_wepuwkno.json" background="transparent" speed="1" style="width: 150px; height: 150px" loop autoplay></lottie-player>
+            </div>
+            <h3 class="step__title">Learn</h3>
+            <h6 class="step__subtitle">through play</h6>
+          </div>
+          <!-- single step ends -->
+          <!-- single step starts -->
+          <div class="step bg--randomGreen">
+            <div class="step__image-container d-flex justify-content-center">
+              <lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_WdTEui.json" background="transparent" speed="1" style="width: 150px; height: 150px" loop autoplay></lottie-player>
+            </div>
+            <h3 class="step__title">Develop</h3>
+            <h6 class="step__subtitle">valuable skills</h6>
+          </div>
+          <!-- single step ends -->
+        </div>
       </div>
     </section>
     <!-- Top rated tutors section -->
@@ -1099,289 +1111,251 @@
         </div>
       </div>
       <div class="random__icons-wrapper">
-        <img src="./assets/images/random-icons/idea.png" alt="" class="random__icons pos--right-bottom" data-aos="zoom-in-right" />
-        <img src="./assets/images/random-icons/microphone.png" alt="" class="random__icons pos--left-top" data-aos="zoom-in-left" />
+        <img src="./assets/images/random-icons/Backpack.png" alt="" class="random__icons pos--right-bottom" data-aos="zoom-in-right" />
+        <img src="./assets/images/random-icons/Ping Pong.png" alt="" class="random__icons pos--left-top" data-aos="zoom-in-left" />
       </div>
     </section>
     <!-- Trending activities section -->
     <section class="section trending-activities-section bg--light2 section__padding">
       <div class="container">
-        <div class="section__header text-center">
-          <h2 class="section__title">Trending Activities</h2>
-          <div class="section__title--divider">
-            <img src="./assets/images/divider-icon.png" class="mx-auto" alt="divider-icon" />
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="section__header text-center text-md-left">
+              <h2 class="section__title">Trending Activities</h2>
+              <div class="section__title--divider d-flex justify-content-center justify-content-md-start">
+                <img src="./assets/images/divider-icon.png" alt="divider-icon" />
+              </div>
+            </div>
+            <!-- single activity starts -->
+            <div class="activity-category mb-5">
+              <div class="activity-category__image-container">
+                <img src="./assets/images/trending-activity/Football.png" alt="Sports Icon" class="activity-category__image" />
+              </div>
+              <h3 class="activity-category__title">Sports</h3>
+              <p class="activity-category__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem culpa dolor natus voluptatem! Excepturi, nam.</p>
+              <ul class="activity-subcategories">
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/cricket.png" alt="" />
+                  </div>
+                  <h5 class="subcategory__title">Cricket</h5>
+                </li>
+                <!-- single subcategory ends -->
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/football-icon.png" alt="" />
+                  </div>
+                  <h5 class="subcategory__title">Football</h5>
+                </li>
+                <!-- single subcategory ends -->
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/basketball-ball-variant.png" alt="" />
+                  </div>
+                  <h5 class="subcategory__title">Basketball</h5>
+                </li>
+                <!-- single subcategory ends -->
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/tennis.png" alt="" />
+                  </div>
+                  <h5 class="subcategory__title">Tennis</h5>
+                </li>
+                <!-- single subcategory ends -->
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/judo.png" alt="" />
+                  </div>
+                  <h5 class="subcategory__title">Karate</h5>
+                </li>
+                <!-- single subcategory ends -->
+              </ul>
+              <div class="activity-category__button-wrapper">
+                <a href="#" class="activity-category__button--link">
+                  Discover More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <!-- single activity ends -->
+            <!-- single activity starts -->
+            <div class="activity-category mb-5 mb-md-0">
+              <div class="activity-category__image-container">
+                <img src="./assets/images/trending-activity/Camera.png" alt="Sports Icon" class="activity-category__image" />
+              </div>
+              <h3 class="activity-category__title">Performing Arts</h3>
+              <p class="activity-category__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem culpa dolor natus voluptatem! Excepturi, nam.</p>
+              <ul class="activity-subcategories">
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/ballet.png" alt="" />
+                  </div>
+                  <h5 class="subcategory__title">Classical Dance</h5>
+                </li>
+                <!-- single subcategory ends -->
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/humor.png" alt="" />
+                  </div>
+                  <h5 class="subcategory__title">Acting Class</h5>
+                </li>
+                <!-- single subcategory ends -->
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/guitar.png" alt="" />
+                  </div>
+                  <h5 class="subcategory__title">Guitar</h5>
+                </li>
+                <!-- single subcategory ends -->
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/tabla.png" alt="" />
+                  </div>
+                  <h5 class="subcategory__title">Tabla</h5>
+                </li>
+                <!-- single subcategory ends -->
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/ballet2.png" alt="" />
+                  </div>
+                  <h5 class="subcategory__title">Ballet</h5>
+                </li>
+                <!-- single subcategory ends -->
+              </ul>
+              <div class="activity-category__button-wrapper">
+                <a href="#" class="activity-category__button--link">
+                  Discover More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <!-- single activity ends -->
           </div>
-        </div>
-        <div class="section__content">
-          <div class="row">
-            <div class="col-12 col-md-6 col-lg-3">
-              <!-- single card starts -->
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front bg--randomPurple">
-                    <img src="./assets/images/trending-activity/ball.png" class="mx-auto mb-4" alt="Avatar" />
-                    <h4 class="card__title text--light mb-2">Sports</h4>
-                    <p class="card__description text--gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, maxime.</p>
-                  </div>
-                  <div class="flip-card-back">
-                    <div class="card__content sports">
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/cricket-bat.png" alt="" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Cricket</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/soccer-ball-variant.png" alt="football-icon" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Football</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/karate.png" alt="" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Karate</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/basketball-ball-variant.png" alt="" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Basket Ball</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/tennis-racket.png" alt="" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Tennis</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                    </div>
-                  </div>
-                </div>
+          <div class="col-12 col-md-6 col-lg-6">
+            <!-- single activity starts -->
+            <div class="activity-category mb-5">
+              <div class="activity-category__image-container">
+                <img src="./assets/images/trending-activity/Hourglass.png" alt="Sports Icon" class="activity-category__image" />
               </div>
-              <!-- single card ends -->
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <!-- single card starts -->
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front bg--randomGreen">
-                    <img src="./assets/images/trending-activity/wellness.png" class="mx-auto mb-4" alt="Avatar" />
-                    <h4 class="card__title text--light mb-2">Wellness</h4>
-                    <p class="card__description text--gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, maxime.</p>
+              <h3 class="activity-category__title">Wellness</h3>
+              <p class="activity-category__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem culpa dolor natus voluptatem! Excepturi, nam.</p>
+              <ul class="activity-subcategories">
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/yoga.png" alt="" />
                   </div>
-                  <div class="flip-card-back">
-                    <div class="card__content wellness">
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/yoga.png" alt="" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Yoga</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/gymnast-somersault.png" alt="football-icon" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Gymnastic</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/chef.png" alt="" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Cooking</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/hula-hoop.png" alt="" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Hula Hoop</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/nutrition.png" alt="" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Kids Nutrition</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                    </div>
+                  <h5 class="subcategory__title">Yoga</h5>
+                </li>
+                <!-- single subcategory ends -->
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/gymnastic-rings.png" alt="" />
                   </div>
-                </div>
+                  <h5 class="subcategory__title">Gymnastic</h5>
+                </li>
+                <!-- single subcategory ends -->
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/chef.png" alt="" />
+                  </div>
+                  <h5 class="subcategory__title">Cooking</h5>
+                </li>
+                <!-- single subcategory ends -->
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/hula-hoop.png" alt="" />
+                  </div>
+                  <h5 class="subcategory__title">Hula Hoop</h5>
+                </li>
+                <!-- single subcategory ends -->
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/nutrition.png" alt="" />
+                  </div>
+                  <h5 class="subcategory__title">Kids Nutrition</h5>
+                </li>
+                <!-- single subcategory ends -->
+              </ul>
+              <div class="activity-category__button-wrapper">
+                <a href="#" class="activity-category__button--link">
+                  Discover More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
               </div>
-              <!-- single card ends -->
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <!-- single card starts -->
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front bg--randomPink">
-                    <img src="./assets/images/trending-activity/canvas.png" class="mx-auto mb-4" alt="Avatar" />
-                    <h4 class="card__title text--light mb-2">Performing Arts</h4>
-                    <p class="card__description text--gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, maxime.</p>
-                  </div>
-                  <div class="flip-card-back">
-                    <div class="card__content arts">
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/ballet.png" alt="" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Classical Dance</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/actor.png" alt="football-icon" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Acting Class</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/guitar.png" alt="" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Guitar</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/tablas.png" alt="" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Tabla</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/ballet2.png" alt="" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Ballet</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                    </div>
-                  </div>
-                </div>
+            <!-- single activity ends -->
+            <!-- single activity starts -->
+            <div class="activity-category">
+              <div class="activity-category__image-container">
+                <img src="./assets/images/trending-activity/Book2.png" alt="Sports Icon" class="activity-category__image" />
               </div>
-              <!-- single card ends -->
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <!-- single card starts -->
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front bg--randomSkyblue">
-                    <img src="./assets/images/trending-activity/graduation-cap.png" class="mx-auto mb-4" alt="Avatar" />
-                    <h4 class="card__title text--light mb-2">Education</h4>
-                    <p class="card__description text--gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, maxime.</p>
+              <h3 class="activity-category__title">Education</h3>
+              <p class="activity-category__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem culpa dolor natus voluptatem! Excepturi, nam.</p>
+              <ul class="activity-subcategories">
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/french.png" alt="" />
                   </div>
-                  <div class="flip-card-back">
-                    <div class="card__content education">
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/french.png" alt="" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">French Learning</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/art.png" alt="football-icon" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Art & Craft</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/microphone.png" alt="" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Story Telling</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/web-development.png" alt="" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Computer Coding</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                      <!-- single content starts -->
-                      <div class="content__item d-flex">
-                        <div class="item__icon">
-                          <img src="./assets/images/trending-activity/experiment.png" alt="" />
-                        </div>
-                        <h4 class="item__description">
-                          <a href="#">Science Experiments</a>
-                        </h4>
-                      </div>
-                      <!-- single content ends -->
-                    </div>
+                  <h5 class="subcategory__title">French Learning</h5>
+                </li>
+                <!-- single subcategory ends -->
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/paint-palette.png" alt="" />
                   </div>
-                </div>
+                  <h5 class="subcategory__title">Art & Craft</h5>
+                </li>
+                <!-- single subcategory ends -->
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/microphone-2.png" alt="" />
+                  </div>
+                  <h5 class="subcategory__title">Story Telling</h5>
+                </li>
+                <!-- single subcategory ends -->
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/web-development.png" alt="" />
+                  </div>
+                  <h5 class="subcategory__title">Computer Coding</h5>
+                </li>
+                <!-- single subcategory ends -->
+                <!-- single subcategory starts -->
+                <li class="subcategory d-flex align-items-center">
+                  <div class="subcategory__icon">
+                    <img src="./assets/images/trending-activity/icons/flask.png" alt="" />
+                  </div>
+                  <h5 class="subcategory__title">Science Experiments</h5>
+                </li>
+                <!-- single subcategory ends -->
+              </ul>
+              <div class="activity-category__button-wrapper">
+                <a href="#" class="activity-category__button--link">
+                  Discover More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
               </div>
-              <!-- single card ends -->
             </div>
+            <!-- single activity ends -->
           </div>
         </div>
       </div>
@@ -2266,119 +2240,145 @@
           </div>
         </div>
       </div>
+      <div class="random__icons-wrapper">
+        <img src="./assets/images/random-icons/Trophy.png" alt="" class="random__icons pos--right-bottom" data-aos="zoom-in-right" />
+        <img src="./assets/images/random-icons/Medal.png" alt="" class="random__icons pos--left-top" data-aos="zoom-in-left" />
+      </div>
     </section>
     <!-- Testimonials -->
-    <section class="section testimonial-section section__padding--top bg--light1">
+    <section class="section testimonial-section section__padding bg--light1">
       <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6 col-lg-6">
-            <div class="section__header text-center text-lg-left">
-              <h2 class="section__title text--primary">Testimonial</h2>
-              <div class="section__title--divider">
-                <img src="./assets/images/divider-icon.png" alt="divider-icon" />
-              </div>
-            </div>
-            <div class="section__content">
-              <!-- Slider main container -->
-              <div class="swiper testimonial-swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                    <!--single testimonial slide started -->
-                    <div class="testimonial">
-                      <div class="testimonial__body text-center text-lg-left">
-                        <div class="author__image">
-                          <img src="./assets/images/testimonial-profiles/profile1.png" alt="dummy-profile" />
-                        </div>
-                        <h6 class="testimonial__comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque omnis quisquam culpa quam voluptatum?</h6>
-                        <div class="testimonial__review-stars">
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                      <div class="testimonial__author text-center text-lg-left">
-                        <div class="author__profile">
-                          <p class="author__name">Sunita Sen</p>
-                          <p class="author__designation">Aryan's Mom</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!--single testimonial slide ends -->
-                  </div>
-                  <div class="swiper-slide">
-                    <!--single testimonial slide started -->
-                    <div class="testimonial">
-                      <div class="testimonial__body text-center text-lg-left">
-                        <div class="author__image">
-                          <img src="./assets/images/testimonial-profiles/profile2.png" alt="dummy-profile" />
-                        </div>
-                        <h6 class="testimonial__comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque omnis quisquam culpa quam voluptatum?</h6>
-                        <div class="testimonial__review-stars">
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                      <div class="testimonial__author text-center text-lg-left">
-                        <div class="author__profile">
-                          <p class="author__name">Sunita Sen</p>
-                          <p class="author__designation">Aryan's Mom</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!--single testimonial slide ends -->
-                  </div>
-                  <div class="swiper-slide">
-                    <!--single testimonial slide started -->
-                    <div class="testimonial">
-                      <div class="testimonial__body text-center text-lg-left">
-                        <div class="author__image">
-                          <img src="./assets/images/testimonial-profiles/profile3.png" alt="dummy-profile" />
-                        </div>
-                        <h6 class="testimonial__comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque omnis quisquam culpa quam voluptatum?</h6>
-                        <div class="testimonial__review-stars">
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                      <div class="testimonial__author text-center text-lg-left">
-                        <div class="author__profile">
-                          <p class="author__name">Sunita Sen</p>
-                          <p class="author__designation">Aryan's Mom</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!--single testimonial slide ends -->
-                  </div>
+        <div class="section__header text-center">
+          <h2 class="section__title text--primary">Testimonial</h2>
+          <div class="section__title--divider">
+            <img src="./assets/images/divider-icon.png" alt="divider-icon" />
+          </div>
+        </div>
+        <div class="section__content bg--white pb-4">
+          <!-- testimonial stat section -->
+          <div class="testimonial-stat pt-5 px-2 mb-lg-5">
+            <h4 class="testimonial-stat__heading text-center text--primary mb-5">Be a part of our global FUN-munity!</h4>
+            <div class="row text-center">
+              <!-- single stat starts -->
+              <div class="col-12 col-md-4 col-lg-4">
+                <div class="stat__wrapper mb-4">
+                  <h3 class="stat__number">20+</h3>
+                  <h5 class="stat__title">Countries</h5>
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev d-none"></div>
-                <div class="swiper-button-next d-none"></div>
               </div>
+              <!-- single stat ends -->
+              <!-- single stat starts -->
+              <div class="col-12 col-md-4 col-lg-4">
+                <div class="stat__wrapper mb-4">
+                  <h3 class="stat__number">15000+</h3>
+                  <h5 class="stat__title">Happy Learners</h5>
+                </div>
+              </div>
+              <!-- single stat ends -->
+              <!-- single stat starts -->
+              <div class="col-12 col-md-4 col-lg-4">
+                <div class="stat__wrapper">
+                  <h3 class="stat__number">1,000,000+</h3>
+                  <h5 class="stat__title">Live Minutes Conducted</h5>
+                </div>
+              </div>
+              <!-- single stat ends -->
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-6 d-flex align-items-end">
-            <div class="testimonial__bg">
-              <img src="./assets/images/kids-png-23974.png" alt="happy kids" />
+          <!-- Slider main container -->
+          <h3 class="text--primary text-center mb-5">Parent’s voices</h3>
+          <div class="swiper testimonial-swiper px-2">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <!--single testimonial slide started -->
+                <div class="testimonial">
+                  <div class="testimonial__body text-center text-lg-left">
+                    <div class="author__image">
+                      <img src="./assets/images/testimonial-profiles/profile1.png" alt="dummy-profile" />
+                    </div>
+                    <h6 class="testimonial__comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque omnis quisquam culpa quam voluptatum?</h6>
+                    <div class="testimonial__review-stars">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                  <div class="testimonial__author text-center text-lg-left">
+                    <div class="author__profile">
+                      <p class="author__name">Sunita Sen</p>
+                      <p class="author__designation">Aryan's Mom</p>
+                    </div>
+                  </div>
+                </div>
+                <!--single testimonial slide ends -->
+              </div>
+              <div class="swiper-slide">
+                <!--single testimonial slide started -->
+                <div class="testimonial">
+                  <div class="testimonial__body text-center text-lg-left">
+                    <div class="author__image">
+                      <img src="./assets/images/testimonial-profiles/profile2.png" alt="dummy-profile" />
+                    </div>
+                    <h6 class="testimonial__comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque omnis quisquam culpa quam voluptatum?</h6>
+                    <div class="testimonial__review-stars">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                  <div class="testimonial__author text-center text-lg-left">
+                    <div class="author__profile">
+                      <p class="author__name">Sunita Sen</p>
+                      <p class="author__designation">Aryan's Mom</p>
+                    </div>
+                  </div>
+                </div>
+                <!--single testimonial slide ends -->
+              </div>
+              <div class="swiper-slide">
+                <!--single testimonial slide started -->
+                <div class="testimonial">
+                  <div class="testimonial__body text-center text-lg-left">
+                    <div class="author__image">
+                      <img src="./assets/images/testimonial-profiles/profile3.png" alt="dummy-profile" />
+                    </div>
+                    <h6 class="testimonial__comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque omnis quisquam culpa quam voluptatum?</h6>
+                    <div class="testimonial__review-stars">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                  </div>
+                  <div class="testimonial__author text-center text-lg-left">
+                    <div class="author__profile">
+                      <p class="author__name">Sunita Sen</p>
+                      <p class="author__designation">Aryan's Mom</p>
+                    </div>
+                  </div>
+                </div>
+                <!--single testimonial slide ends -->
+              </div>
             </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev d-none"></div>
+            <div class="swiper-button-next d-none"></div>
           </div>
         </div>
       </div>
       <div class="random__icons-wrapper">
-        <img src="./assets/images/random-icons/quotation.png" alt="" class="random__icons pos--right-top" data-aos="zoom-in-left" />
-        <img src="./assets/images/random-icons/smile.png" alt="" class="random__icons pos--left-bottom" data-aos="zoom-in-right" />
+        <img src="./assets/images/random-icons/quotation.png" alt="" class="random__icons pos--right-top" data-aos="zoom-in-left" style="width: 64px" />
+        <img src="./assets/images/random-icons/smile.png" alt="" class="random__icons pos--left-bottom" data-aos="zoom-in-right" style="width: 64px" />
       </div>
     </section>
     <!-- Latest Articles -->
@@ -2482,7 +2482,7 @@
             <h3 class="subscribe-form__heading mb-2">Join now and get 30% off<br />on your first course</h3>
             <h6 class="subscribe-form__description mb-4">Subscribe to the weekly newsletter for all the latest updates</h6>
             <form action="#" class="subscribe-form">
-              <div class="input__container">
+              <div class="input__container d-md-flex align-items-center">
                 <input type="email" name="email" placeholder="Your Email" required />
                 <button class="button button__primary">Subscribe</button>
               </div>
@@ -2527,7 +2527,7 @@
                       </a>
                     </li> -->
                   </ul>
-                  <a href="#" class="button button__light">Know More</a>
+                  <a href="#" class="button button__primary">Know More</a>
                 </div>
               </div>
             </div>
@@ -2597,6 +2597,7 @@
     <script src="./assets/vendors/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/vendors/lightbox2-2.11.3/dist/js/lightbox.min.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- custom js script -->
     <script src="./js/script.js"></script>
