@@ -46,7 +46,7 @@
                   <i class="bi bi-telephone"></i>
                 </div>
                 <div class="contact__text">
-                  <a href="tel:contact@domain.com">+123 4567890</a>
+                  <a href="tel:+123 4567890">+123 4567890</a>
                 </div>
               </div>
               <!-- single icon box ends -->
@@ -111,33 +111,24 @@
                   <li class="menu__item">
                     <a href="#" class="menu__item--link"><span class="link__wrapper">Contact</span></a>
                   </li>
+                  <li class="menu__item">
+                    <button class="nav__button--mobile-search">
+                      <i class="bi bi-search"></i>
+                    </button>
+                  </li>
+                  <!-- <li class="menu__item">
+                    <a href="#" class="menu__item--link"><span class="link__wrapper">Book a Demo</span></a>
+                  </li> -->
                 </ul>
               </nav>
               <!-- nav menu for desktop ends -->
-              <!-- search button for mobile -->
-              <button class="nav__button--mobile-search mr-3">
+              <!-- search button for mobile-->
+              <button class="nav__button--mobile-search mr-3 d-lg-none">
                 <i class="bi bi-search"></i>
               </button>
-              <div class="header__cta-wrapper d-none d-lg-inline-block">
-                <a href="#" class="button button__primary cta__button--link">Book a Demo</a>
+              <div class="header__cta-wrapper d-none d-lg-inline-block ml-3">
+                <a href="#" class="button button__red cta__button--link">Book a Demo</a>
               </div>
-              <!-- mobile search form starts -->
-              <div class="search-form__wrapper">
-                <div class="search-form__wrapper-inner d-flex align-items-center justify-content-center">
-                  <button class="search-form__button--close">
-                    <i class="bi bi-x"></i>
-                  </button>
-                  <form action="#" class="search-form" id="searchFormMobile">
-                    <div class="input__container d-flex">
-                      <input type="text" name="search-input" placeholder="Search activities" required />
-                      <button type="submit" class="search-form__button--submit">
-                        <i class="bi bi-search"></i>
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <!-- mobile search form ends -->
               <button class="nav__button--toggler d-lg-none" id="mainNavToggler">
                 <i class="bi bi-list"></i>
               </button>
@@ -145,7 +136,7 @@
             <div class="bg__overlay"></div>
             <!-- nav mobile menu starts -->
             <nav class="nav-main__mobile">
-              <ul class="nav-main__menu pb-5">
+              <ul class="nav-main__menu pb-3">
                 <li class="menu__item">
                   <a href="#" class="menu__item--link active"><span class="link__wrapper">Home</span></a>
                 </li>
@@ -164,33 +155,48 @@
                 <li class="menu__item">
                   <a href="#" class="menu__item--link"><span class="link__wrapper">Contact</span></a>
                 </li>
-                <li class="menu__item">
-                  <div class="header__cta-wrapper mt-2">
-                    <a href="#" class="button button__primary cta__button--link d-block">Book a Demo</a>
-                  </div>
-                </li>
               </ul>
+              <div class="header__cta-wrapper d-lg-none">
+                <a href="#" class="button button__red cta__button--link">Book a Demo</a>
+              </div>
             </nav>
             <!-- nav mobile menu ends -->
           </div>
         </div>
       </div>
     </header>
+    <!-- search form starts -->
+    <div class="search-form__wrapper">
+      <div class="search-form__wrapper-inner d-flex align-items-center justify-content-center">
+        <button class="search-form__button--close">
+          <i class="bi bi-x"></i>
+        </button>
+        <form action="#" class="search-form" id="searchFormMobile">
+          <div class="input__container d-flex">
+            <input type="text" name="search-input" placeholder="Search activities" required />
+            <button type="submit" class="search-form__button--submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+     <!-- search form ends -->
     <!-- Hero section -->
     <section class="section hero-section d-flex align-items-center bg--light1">
       <div class="hero-section__bg-overlay d-none"></div>
       <div class="container">
         <div class="row d-flex align-items-center">
-          <div class="col-12 col-md-6 col-lg-6">
+          <div class="col-12 col-md-8 col-lg-6">
             <div class="hero-section__content text-center text-md-left">
               <h4 class="hero-section__subheading">Actipass 2021</h4>
               <h1 class="hero-section__heading">Lorem ipsum dolor sit.</h1>
               <div class="hero-section__button-wrapper">
-                <a href="#" class="button button__primary">Explore More</a>
+                <a href="#" class="button button__red">Explore More</a>
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-6">
+          <div class="col-12 col-md-4 col-lg-6">
             <!-- <img src="/assets/images/banner/Asset_24x.png" class="hero-section__image" alt="kids-image" /> -->
           </div>
         </div>
@@ -2252,35 +2258,35 @@
       <div class="container">
         <h3 class="text-center text--light mb-5">Be a part of our global FUN-munity!</h3>
         <div class="stat-wrapper">
-          <div class="row" id="counter">
+          <div class="row justify-content-center" id="counter">
             <!-- single stat starts -->
-            <div class="col-12 col-md-4 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4">
               <div class="stat mb-4">
                 <h2 class="stat__number counter">
                   <span class="counter-value" data-count="20">0</span>
-                  +
+                  <span class="counter__prefix">+</span>
                 </h2>
                 <h5 class="stat__title text--primary">Countries</h5>
               </div>
             </div>
             <!-- single stat ends -->
             <!-- single stat starts -->
-            <div class="col-12 col-md-4 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4">
               <div class="stat mb-4">
                 <h2 class="stat__number counter">
                   <span class="counter-value" data-count="15000">0</span>
-                  +
+                  <span class="counter__prefix">+</span>
                 </h2>
                 <h5 class="stat__title text--primary">Happy Learners</h5>
               </div>
             </div>
             <!-- single stat ends -->
             <!-- single stat starts -->
-            <div class="col-12 col-md-4 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4">
               <div class="stat counter">
                 <h2 class="stat__number">
                   <span class="counter-value" data-count="1000000">0</span>
-                  +
+                  <span class="counter__prefix">+</span>
                 </h2>
                 <h5 class="stat__title text--primary">Live Minutes Conducted</h5>
               </div>
@@ -2294,11 +2300,11 @@
       </div>
     </section>
     <!-- Testimonials -->
-    <section class="section testimonial-section section__padding bg--light1">
+    <section class="section testimonial-section section__padding">
       <div class="container">
-        <div class="section__header text-center text-lg-left">
+        <div class="section__header text-center">
           <h2 class="section__title text--primary">Testimonials</h2>
-          <div class="section__title--divider d-flex justify-content-center justify-content-lg-start">
+          <div class="section__title--divider d-flex justify-content-center">
             <img src="./assets/images/divider-icon.png" alt="divider-icon" />
           </div>
         </div>
@@ -2309,58 +2315,59 @@
             <div class="swiper-wrapper">
               <!-- Slides testimonial started -->
               <div class="swiper-slide">
-                <!--single testimonial slide started -->
                 <div class="testimonial bg--white">
-                  <p class="testimonial__quote">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis enim dolores molestiae suscipit qui dolorem pariatur numquam esse, quod doloribus."</p>
-                  <div class="testimonial__author-wrapper">
-                    <div class="author__image-container">
+                  <p class="testimonial__quote text-center text-lg-left">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis enim dolores molestiae suscipit qui dolorem pariatur numquam esse, quod doloribus."</p>
+                  <div class="testimonial__author-wrapper d-lg-flex align-items-center">
+                    <div class="author__image-container d-flex justify-content-center justify-content-lg-start">
                       <img src="./assets/images/testimonial-profiles/profile1.png" alt="profile-1" />
                     </div>
-                    <div class="author__description">
+                    <div class="author__description text-center text-lg-left">
                       <h6 class="author__title">Jane Doe</h6>
                       <p class="author__designation">Housewife</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Slides testimonial ends -->
-                              <!--single testimonial slide started -->
-                              <div class="testimonial bg--white">
-                                <p class="testimonial__quote">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis enim dolores molestiae suscipit qui dolorem pariatur numquam esse, quod doloribus."</p>
-                                <div class="testimonial__author-wrapper">
-                                  <div class="author__image-container">
-                                    <img src="./assets/images/testimonial-profiles/profile1.png" alt="profile-1" />
-                                  </div>
-                                  <div class="author__description">
-                                    <h6 class="author__title">Jane Doe</h6>
-                                    <p class="author__designation">Housewife</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- Slides testimonial ends -->
-                                            <!--single testimonial slide started -->
+              <!-- Slides testimonial  ends -->
+              <!-- Slides testimonial started -->
+              <div class="swiper-slide">
                 <div class="testimonial bg--white">
-                  <p class="testimonial__quote">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis enim dolores molestiae suscipit qui dolorem pariatur numquam esse, quod doloribus."</p>
-                  <div class="testimonial__author-wrapper">
-                    <div class="author__image-container">
-                      <img src="./assets/images/testimonial-profiles/profile1.png" alt="profile-1" />
+                  <p class="testimonial__quote text-center text-lg-left">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis enim dolores molestiae suscipit qui dolorem pariatur numquam esse, quod doloribus."</p>
+                  <div class="testimonial__author-wrapper d-lg-flex align-items-center">
+                    <div class="author__image-container d-flex justify-content-center justify-content-lg-start">
+                      <img src="./assets/images/testimonial-profiles/profile2.png" alt="profile-2" />
                     </div>
-                    <div class="author__description">
+                    <div class="author__description text-center text-lg-left">
                       <h6 class="author__title">Jane Doe</h6>
                       <p class="author__designation">Housewife</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Slides testimonial ends -->
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
-
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev d-none"></div>
-              <div class="swiper-button-next d-none"></div>
+              <!-- Slides testimonial  ends -->
+              <!-- Slides testimonial started -->
+              <div class="swiper-slide">
+                <div class="testimonial bg--white">
+                  <p class="testimonial__quote text-center text-lg-left">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis enim dolores molestiae suscipit qui dolorem pariatur numquam esse, quod doloribus."</p>
+                  <div class="testimonial__author-wrapper d-lg-flex align-items-center">
+                    <div class="author__image-container d-flex justify-content-center justify-content-lg-start">
+                      <img src="./assets/images/testimonial-profiles/profile3.png" alt="profile-3" />
+                    </div>
+                    <div class="author__description text-center text-lg-left">
+                      <h6 class="author__title">Jane Doe</h6>
+                      <p class="author__designation">Housewife</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slides testimonial  ends -->
             </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev d-none"></div>
+            <div class="swiper-button-next d-none"></div>
           </div>
         </div>
       </div>
