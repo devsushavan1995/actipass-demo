@@ -94,7 +94,7 @@
               <nav class="nav-main d-none d-lg-flex">
                 <ul class="nav-main__menu">
                   <li class="menu__item">
-                    <a href="#" class="menu__item--link active-link"><span class="link__wrapper">Home</span></a>
+                    <a href="#" class="menu__item--link active"><span class="link__wrapper">Home</span></a>
                   </li>
                   <li class="menu__item">
                     <a href="#" class="menu__item--link"><span class="link__wrapper">Courses</span></a>
@@ -147,7 +147,7 @@
             <nav class="nav-main__mobile">
               <ul class="nav-main__menu pb-5">
                 <li class="menu__item">
-                  <a href="#" class="menu__item--link link-active"><span class="link__wrapper">Home</span></a>
+                  <a href="#" class="menu__item--link active"><span class="link__wrapper">Home</span></a>
                 </li>
                 <li class="menu__item">
                   <a href="#" class="menu__item--link"><span class="link__wrapper">Courses</span></a>
@@ -178,7 +178,7 @@
     </header>
     <!-- Hero section -->
     <section class="section hero-section d-flex align-items-center bg--light1">
-      <div class="hero-section__bg-overlay d-none d-md-none d-lg-block"></div>
+      <div class="hero-section__bg-overlay d-none"></div>
       <div class="container">
         <div class="row d-flex align-items-center">
           <div class="col-12 col-md-6 col-lg-6">
@@ -191,7 +191,7 @@
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-6">
-            <img src="/assets/images/banner/kids-png-23991.png" class="hero-section__image" alt="kids-image" />
+            <!-- <img src="/assets/images/banner/Asset_24x.png" class="hero-section__image" alt="kids-image" /> -->
           </div>
         </div>
       </div>
@@ -2245,134 +2245,122 @@
         <img src="./assets/images/random-icons/Medal.png" alt="" class="random__icons pos--left-top" data-aos="zoom-in-left" />
       </div>
     </section>
+    <!-- Stat section -->
+    <section class="section stat-section section__padding">
+      <div class="section__bg bg--primary"></div>
+      <div class="section__bg-overlay"></div>
+      <div class="container">
+        <h3 class="text-center text--light mb-5">Be a part of our global FUN-munity!</h3>
+        <div class="stat-wrapper">
+          <div class="row" id="counter">
+            <!-- single stat starts -->
+            <div class="col-12 col-md-4 col-lg-4">
+              <div class="stat mb-4">
+                <h2 class="stat__number counter">
+                  <span class="counter-value" data-count="20">0</span>
+                  +
+                </h2>
+                <h5 class="stat__title text--primary">Countries</h5>
+              </div>
+            </div>
+            <!-- single stat ends -->
+            <!-- single stat starts -->
+            <div class="col-12 col-md-4 col-lg-4">
+              <div class="stat mb-4">
+                <h2 class="stat__number counter">
+                  <span class="counter-value" data-count="15000">0</span>
+                  +
+                </h2>
+                <h5 class="stat__title text--primary">Happy Learners</h5>
+              </div>
+            </div>
+            <!-- single stat ends -->
+            <!-- single stat starts -->
+            <div class="col-12 col-md-4 col-lg-4">
+              <div class="stat counter">
+                <h2 class="stat__number">
+                  <span class="counter-value" data-count="1000000">0</span>
+                  +
+                </h2>
+                <h5 class="stat__title text--primary">Live Minutes Conducted</h5>
+              </div>
+            </div>
+            <!-- single stat ends -->
+          </div>
+        </div>
+      </div>
+      <div class="random__icons-wrapper">
+        <img src="./assets/images/random-icons/Champion Ranking.png" alt="" class="random__icons pos--left-bottom" data-aos="zoom-in-right" />
+      </div>
+    </section>
     <!-- Testimonials -->
     <section class="section testimonial-section section__padding bg--light1">
       <div class="container">
-        <div class="section__header text-center">
-          <h2 class="section__title text--primary">Testimonial</h2>
-          <div class="section__title--divider">
+        <div class="section__header text-center text-lg-left">
+          <h2 class="section__title text--primary">Testimonials</h2>
+          <div class="section__title--divider d-flex justify-content-center justify-content-lg-start">
             <img src="./assets/images/divider-icon.png" alt="divider-icon" />
           </div>
         </div>
-        <div class="section__content bg--white pb-4">
-          <!-- testimonial stat section -->
-          <div class="testimonial-stat pt-5 px-2 mb-5">
-            <h4 class="testimonial-stat__heading text-center text--primary mb-5">Be a part of our global FUN-munity!</h4>
-            <div class="row text-center">
-              <!-- single stat starts -->
-              <div class="col-12 col-md-4 col-lg-4">
-                <div class="stat__wrapper mb-4">
-                  <h3 class="stat__number">20+</h3>
-                  <h5 class="stat__title">Countries</h5>
-                </div>
-              </div>
-              <!-- single stat ends -->
-              <!-- single stat starts -->
-              <div class="col-12 col-md-4 col-lg-4">
-                <div class="stat__wrapper mb-4">
-                  <h3 class="stat__number">15000+</h3>
-                  <h5 class="stat__title">Happy Learners</h5>
-                </div>
-              </div>
-              <!-- single stat ends -->
-              <!-- single stat starts -->
-              <div class="col-12 col-md-4 col-lg-4">
-                <div class="stat__wrapper">
-                  <h3 class="stat__number">1,000,000+</h3>
-                  <h5 class="stat__title">Live Minutes Conducted</h5>
-                </div>
-              </div>
-              <!-- single stat ends -->
-            </div>
-          </div>
+        <div class="section__content">
           <!-- Slider main container -->
-          <h3 class="text--primary text-center mb-5">Parent’s voices</h3>
           <div class="swiper testimonial-swiper px-2">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-              <!-- Slides -->
+              <!-- Slides testimonial started -->
               <div class="swiper-slide">
                 <!--single testimonial slide started -->
-                <div class="testimonial">
-                  <div class="testimonial__body text-center text-lg-left">
-                    <div class="author__image">
-                      <img src="./assets/images/testimonial-profiles/profile1.png" alt="dummy-profile" />
+                <div class="testimonial bg--white">
+                  <p class="testimonial__quote">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis enim dolores molestiae suscipit qui dolorem pariatur numquam esse, quod doloribus."</p>
+                  <div class="testimonial__author-wrapper">
+                    <div class="author__image-container">
+                      <img src="./assets/images/testimonial-profiles/profile1.png" alt="profile-1" />
                     </div>
-                    <h6 class="testimonial__comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque omnis quisquam culpa quam voluptatum?</h6>
-                    <div class="testimonial__review-stars">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                    </div>
-                  </div>
-                  <div class="testimonial__author text-center text-lg-left">
-                    <div class="author__profile">
-                      <p class="author__name">Sunita Sen</p>
-                      <p class="author__designation">Aryan's Mom</p>
+                    <div class="author__description">
+                      <h6 class="author__title">Jane Doe</h6>
+                      <p class="author__designation">Housewife</p>
                     </div>
                   </div>
                 </div>
-                <!--single testimonial slide ends -->
               </div>
-              <div class="swiper-slide">
-                <!--single testimonial slide started -->
-                <div class="testimonial">
-                  <div class="testimonial__body text-center text-lg-left">
-                    <div class="author__image">
-                      <img src="./assets/images/testimonial-profiles/profile2.png" alt="dummy-profile" />
+              <!-- Slides testimonial ends -->
+                              <!--single testimonial slide started -->
+                              <div class="testimonial bg--white">
+                                <p class="testimonial__quote">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis enim dolores molestiae suscipit qui dolorem pariatur numquam esse, quod doloribus."</p>
+                                <div class="testimonial__author-wrapper">
+                                  <div class="author__image-container">
+                                    <img src="./assets/images/testimonial-profiles/profile1.png" alt="profile-1" />
+                                  </div>
+                                  <div class="author__description">
+                                    <h6 class="author__title">Jane Doe</h6>
+                                    <p class="author__designation">Housewife</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Slides testimonial ends -->
+                                            <!--single testimonial slide started -->
+                <div class="testimonial bg--white">
+                  <p class="testimonial__quote">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis enim dolores molestiae suscipit qui dolorem pariatur numquam esse, quod doloribus."</p>
+                  <div class="testimonial__author-wrapper">
+                    <div class="author__image-container">
+                      <img src="./assets/images/testimonial-profiles/profile1.png" alt="profile-1" />
                     </div>
-                    <h6 class="testimonial__comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque omnis quisquam culpa quam voluptatum?</h6>
-                    <div class="testimonial__review-stars">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                    </div>
-                  </div>
-                  <div class="testimonial__author text-center text-lg-left">
-                    <div class="author__profile">
-                      <p class="author__name">Sunita Sen</p>
-                      <p class="author__designation">Aryan's Mom</p>
+                    <div class="author__description">
+                      <h6 class="author__title">Jane Doe</h6>
+                      <p class="author__designation">Housewife</p>
                     </div>
                   </div>
                 </div>
-                <!--single testimonial slide ends -->
               </div>
-              <div class="swiper-slide">
-                <!--single testimonial slide started -->
-                <div class="testimonial">
-                  <div class="testimonial__body text-center text-lg-left">
-                    <div class="author__image">
-                      <img src="./assets/images/testimonial-profiles/profile3.png" alt="dummy-profile" />
-                    </div>
-                    <h6 class="testimonial__comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, atque omnis quisquam culpa quam voluptatum?</h6>
-                    <div class="testimonial__review-stars">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                    </div>
-                  </div>
-                  <div class="testimonial__author text-center text-lg-left">
-                    <div class="author__profile">
-                      <p class="author__name">Sunita Sen</p>
-                      <p class="author__designation">Aryan's Mom</p>
-                    </div>
-                  </div>
-                </div>
-                <!--single testimonial slide ends -->
-              </div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+              <!-- Slides testimonial ends -->
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev d-none"></div>
-            <div class="swiper-button-next d-none"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev d-none"></div>
+              <div class="swiper-button-next d-none"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -2527,7 +2515,7 @@
                       </a>
                     </li> -->
                   </ul>
-                  <a href="#" class="button button__primary">Know More</a>
+                  <a href="#" class="button button__primary button__primary--no-shadow">Know More</a>
                 </div>
               </div>
             </div>

@@ -2,13 +2,22 @@ $(document).ready(function () {
   //animated on scroll initialization
   AOS.init();
 
-  // sticky navigation
+  /* sticky navigation
   var headerBottomEl = $('.header .header__bottom');
   $(window).on('scroll', function () {
     if ($(window).scrollTop() > 60) {
       headerBottomEl.addClass('header__bottom--sticky');
     } else {
       headerBottomEl.removeClass('header__bottom--sticky');
+    }
+  });
+  */
+  var header = $('.header');
+  $(window).on('scroll', function () {
+    if ($(window).scrollTop() > 60) {
+      header.addClass('header--sticky');
+    } else {
+      header.removeClass('header--sticky');
     }
   });
 
@@ -36,6 +45,16 @@ $(document).ready(function () {
       searchFormBtnCloseEl.on('click', function () {
         searchFormWrapperEl.removeClass('search-form__wrapper--active');
       });
+    }
+  });
+  // adding classes to active pages
+  var current = location.pathname;
+  $('nav ul li a').each(function () {
+    var $this = $(this);
+    console.log(current);
+    // we check comparison between current page and attribute redirection.
+    if ($this.attr('href') === current) {
+      $this.addClass('active');
     }
   });
   // hero section swiper
@@ -123,6 +142,37 @@ $(document).ready(function () {
     },
   });
 
+  // stat section counter
+  var a = 0;
+  $(window).scroll(function () {
+    var oTop = $('#counter').offset().top - window.innerHeight;
+    if (a == 0 && $(window).scrollTop() > oTop) {
+      $('.counter-value').each(function () {
+        var $this = $(this),
+          countTo = $this.attr('data-count');
+        $({
+          countNum: $this.text(),
+        }).animate(
+          {
+            countNum: countTo,
+          },
+
+          {
+            duration: 3000,
+            easing: 'swing',
+            step: function () {
+              $this.text(Math.floor(this.countNum));
+            },
+            complete: function () {
+              $this.text(this.countNum);
+              //alert('finished');
+            },
+          }
+        );
+      });
+      a = 1;
+    }
+  });
   // testimonial section swiper
   var swiperHero = new Swiper('.testimonial-swiper', {
     // Optional parameters
