@@ -641,12 +641,6 @@ h6 {
   .header .nav__wrapper .search-form input {
     width: 360px;
   }
-}
-@media (min-width: 992px) {
-  .header .nav__wrapper .search-form input {
-    width: 400px;
-  }
-}
 /* Header - header bottom ends */
 
 /* Search Form */
@@ -696,6 +690,16 @@ h6 {
   border: none;
   color: #fff;
   border-radius: 0 10px 10px 0;
+}
+@media (min-width: 768px) {
+  .search-form input {
+    width: 320px;
+  }
+}
+@media (min-width: 992px) {
+  .search-form input {
+    width: 400px;
+  }
 }
 /* Footer */
 .footer {
@@ -1157,7 +1161,7 @@ h6 {
   padding: 1.5rem 1.875rem;
 }
 .testimonial-section .testimonial-swiper {
-  padding: 0 0 2rem 0;
+  padding: 0 0 3rem 0;
 }
 .testimonial-section .testimonial .testimonial__quote {
   font-style: italic;
