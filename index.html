@@ -61,7 +61,7 @@
                   </select>
                 </li>
                 <!-- Choose location -->
-                <li class="list__item d-inline-block mx-4">
+                <li class="list__item d-inline-block mx-2 mx-md-4">
                   <select class="user-action--location">
                     <option selected>Select City</option>
                     <option value="Kolkata">Kolkata</option>
@@ -2616,11 +2616,15 @@
                       <div class="input__container">
                         <input type="password" name="signInPassword" placeholder="Password" required />
                       </div>
+                      <div class="form-group form-check input__container">
+                        <input type="checkbox" class="form-check-input input__checkbox" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Keep me signed in</label>
+                      </div>
                       <button type="submit" class="button button__primary form__button--submit">Sign In</button>
                     </form>
                     <!-- sign in with google or facebook-->
                     <div class="additonal-sign-in-wrapper">
-                      <div class="additonal-sign-in__heading">
+                      <div class="additonal-sign-in__heading d-flex justify-content-center">
                         <div class="heading__divider"></div>
                         <div class="heading__text">Or Sign in with</div>
                       </div>
@@ -2660,7 +2664,7 @@
                   <!-- sign up box ends-->
                 </div>
               </div>
-              <div class="col-12 col-md-6 col-lg-6">
+              <div class="col-12 col-md-6 col-lg-6 d-flex align-self-md-center">
                 <div class="sign-in__image-container">
                   <img src="./assets/images/sign-in-bg.png" alt="Sign-in Background" />
                 </div>

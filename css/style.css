@@ -86,14 +86,14 @@ body {
   overflow-x: hidden;
   position: relative;
   padding-left: 0;
-  padding-right: 0;
+  padding-right: 0!important;
   padding-top: 0;
   padding-bottom: 0;
 }
-body.modal-open {
-  overflow: auto !important;
+body.body--no-scroll {
+  overflow: hidden!important;
 }
-body.modal-open[style] {
+.modal {
   padding-right: 0px !important;
 }
 ul {
@@ -126,9 +126,6 @@ input:focus {
 input {
   margin: 0;
   padding: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 /* Typography */
@@ -1442,7 +1439,7 @@ h6 {
   border-radius: 10px;
 }
 .modal__sign-in .modal-body {
-  padding: 3.5rem 2.25rem;
+  padding: 2rem 2.25rem;
 }
 .modal__sign-in .user-action-wrapper {
   width: 200%;
@@ -1473,7 +1470,7 @@ h6 {
 }
 .modal__sign-in .user-action__heading {
   color: var(--colorPrimary);
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1rem 0;
 }
 .modal__sign-in .user-action__text {
   color: var(--colorPara);
@@ -1502,6 +1499,11 @@ h6 {
   color: var(--colorPrimary);
   border-radius: 30px;
 }
+.modal__sign-in .user-action__form .input__container input.input__checkbox {
+  width: auto;
+  border-radius: 5px;
+  padding: auto;
+}
 .modal__sign-in .user-action__form .input__container input::placeholder {
   color: var(--colorPara);
 }
@@ -1509,9 +1511,50 @@ h6 {
   width: 100%;
   padding: 0.9375rem;
 }
-.modal__sign-in .additonal-sign-in-wrapper {
+.modal__sign-in .additonal-sign-in__heading {
   position: relative;
+  margin: 0 0 1rem 0;
 }
+.modal__sign-in .additonal-sign-in__heading .heading__divider {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+}
+.modal__sign-in .additonal-sign-in__heading .heading__text {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background:#fff;
+  z-index: 2;
+  color: var(--colorPrimary);
+  font-weight: 600;
+}
+.modal__sign-in .additonal-sign-in-wrapper .additonal-sign-in__button {
+  width: 48px;
+  height: 48px;
+  background: #444;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  margin: 0 0.2rem;
+  font-size: 1.25rem;
+}
+.modal__sign-in .additonal-sign-in-wrapper .additonal-sign-in__button.additonal-sign-in__button--google {
+  background: #ea4335;
+}
+.modal__sign-in .additonal-sign-in-wrapper .additonal-sign-in__button.additonal-sign-in__button--facebook {
+  background: #0676e8;
+}
+
 
 /* admin dashboard styles */
 /* dashboard sidebar starts */
