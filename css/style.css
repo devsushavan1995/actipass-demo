@@ -1484,6 +1484,7 @@ h6 {
   box-shadow: none;
   color: var(--colorRandomPink);
   font-weight: 600;
+  text-decoration: underline;
 }
 .modal__sign-in .user-action__text .user-action__button:hover {
   color: var(--colorRandomGreen);

@@ -54,10 +54,19 @@ $(document).ready(function () {
   // sign in modal actions
   var btnDirectSignUpEl = $('.modal__sign-in .user-action__button--sign-up');
   var btnDirectSignInEl = $('.modal__sign-in .user-action__button--sign-in');
-  var userActionWrapperEl = $('modal__sign-in .user-action-wrapper');
+  var userActionWrapperEl = $('.modal__sign-in .user-action-wrapper');
   btnDirectSignUpEl.on('click', function () {
-    userActionWrapperEl.addClass('user-action-wrapper-active');
-    if (userActionWrapperEl.hasClass('user-action-wrapper-active')) {
+    userActionWrapperEl.addClass('user-action-wrapper--slide-left');
+    if (userActionWrapperEl.hasClass('user-action-wrapper--slide-left')) {
+      btnDirectSignInEl.on('click', function () {
+        userActionWrapperEl.removeClass('user-action-wrapper--slide-left');
+      });
+    }
+  });
+  // back to login state after closing sign in modal
+  $('#modalSignIn').on('hidden.bs.modal', function (event) {
+    if (userActionWrapperEl.hasClass('user-action-wrapper--slide-left')) {
+      userActionWrapperEl.removeClass('user-action-wrapper--slide-left');
     }
   });
   // adding classes to active pages
