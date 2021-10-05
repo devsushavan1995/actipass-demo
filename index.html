@@ -28,29 +28,24 @@
       <div class="header__top bg--primary">
         <div class="container">
           <div class="header__top-wrapper d-flex justify-content-center justify-content-lg-between align-items-center">
-            <!-- user action links -->
-            <div class="header__contact-wrapper d-none d-lg-flex align-items-center">
-              <!-- single icon box started -->
-              <div class="contact__icon-box d-flex align-items-center mr-4">
-                <div class="contact__icon mr-2">
-                  <i class="bi bi-envelope"></i>
+            <!--search for large screen -->
+            <div class="header__search d-none d-lg-block">
+              <form action="" class="search-form-lg">
+                <div class="form__container d-flex">
+                  <input type="text" name="activity" class="form__input--text" placeholder="Search activites" />
+                  <select class="search__category--activities">
+                    <option selected>All Activities</option>
+                    <option value="Activity 1">Activity 1</option>
+                    <option value="Activity 2">Activity 2</option>
+                    <option value="Activity 3">Activity 3</option>
+                  </select>
+                  <button type="submit" class="search-form__button--submit button__primary">
+                    <i class="bi bi-search"></i>
+                  </button>
                 </div>
-                <div class="contact__text">
-                  <a href="mailto:contact@domain.com">contact@domain.com</a>
-                </div>
-              </div>
-              <!-- single icon box ends -->
-              <!-- single icon box started -->
-              <div class="contact__icon-box d-flex align-items-center">
-                <div class="contact__icon mr-2">
-                  <i class="bi bi-telephone"></i>
-                </div>
-                <div class="contact__text">
-                  <a href="tel:+123 4567890">+123 4567890</a>
-                </div>
-              </div>
-              <!-- single icon box ends -->
+              </form>
             </div>
+            <!-- user action links -->
             <div class="header__user-actions text-right">
               <ul class="user-actions__list d-flex align-items-center">
                 <!-- choose currency -->
@@ -111,7 +106,7 @@
                   <li class="menu__item">
                     <a href="#" class="menu__item--link"><span class="link__wrapper">Contact</span></a>
                   </li>
-                  <li class="menu__item">
+                  <li class="menu__item d-none">
                     <button class="nav__button--mobile-search">
                       <i class="bi bi-search"></i>
                     </button>
@@ -2479,7 +2474,7 @@
     </section>
     <!-- Footer -->
     <footer class="footer bg--primary">
-      <div class="footer__top bg--skyblue">
+      <!-- <div class="footer__top bg--skyblue">
         <div class="container">
           <div class="subscribe-form__wrapper text-center">
             <h3 class="subscribe-form__heading mb-2">Join now and get<br />30% off on your first course</h3>
@@ -2495,20 +2490,109 @@
         <div class="subscribe__bg">
           <img src="./assets/images/email-box.png" alt="email-box" />
         </div>
-      </div>
+      </div> -->
       <div class="footer__main">
         <div class="container">
           <div class="row">
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-12 col-lg-6">
+              <h4 class="footer__block-heading text--light text-center">Quick Links</h4>
+              <div class="row">
+                <div class="col-12 col-md-4 col-lg-4 pl-md-0">
+                  <ul class="footer__menu text-center text-md-left">
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Basket Ball Coaching</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Art & Craft Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Music Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Ballet Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Tabla Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Guitar Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Yoga Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Cricket Coaching</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4 mb-md-5 mb-lg-0">
+                  <ul class="footer__menu text-center text-md-left">
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Basket Ball Coaching</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Art & Craft Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Music Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Ballet Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Tabla Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Guitar Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Yoga Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Cricket Coaching</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4 pr-md-0">
+                  <ul class="footer__menu text-center text-md-left">
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Basket Ball Coaching</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Art & Craft Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Music Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Ballet Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Tabla Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Guitar Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Yoga Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Cricket Coaching</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-6">
               <div class="footer__about">
-                <div class="about__logo d-flex justify-content-center justify-content-md-start">
+                <div class="about__logo d-flex justify-content-center">
                   <a href="#" class="d-inline-block">
                     <img src="./assets/images/actipass_logo.png" alt="logo-light" />
                   </a>
                 </div>
-                <p class="about__description text--gray text-center text-md-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iure qui blanditiis consequatur unde architecto repudiandae at amet nam aperiam?</p>
-                <div class="about__social d-flex align-items-center justify-content-center justify-content-md-start">
-                  <ul class="social-icons d-flex justify-content-center justify-content-md-start">
+                <p class="about__description text--gray text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iure qui blanditiis consequatur unde architecto repudiandae at amet nam aperiam?</p>
+                <div class="about__social d-flex align-items-center justify-content-center">
+                  <ul class="social-icons d-flex justify-content-center">
                     <li class="social-icons__item">
                       <a href="#" class="social-icons__item--link">
                         <i class="bi bi-facebook"></i>
@@ -2533,64 +2617,44 @@
                   <a href="#" class="button button__primary">Know More</a>
                 </div>
               </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <h4 class="footer__block-heading text--light text-center text-md-left">Popular Category</h4>
-              <ul class="footer__menu text-center text-md-left">
-                <li class="menu__item">
-                  <a href="#" class="menu__item--link">Sports</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__item--link">Wellness</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__item--link">Performing Arts</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__item--link">Education</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-              <h4 class="footer__block-heading text--light text-center text-md-left">Useful Links</h4>
-              <ul class="footer__menu text-center text-md-left">
-                <li class="menu__item">
-                  <a href="#" class="menu__item--link">About Us</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__item--link">Blogs</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__item--link">Events</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__item--link">Become a Partner</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-12 col-md-6 col-lg-2">
-              <h4 class="footer__block-heading text--light text-center text-md-left">Help</h4>
-              <ul class="footer__menu text-center text-md-left">
-                <li class="menu__item">
-                  <a href="#" class="menu__item--link">Help Center</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__item--link">Contact Us</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__item--link">FAQs</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#" class="menu__item--link">Ask Experts</a>
-                </li>
-              </ul>
+              <div class="subscribe-form__wrapper text-center">
+                <h6 class="subscribe-form__description text--white mb-3">Get Quick Updates From Actipass</h6>
+                <form action="#" class="subscribe-form">
+                  <div class="input__container d-md-flex align-items-center">
+                    <input type="email" name="email" placeholder="Your Email" required />
+                    <button class="button button__primary">
+                      <i class="uil uil-message"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="footer__bottom">
         <div class="container">
-          <p class="footer__copyright-text text-center text--gray">©2021 Actipass Website. All rights reserved.</p>
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-6 pl-lg-0 order-1 order-lg-0">
+              <p class="footer__copyright-text text-center text-lg-left text--gray">©2021 Actipass Website. All rights reserved.</p>
+            </div>
+            <div class="col-12 col-md-12 col-lg-6 d-flex justify-content-center justify-content-lg-end order-0 order-lg-1">
+              <ul class="footer__menu-bottom text-center text-lg-right">
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">About Us</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">Contact Us</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">Terms & Conditions</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
@@ -2603,7 +2667,7 @@
           </button>
           <div class="modal-body">
             <div class="row">
-              <div class="col-12 col-md-6 col-lg-6 overflow-hidden">
+              <div class="col-12 col-md-12 col-lg-6 overflow-hidden">
                 <div class="user-action-wrapper d-flex">
                   <!-- sign in box starts -->
                   <div class="user-action user-action--sign-in">
@@ -2617,8 +2681,8 @@
                         <input type="password" name="signInPassword" placeholder="Password" required />
                       </div>
                       <div class="form-group form-check input__container">
-                        <input type="checkbox" class="form-check-input input__checkbox" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Keep me signed in</label>
+                        <input type="checkbox" class="form-check-input input__checkbox" id="exampleCheck1" />
+                        <label class="form-check-label ml-2" for="signedin">Keep me signed in</label>
                       </div>
                       <button type="submit" class="button button__primary form__button--submit">Sign In</button>
                     </form>
@@ -2658,13 +2722,13 @@
                       <div class="input__container">
                         <input type="password" name="signUpConPassword" placeholder="Confirm Password" required />
                       </div>
-                      <button type="submit" class="button button__primary">Sign Up</button>
+                      <button type="submit" class="button button__primary form__button--submit">Sign Up</button>
                     </form>
                   </div>
                   <!-- sign up box ends-->
                 </div>
               </div>
-              <div class="col-12 col-md-6 col-lg-6 d-flex align-self-md-center">
+              <div class="col-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-center">
                 <div class="sign-in__image-container">
                   <img src="./assets/images/sign-in-bg.png" alt="Sign-in Background" />
                 </div>
