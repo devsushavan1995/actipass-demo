@@ -15,9 +15,9 @@ $(document).ready(function () {
   var header = $('.header');
   $(window).on('scroll', function () {
     if ($(window).scrollTop() > 50) {
-      header.addClass('header__bg--lighter header__on-scroll');
+      header.addClass('header__bg--lighter header--on-scroll');
     } else {
-      header.removeClass('header__bg--lighter header__on-scroll');
+      header.removeClass('header__bg--lighter header--on-scroll');
     }
   });
 
@@ -49,6 +49,15 @@ $(document).ready(function () {
         $('body').css('overflow-y', 'scroll');
         searchFormWrapperEl.removeClass('search-form__wrapper--active');
       });
+    }
+  });
+  // sign in modal actions
+  var btnDirectSignUpEl = $('.modal__sign-in .user-action__button--sign-up');
+  var btnDirectSignInEl = $('.modal__sign-in .user-action__button--sign-in');
+  var userActionWrapperEl = $('modal__sign-in .user-action-wrapper');
+  btnDirectSignUpEl.on('click', function () {
+    userActionWrapperEl.addClass('user-action-wrapper-active');
+    if (userActionWrapperEl.hasClass('user-action-wrapper-active')) {
     }
   });
   // adding classes to active pages
