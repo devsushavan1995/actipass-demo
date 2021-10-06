@@ -70,15 +70,7 @@ $(document).ready(function () {
     }
   });
   // adding classes to active pages
-  var current = location.pathname;
-  $('nav ul li a').each(function () {
-    var $this = $(this);
-    console.log(current);
-    // we check comparison between current page and attribute redirection.
-    if ($this.attr('href') === current) {
-      $this.addClass('active');
-    }
-  });
+  $('nav li a[href="/' + location.pathname.split("/")[1] + '"]').addClass('active');
   // hero section swiper
   var swiperHero = new Swiper('.swiper-hero', {
     // Optional parameters
@@ -254,4 +246,16 @@ $(document).ready(function () {
     dashboardContentAreaEl.toggleClass('dashboard__content-area--fluid');
     dashboardTopbarEl.toggleClass('dashboard__topbar--fluid');
   });
+
+  // toggle buttons for select activity
+  //$('input.cb-value').prop("checked", true);
+$('.cb-value').click(function() {
+  var mainParent = $(this).parent('.toggle-button');
+  if($(mainParent).find('input.cb-value').is(':checked')) {
+    $(mainParent).addClass('toggle-button--active');
+  } else {
+    $(mainParent).removeClass('toggle-button--active');
+  }
+
+})
 });
