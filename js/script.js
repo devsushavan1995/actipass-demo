@@ -69,8 +69,6 @@ $(document).ready(function () {
       userActionWrapperEl.removeClass('user-action-wrapper--slide-left');
     }
   });
-  // adding classes to active pages
-  $('nav li a[href="/' + location.pathname.split("/")[1] + '"]').addClass('active');
   // hero section swiper
   var swiperHero = new Swiper('.swiper-hero', {
     // Optional parameters
@@ -157,6 +155,7 @@ $(document).ready(function () {
   });
 
   // stat section counter
+  /*
   var a = 0;
   $(window).scroll(function () {
     var oTop = $('#counter').offset().top - window.innerHeight;
@@ -187,6 +186,7 @@ $(document).ready(function () {
       a = 1;
     }
   });
+  */
   // testimonial section swiper
   var swiperHero = new Swiper('.testimonial-swiper', {
     // Optional parameters
@@ -249,13 +249,25 @@ $(document).ready(function () {
 
   // toggle buttons for select activity
   //$('input.cb-value').prop("checked", true);
-$('.cb-value').click(function() {
-  var mainParent = $(this).parent('.toggle-button');
-  if($(mainParent).find('input.cb-value').is(':checked')) {
-    $(mainParent).addClass('toggle-button--active');
-  } else {
-    $(mainParent).removeClass('toggle-button--active');
+  $('.cb-value').click(function () {
+    var mainParent = $(this).parent('.toggle-button');
+    if ($(mainParent).find('input.cb-value').is(':checked')) {
+      $(mainParent).addClass('toggle-button--active');
+    } else {
+      $(mainParent).removeClass('toggle-button--active');
+    }
+  });
+  // adding active class to nav links as per page
+  // Get current path and find target link
+  var path = window.location.pathname.split("/").pop();
+  console.log(path);
+  // Account for home page with empty path
+  if ( path == '' ) {
+    path = 'index.html';
   }
-
-})
+      
+  var target = $('nav a[href="'+path+'"]');
+  console.log(target);
+  // Add active class to target link
+  target.addClass('active');
 });

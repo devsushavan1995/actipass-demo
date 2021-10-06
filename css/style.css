@@ -2028,6 +2028,7 @@ h6 {
 .onepass-wrapper .onepass-activity .activity__week-day,
 .onepass-wrapper .onepass-activity .user-action__select-tutor {
   width: 110px;
+  text-align: left;
 }
 .onepass-wrapper .onepass-activity .user-action__select-activity {
   width: 150px;
@@ -2054,6 +2055,98 @@ h6 {
 .onepass-wrapper .onepass-activity .user-action__course-time-wrapper .user-action__course-time  {
   width: 100px;
 }
+.onepass-wrapper .onepass-activity .onepass-activity__button--book {
+  margin-left: 0.5rem;
+}
+
+/* Browse vendor */
+.modal-browse-vendors .vendor {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  border-radius: 10px;
+}
+.modal-browse-vendors .modal-header {
+  padding-top: 4rem;
+}
+.modal-browse-vendors .browse-vendors__filter-container .form-control {
+  width: 250px;
+}
+.modal-browse-vendors .modal-browse-vendors__button--close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 1.5rem;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--colorRandomSkyblue);
+  opacity: 1!important;
+  border-radius: 5px;
+}
+.modal-browse-vendors .modal-browse-vendors__button--close span {
+  margin-top: -3px;
+}
+.vendor .vendor__fee {
+  color: var(--colorPrimary);
+  font-size: 0.9375rem;
+}
+.vendor .vendor__fee .fee {
+  font-size: 1.15rem;
+  color: var(--colorRandomGreen);
+  margin-left: 0.5rem;
+}
+.vendor .vendor__review-container {
+  margin-bottom: 0.75rem;
+}
+.vendor .vendor__review-container i {
+  color: var(--colorAccent);
+}
+.vendor .vendor__specification .specification__button {
+  padding: 0.35rem;
+  font-size: 0.85rem;
+  margin-right: 0.35rem;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  display: block;
+}
+.vendor .vendor__specification .specification__button.specification__button--one-pass {
+  background: var(--colorRandomPurple);
+}
+.vendor .vendor__specification .specification__button.specification__button--play-video {
+  background: var(--colorRandomSkyblue);
+}
+.vendor .vendor__specification .specification__button.specification__button--verified {
+  background: var(--colorRandomGreen);
+}
+.vendor .vendor__specification .specification__button.specification__button--top-5 {
+  background: var(--colorRandomPink);
+}
+.vendor .vendor__specification .specification__button .button__text {
+  margin-right: 0.45rem;
+}
+.vendor .eligibility-list {
+  margin-top: 1rem;
+}
+.vendor .eligibility-list .list-item {
+  margin-right: 0.5rem;
+  line-height: 1em;
+  font-size: 0.9375rem;
+  color: var(--colorPrimary);
+  font-weight: 700;
+}
+.vendor .eligibility-list .list-item:nth-child(2) {
+  padding: 0 0.5rem;
+  border: 1px solid var(--colorPrimary);
+  border-width: 0 1px 0 1px;
+}
+/* .vendor .vendor__button-cta-wrapper {
+margin: 1rem 0 0 0;
+} */
+
 
 
 
