@@ -2414,6 +2414,10 @@ margin: 1rem 0 0 0;
 }
 
 /* Market Place courses */
+.market-place-wrapper .market-place__header .market-place-course--filter.form-control {
+  width: 135px;
+  font-size: 0.8rem;
+}
 .market-place-wrapper .course-container {
   display: none;
 }
@@ -2484,3 +2488,16 @@ margin: 1rem 0 0 0;
 .market-place-wrapper .course .course__cta--wishlist .cta__link-title {
   display: none;
 }
+@media (min-width: 768px) {
+  .market-place-wrapper .market-place__header .market-place-course--filter.form-control {
+    width: 175px;
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 992px) {
+  .market-place-wrapper .market-place__header .market-place-course--filter.form-control {
+    width: 250px;
+    font-size: 0.9375rem;
+  }
+}
+

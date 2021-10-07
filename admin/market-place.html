@@ -184,7 +184,21 @@
         <!-- dashboard content starts -->
         <div class="dashboard__content">
           <div class="market-place-wrapper">
-            <div class="market-place__header">filter will come here</div>
+            <div class="market-place__header d-flex justify-content-between w-100 mb-5">
+              <!-- filters -->
+              <select class="market-place-course--filter form-control cat1">
+                <option value="cat-all">Filter All</option>
+                <option value="cat-red">Filter Conditon 1</option>
+                <option value="cat-blue">Filter Conditon 2</option>
+                <option value="cat-green">Filter Conditon 3</option>
+              </select>
+              <!-- sort by -->
+              <select class="market-place-course--filter form-control cat2">
+                <option value="cat-all">Sort Default</option>
+                <option value="cat-even">Sort Conditon 1</option>
+                <option value="cat-odd">Sort Conditon 2</option>
+              </select>
+            </div>
             <div class="market-place__body">
               <div class="market-place__courses-wrapper row flex-wrap">
                 <!-- single course item starts -->
@@ -608,7 +622,7 @@
                 <button class="button button__secondary course__button--load-more d-flex align-items-center" id="courseButtonLoadMore">
                   <span class="spinner-border spinner-border-sm mr-2 d-none" role="status" aria-hidden="true"></span>
                   <span class="button__text">Load More</span>
-                  </button>
+                </button>
               </div>
             </div>
           </div>
