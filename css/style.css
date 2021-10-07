@@ -2287,7 +2287,7 @@ h6 {
 .modal-browse-vendors .modal-browse-vendors__button--close span {
   margin-top: -3px;
 }
-.vendor .vendor__image-container {
+.vendor .vendor__image-container img {
   border-radius: 5px;
 }
 .vendor .vendor__content {
@@ -2428,6 +2428,16 @@ margin: 1rem 0 0 0;
   overflow: hidden;
   position: relative;
   margin-bottom: 1.5rem;
+}
+.market-place-wrapper .course .course__image-container{
+  overflow: hidden;
+  display: block;
+}
+.market-place-wrapper .course .course__image-container img {
+  transition: all 0.3s ease;
+}
+.market-place-wrapper .course:hover .course__image-container img {
+  transform: scale(1.1);
 }
 .market-place-wrapper .course .course__body {
   padding: 1.25rem;
