@@ -13,11 +13,10 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Actipass | Dashboard</title>
+    <title>Actipass | One Pass</title>
   </head>
   <body>
     <section class="dashboard-wrapper">
-      <!-- <div class="dashboard__sidebar-backside"></div> -->
       <div class="dashboard__sidebar">
         <!-- sidebar logo starts -->
         <div class="sidebar__logo-wrapper d-flex justify-content-between">
@@ -184,96 +183,7 @@
         <!-- dashboard top navigation ends -->
         <!-- dashboard content starts -->
         <div class="dashboard__content">
-          <!-- Button trigger modal -->
-          <button type="button" class="button button__primary mb-2" data-toggle="modal" data-target="#addChildModal">Add Child</button>
-          <button type="button" class="button button__primary ml-none ml-sm-2" data-toggle="modal" data-target="#selectChildModal">Select Child</button>
 
-          <!-- Add child Modal -->
-          <div class="modal fade modal__child-add" id="addChildModal" tabindex="-1" aria-labelledby="addChildModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content border-0">
-                <button type="button" class="close modal__button--close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="modal-body p-0">
-                  <div class="form__addChild--wrapper d-flex flex-wrap">
-                    <div class="form__addChild-container">
-                      <h4 class="addChild__title">Every Child Is Special</h4>
-                      <form action="#" class="form__addChild">
-                        <div class="input__container">
-                          <label for="Username">Child Name</label>
-                          <input type="text" name="username" placeholder="Username or email" required />
-                        </div>
-                        <div class="input__container">
-                          <label for="dateofbirth">Date of Birth</label>
-                          <input type="date" name="dob" placeholder="2020-01-01" required />
-                        </div>
-                        <button type="submit" class="button button__primary">Save</button>
-                      </form>
-                      <div class="child-profile__container">
-                        <button class="button button__primary child-profile__button--add">
-                          <span class="button__text">Add Child</span>
-                          <span class="icon"><i class="bi bi-plus"></i></span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="form__addChild-bg">
-                      <img src="/assets/images/undraw_children_4rtb.svg" alt="illustration1" />
-                    </div>
-                  </div>
-                </div>
-                <!-- <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div> -->
-              </div>
-            </div>
-          </div>
-          <!-- Add child Modal ends -->
-          <!-- Select Child Modal starts -->
-          <div class="modal fade modal__child-add modal__child-select" id="selectChildModal" tabindex="-1" aria-labelledby="addChildModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content border-0">
-                <button type="button" class="close modal__button--close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="modal-body p-0">
-                  <div class="form__addChild--wrapper d-flex flex-wrap">
-                    <div class="form__addChild-container">
-                      <h4 class="addChild__title mb-4">Every Child Is Special</h4>
-                      <ul class="child-profile__saved mb-4">
-                        <li class="child-profile__saved-item mb-3 d-flex align-items-center">
-                          <div class="child-profile__image mr-3">
-                            <img src="/assets/images/child1.jpg" alt="child1" />
-                          </div>
-                          <h6 class="child-profile__title">Hiyaan Shah</h6>
-                        </li>
-                        <li class="child-profile__saved-item mb-3 d-flex align-items-center">
-                          <div class="child-profile__image mr-3">
-                            <img src="/assets/images/child2.jpg" alt="child2" />
-                          </div>
-                          <h6 class="child-profile__title">Sourav Shah</h6>
-                        </li>
-                      </ul>
-                      <div class="child-profile__container">
-                        <button class="button button__primary child-profile__button--add">
-                          <span class="button__text">Add Child</span>
-                          <span class="icon"><i class="bi bi-plus"></i></span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="form__addChild-bg">
-                      <img src="/assets/images/selectchild-bg.svg" alt="illustration2" />
-                    </div>
-                  </div>
-                </div>
-                <!-- <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div> -->
-              </div>
-            </div>
-          </div>
         </div>
         <!-- dashboard content ends -->
         <!-- dashboard footer starts -->

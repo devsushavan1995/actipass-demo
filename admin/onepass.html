@@ -119,6 +119,14 @@
               </a>
             </li>
             <!-- single link item ends -->
+            <!-- single link item starts -->
+            <li class="menu__item">
+              <a href="../admin/market-place.html" class="menu__item--link">
+                <span class="link__icon"><i class="uil uil-store"></i></span>
+                <span class="link__title">Market Place</span>
+              </a>
+            </li>
+            <!-- single link item ends -->
           </ul>
         </nav>
         <!-- sidebar menu ends -->
@@ -176,15 +184,15 @@
         <!-- dashboard content starts -->
         <div class="dashboard__content">
           <div class="onepass-wrapper">
-            <div class="onepass__header mb-4 d-flex justify-content-between align-items-center">
+            <div class="onepass__header mb-4 d-md-flex justify-content-between align-items-center">
               <h6 class="onepass__heading m-0">Let's Plan Your Activities For Your First Week</h6>
-              <a href="#" class="button button__secondary">Next Page</a>
+              <a href="#" class="button button__secondary d-none d-md-inline-block">Next Page</a>
             </div>
             <div class="onepass__body">
               <!-- single activity booking -->
-              <form action="#" class="onepass-activity d-flex align-items-center justify-content-between bg--white mb-4">
+              <form action="#" class="onepass-activity d-md-flex flex-wrap flex-xl-nowrap justify-content-between bg--white mb-4">
                 <input class="activity__week-day" type="text" placeholder="Monday" value="Monday" readonly />
-                <div class="activity__user-action d-flex align-items-center">
+                <div class="activity__user-action d-md-flex flex-wrap align-items-center justify-content-between">
                   <select class="form-control user-action__select-activity">
                     <option selected>Football</option>
                     <option value="Cricket">Cricket</option>
@@ -194,7 +202,7 @@
                   <input type="button" class="button button__secondary user-action__button--browse-vendor" data-toggle="modal" data-target="#onepassBrowseVendor" value="Browse Vendors" />
                   <input class="user-action__select-tutor" type="text" placeholder="Rajguru" value="Rajguru" readonly />
                   <input type="date" name="activityDate" class="form-control user-action__select-date" />
-                  <div class="user-action__course-time-wrapper d-flex align-items-center">
+                  <div class="user-action__course-time-wrapper d-flex flex-lg-wrap align-items-center">
                     <label for="course-time mr-1">Time:</label>
                     <input class="user-action__course-time" type="text" placeholder="Time: 15:00-16:00" value="15:00-16:00" readonly />
                   </div>
@@ -202,29 +210,9 @@
                 <button type="submit" class="button button__primary onepass-activity__button--book">Book</button>
               </form>
               <!-- single activity booking -->
-              <form action="#" class="onepass-activity d-flex align-items-center justify-content-between bg--white mb-4">
+              <form action="#" class="onepass-activity d-md-flex flex-wrap flex-xl-nowrap justify-content-between bg--white mb-4">
                 <input class="activity__week-day" type="text" placeholder="Tuesday" value="Tuesday" readonly />
-                <div class="activity__user-action d-flex align-items-center">
-                  <select class="form-control user-action__select-activity">
-                    <option selected>Football</option>
-                    <option value="Cricket">Cricket</option>
-                    <option value="Karate">Karate</option>
-                    <option value="Basketball">Basketball</option>
-                  </select>
-                  <input type="button" class="button button__secondary user-action__button--browse-vendor" data-toggle="modal" data-target="#onepassBrowseVendor" value="Browse Vendors" />
-                  <input class="user-action__select-tutor" type="text" placeholder="Nupur" value="Nupur" readonly />
-                  <input type="date" name="activityDate" class="form-control user-action__select-date" />
-                  <div class="user-action__course-time-wrapper d-flex align-items-center">
-                    <label for="course-time mr-1">Time:</label>
-                    <input class="user-action__course-time" type="text" placeholder="Time: 15:00-16:00" value="15:00-16:00" readonly />
-                  </div>
-                </div>
-                <button type="submit" class="button button__primary onepass-activity__button--book">Book</button>
-              </form>
-              <!-- single activity booking -->
-              <form action="#" class="onepass-activity d-flex align-items-center justify-content-between bg--white mb-4">
-                <input class="activity__week-day" type="text" placeholder="Wednesday" value=" Wednesday" readonly />
-                <div class="activity__user-action d-flex align-items-center">
+                <div class="activity__user-action d-md-flex flex-wrap align-items-center justify-content-between">
                   <select class="form-control user-action__select-activity">
                     <option selected>Football</option>
                     <option value="Cricket">Cricket</option>
@@ -234,7 +222,7 @@
                   <input type="button" class="button button__secondary user-action__button--browse-vendor" data-toggle="modal" data-target="#onepassBrowseVendor" value="Browse Vendors" />
                   <input class="user-action__select-tutor" type="text" placeholder="Rajguru" value="Rajguru" readonly />
                   <input type="date" name="activityDate" class="form-control user-action__select-date" />
-                  <div class="user-action__course-time-wrapper d-flex align-items-center">
+                  <div class="user-action__course-time-wrapper d-flex flex-lg-wrap align-items-center">
                     <label for="course-time mr-1">Time:</label>
                     <input class="user-action__course-time" type="text" placeholder="Time: 15:00-16:00" value="15:00-16:00" readonly />
                   </div>
@@ -242,9 +230,29 @@
                 <button type="submit" class="button button__primary onepass-activity__button--book">Book</button>
               </form>
               <!-- single activity booking -->
-              <form action="#" class="onepass-activity d-flex align-items-center justify-content-between bg--white mb-4">
+              <form action="#" class="onepass-activity d-md-flex flex-wrap flex-xl-nowrap justify-content-between bg--white mb-4">
+                <input class="activity__week-day" type="text" placeholder="Wednesday" value="Wednesday" readonly />
+                <div class="activity__user-action d-md-flex flex-wrap align-items-center justify-content-between">
+                  <select class="form-control user-action__select-activity">
+                    <option selected>Football</option>
+                    <option value="Cricket">Cricket</option>
+                    <option value="Karate">Karate</option>
+                    <option value="Basketball">Basketball</option>
+                  </select>
+                  <input type="button" class="button button__secondary user-action__button--browse-vendor" data-toggle="modal" data-target="#onepassBrowseVendor" value="Browse Vendors" />
+                  <input class="user-action__select-tutor" type="text" placeholder="Rajguru" value="Rajguru" readonly />
+                  <input type="date" name="activityDate" class="form-control user-action__select-date" />
+                  <div class="user-action__course-time-wrapper d-flex flex-lg-wrap align-items-center">
+                    <label for="course-time mr-1">Time:</label>
+                    <input class="user-action__course-time" type="text" placeholder="Time: 15:00-16:00" value="15:00-16:00" readonly />
+                  </div>
+                </div>
+                <button type="submit" class="button button__primary onepass-activity__button--book">Book</button>
+              </form>
+              <!-- single activity booking -->
+              <form action="#" class="onepass-activity d-md-flex flex-wrap flex-xl-nowrap justify-content-between bg--white mb-4">
                 <input class="activity__week-day" type="text" placeholder="Thrusday" value="Thrusday" readonly />
-                <div class="activity__user-action d-flex align-items-center">
+                <div class="activity__user-action d-md-flex flex-wrap align-items-center justify-content-between">
                   <select class="form-control user-action__select-activity">
                     <option selected>Football</option>
                     <option value="Cricket">Cricket</option>
@@ -254,7 +262,7 @@
                   <input type="button" class="button button__secondary user-action__button--browse-vendor" data-toggle="modal" data-target="#onepassBrowseVendor" value="Browse Vendors" />
                   <input class="user-action__select-tutor" type="text" placeholder="Rajguru" value="Rajguru" readonly />
                   <input type="date" name="activityDate" class="form-control user-action__select-date" />
-                  <div class="user-action__course-time-wrapper d-flex align-items-center">
+                  <div class="user-action__course-time-wrapper d-flex flex-lg-wrap align-items-center">
                     <label for="course-time mr-1">Time:</label>
                     <input class="user-action__course-time" type="text" placeholder="Time: 15:00-16:00" value="15:00-16:00" readonly />
                   </div>
@@ -262,19 +270,19 @@
                 <button type="submit" class="button button__primary onepass-activity__button--book">Book</button>
               </form>
               <!-- single activity booking -->
-              <form action="#" class="onepass-activity d-flex align-items-center justify-content-between bg--white mb-4">
+              <form action="#" class="onepass-activity d-md-flex flex-wrap flex-xl-nowrap justify-content-between bg--white mb-4">
                 <input class="activity__week-day" type="text" placeholder="Friday" value="Friday" readonly />
-                <div class="activity__user-action d-flex align-items-center">
+                <div class="activity__user-action d-md-flex flex-wrap align-items-center justify-content-between">
                   <select class="form-control user-action__select-activity">
                     <option selected>Football</option>
                     <option value="Cricket">Cricket</option>
                     <option value="Karate">Karate</option>
                     <option value="Basketball">Basketball</option>
                   </select>
-                  <button class="button button__secondary user-action__button--browse-vendor">Browse Vendor</button>
+                  <input type="button" class="button button__secondary user-action__button--browse-vendor" data-toggle="modal" data-target="#onepassBrowseVendor" value="Browse Vendors" />
                   <input class="user-action__select-tutor" type="text" placeholder="Rajguru" value="Rajguru" readonly />
                   <input type="date" name="activityDate" class="form-control user-action__select-date" />
-                  <div class="user-action__course-time-wrapper d-flex align-items-center">
+                  <div class="user-action__course-time-wrapper d-flex flex-lg-wrap align-items-center">
                     <label for="course-time mr-1">Time:</label>
                     <input class="user-action__course-time" type="text" placeholder="Time: 15:00-16:00" value="15:00-16:00" readonly />
                   </div>
@@ -282,9 +290,9 @@
                 <button type="submit" class="button button__primary onepass-activity__button--book">Book</button>
               </form>
               <!-- single activity booking -->
-              <form action="#" class="onepass-activity d-flex align-items-center justify-content-between bg--white mb-4">
+              <form action="#" class="onepass-activity d-md-flex flex-wrap flex-xl-nowrap justify-content-between bg--white mb-4">
                 <input class="activity__week-day" type="text" placeholder="Saturday" value="Saturday" readonly />
-                <div class="activity__user-action d-flex align-items-center">
+                <div class="activity__user-action d-md-flex flex-wrap align-items-center justify-content-between">
                   <select class="form-control user-action__select-activity">
                     <option selected>Football</option>
                     <option value="Cricket">Cricket</option>
@@ -294,7 +302,7 @@
                   <input type="button" class="button button__secondary user-action__button--browse-vendor" data-toggle="modal" data-target="#onepassBrowseVendor" value="Browse Vendors" />
                   <input class="user-action__select-tutor" type="text" placeholder="Rajguru" value="Rajguru" readonly />
                   <input type="date" name="activityDate" class="form-control user-action__select-date" />
-                  <div class="user-action__course-time-wrapper d-flex align-items-center">
+                  <div class="user-action__course-time-wrapper d-flex flex-lg-wrap align-items-center">
                     <label for="course-time mr-1">Time:</label>
                     <input class="user-action__course-time" type="text" placeholder="Time: 15:00-16:00" value="15:00-16:00" readonly />
                   </div>
@@ -302,9 +310,9 @@
                 <button type="submit" class="button button__primary onepass-activity__button--book">Book</button>
               </form>
               <!-- single activity booking -->
-              <form action="#" class="onepass-activity d-flex align-items-center justify-content-between bg--white mb-4">
+              <form action="#" class="onepass-activity d-md-flex flex-wrap flex-xl-nowrap justify-content-between bg--white mb-4">
                 <input class="activity__week-day" type="text" placeholder="Sunday" value="Sunday" readonly />
-                <div class="activity__user-action d-flex align-items-center">
+                <div class="activity__user-action d-md-flex flex-wrap align-items-center justify-content-between">
                   <select class="form-control user-action__select-activity">
                     <option selected>Football</option>
                     <option value="Cricket">Cricket</option>
@@ -314,13 +322,15 @@
                   <input type="button" class="button button__secondary user-action__button--browse-vendor" data-toggle="modal" data-target="#onepassBrowseVendor" value="Browse Vendors" />
                   <input class="user-action__select-tutor" type="text" placeholder="Rajguru" value="Rajguru" readonly />
                   <input type="date" name="activityDate" class="form-control user-action__select-date" />
-                  <div class="user-action__course-time-wrapper d-flex align-items-center">
+                  <div class="user-action__course-time-wrapper d-flex flex-lg-wrap align-items-center">
                     <label for="course-time mr-1">Time:</label>
                     <input class="user-action__course-time" type="text" placeholder="Time: 15:00-16:00" value="15:00-16:00" readonly />
                   </div>
                 </div>
                 <button type="submit" class="button button__primary onepass-activity__button--book">Book</button>
               </form>
+
+              <a href="#" class="button button__secondary d-inline-block d-md-none">Next Page</a>
             </div>
           </div>
         </div>
@@ -371,12 +381,12 @@
                 <!-- single vendor -->
                 <div class="vendor mb-4">
                   <div class="row">
-                    <div class="col-12 col-sm-4 col-md-4 col-lg-3">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3">
                       <div class="vendor__image-container">
                         <img src="../assets/images/dummy-600x500.png" alt="vendor-profile-image" />
                       </div>
                     </div>
-                    <div class="col-12 col-sm-8 col-md-8 col-lg-9">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-9">
                       <div class="row">
                         <div class="col-12 col-md-12 col-lg-8">
                           <div class="vendor__content">
@@ -417,7 +427,7 @@
                           </div>
                         </div>
                         <div class="col-12 col-md-12 col-lg-4">
-                          <div class="vendor__button-cta-wrapper d-flex justify-content-end">
+                          <div class="vendor__button-cta-wrapper d-flex justify-content-lg-end">
                             <a href="#" class="button button__primary vendor__button--select">Select This Vendor</a>
                           </div>
                         </div>
@@ -428,12 +438,12 @@
                 <!-- single vendor -->
                 <div class="vendor mb-4">
                   <div class="row">
-                    <div class="col-12 col-sm-4 col-md-4 col-lg-3">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3">
                       <div class="vendor__image-container">
                         <img src="../assets/images/dummy-600x500.png" alt="vendor-profile-image" />
                       </div>
                     </div>
-                    <div class="col-12 col-sm-8 col-md-8 col-lg-9">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-9">
                       <div class="row">
                         <div class="col-12 col-md-12 col-lg-8">
                           <div class="vendor__content">
@@ -474,7 +484,7 @@
                           </div>
                         </div>
                         <div class="col-12 col-md-12 col-lg-4">
-                          <div class="vendor__button-cta-wrapper d-flex justify-content-end">
+                          <div class="vendor__button-cta-wrapper d-flex justify-content-lg-end">
                             <a href="#" class="button button__primary vendor__button--select">Select This Vendor</a>
                           </div>
                         </div>
@@ -485,12 +495,12 @@
                 <!-- single vendor -->
                 <div class="vendor mb-4">
                   <div class="row">
-                    <div class="col-12 col-sm-4 col-md-4 col-lg-3">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3">
                       <div class="vendor__image-container">
                         <img src="../assets/images/dummy-600x500.png" alt="vendor-profile-image" />
                       </div>
                     </div>
-                    <div class="col-12 col-sm-8 col-md-8 col-lg-9">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-9">
                       <div class="row">
                         <div class="col-12 col-md-12 col-lg-8">
                           <div class="vendor__content">
@@ -531,7 +541,7 @@
                           </div>
                         </div>
                         <div class="col-12 col-md-12 col-lg-4">
-                          <div class="vendor__button-cta-wrapper d-flex justify-content-end">
+                          <div class="vendor__button-cta-wrapper d-flex justify-content-lg-end">
                             <a href="#" class="button button__primary vendor__button--select">Select This Vendor</a>
                           </div>
                         </div>
@@ -540,14 +550,14 @@
                   </div>
                 </div>
                 <!-- single vendor -->
-                <div class="vendor">
+                <div class="vendor mb-4">
                   <div class="row">
-                    <div class="col-12 col-sm-4 col-md-4 col-lg-3">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3">
                       <div class="vendor__image-container">
                         <img src="../assets/images/dummy-600x500.png" alt="vendor-profile-image" />
                       </div>
                     </div>
-                    <div class="col-12 col-sm-8 col-md-8 col-lg-9">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-9">
                       <div class="row">
                         <div class="col-12 col-md-12 col-lg-8">
                           <div class="vendor__content">
@@ -588,7 +598,7 @@
                           </div>
                         </div>
                         <div class="col-12 col-md-12 col-lg-4">
-                          <div class="vendor__button-cta-wrapper d-flex justify-content-end">
+                          <div class="vendor__button-cta-wrapper d-flex justify-content-lg-end">
                             <a href="#" class="button button__primary vendor__button--select">Select This Vendor</a>
                           </div>
                         </div>

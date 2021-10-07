@@ -240,6 +240,11 @@ $(document).ready(function () {
   var dashboardSidebarEl = $('.dashboard-wrapper .dashboard__sidebar');
   var dashboardContentAreaEl = $('.dashboard-wrapper .dashboard__content-area');
   var dashboardTopbarEl = $('.dashboard-wrapper .dashboard__topbar');
+  if ($(window).width() < 992) {
+    dashboardSidebarEl.addClass('dashboard__sidebar--shrinked');
+    dashboardContentAreaEl.addClass('dashboard__content-area--fluid');
+    dashboardTopbarEl.addClass('dashboard__topbar--fluid');
+  }
   dashboardSidebarTogglerEl.on('click', function () {
     dashboardSidebarEl.toggleClass('dashboard__sidebar--shrinked');
     dashboardContentAreaEl.toggleClass('dashboard__content-area--fluid');
@@ -257,16 +262,11 @@ $(document).ready(function () {
     }
   });
   // adding active class to nav links as per page
-  // Get current path and find target link
-  var path = window.location.pathname.split('/').pop();
-  console.log(path);
-  // Account for home page with empty path
-  if (path == '') {
-    path = 'index.html';
-  }
-
-  var target = $('nav a[href="' + path + '"]');
-  console.log(target);
-  // Add active class to target link
-  target.addClass('active');
+  var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+  $('ul a').each(function() {
+   if (this.href === path) {
+     $('ul a').removeClass('active');
+    $(this).addClass('active');
+   }
+  });
 });

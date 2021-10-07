@@ -1673,7 +1673,7 @@ h6 {
   bottom: 0;
   position: fixed;
   top: 0;
-  padding: 4.35rem 0 0 0;
+  padding: 4.35rem 0;
   height: 100%;
   overflow-y: scroll;
   scrollbar-width: none;
@@ -1776,7 +1776,7 @@ h6 {
 .dashboard-wrapper .dashboard__content-area {
   margin-left: 250px;
   overflow: hidden;
-  padding: 6.5rem 1.5rem 0 1.5rem;
+  padding: 6.5rem 1.5rem 3rem 1.5rem;
   min-height: 100vh;
 }
 .dashboard-wrapper .dashboard__content-area.dashboard__content-area--fluid {
@@ -1958,6 +1958,7 @@ h6 {
 /* Dasboard content - select activity */
 .select-activity-wrapper .toggle-button-container .toggle-button__heading {
   margin: 0;
+  font-size: 0.9375rem;
 }
 .select-activity-wrapper .toggle-button {
   width: 72px;
@@ -1975,13 +1976,13 @@ h6 {
   cursor: pointer;
   margin-right: 1rem;
 }
-.toggle-button.toggle-button--active {
+.select-activity-wrapper .toggle-button.toggle-button--active {
   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAmUlEQVQ4T6WT0RWDMAhFeZs4ipu0mawZpaO4yevBc6hUIWLNd+4NeQDk5sE/PMkZwFvZywKSTxF5iUgH0C4JHGyF97IggFVSqyCFga0CvQSg70Mdwd8QSSr4sGBMcgavAgdvwQCtApvA2uKr1x7Pu++06ItrF5LXPB/CP4M0kKTwYRIDyRAOR9lJTuF0F0hOAJbKopVHOZN9ACS0UgowIx8ZAAAAAElFTkSuQmCC') no-repeat 10px center #069299;
 }
-.toggle-button.toggle-button--active .round-button {
+.select-activity-wrapper .toggle-button.toggle-button--active .round-button {
   left: 41px;
 }
-.toggle-button .round-button {
+.select-activity-wrapper .toggle-button .round-button {
   width: 26px;
   height: 26px;
   background-color: #fff;
@@ -1996,7 +1997,7 @@ h6 {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.toggle-button .cb-value {
+.select-activity-wrapper .toggle-button .cb-value {
   position: absolute;
   left: 0;
   right: 0;
@@ -2007,12 +2008,36 @@ h6 {
   cursor: pointer;
   -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
 }
+.select-activity-wrapper .button {
+  font-size: 0.9rem;
+  padding: 0.65rem 1.25rem;
+}
+@media (min-width: 768px) {
+  .select-activity-wrapper .toggle-button-container .toggle-button__heading {
+    font-size: 1.062rem;
+  }
+  .select-activity-wrapper .button {
+    font-size: 1rem;
+    padding: 0.8rem 1.75rem;
+  }
+}
+@media (min-width: 992px) {
+  .select-activity-wrapper .toggle-button-container .toggle-button__heading {
+    font-size: 0.85rem;
+  }
+}
+@media (min-width: 1200px) {
+  .select-activity-wrapper .toggle-button-container .toggle-button__heading {
+    font-size: 1.15rem;
+  }
+}
 
 /* One Pass */
 .onepass-wrapper .onepass-activity {
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 .onepass-wrapper .onepass-activity .activity__week-day,
 .onepass-wrapper .onepass-activity .user-action__course-time,
@@ -2022,30 +2047,49 @@ h6 {
   font-weight: 700;
   border: none;
   color: var(--colorPrimary);
-  text-align: center;
-  margin:0;
 }
-.onepass-wrapper .onepass-activity .activity__week-day,
-.onepass-wrapper .onepass-activity .user-action__select-tutor {
-  width: 110px;
+.onepass-wrapper .onepass-activity .activity__week-day {
+  margin-bottom: 1.25rem;
   text-align: left;
 }
 .onepass-wrapper .onepass-activity .user-action__select-activity {
-  width: 150px;
-  margin-right: 0.75rem;
+  width: 100%;
+  margin: 0 0 1rem 0;
   font-size: 0.9375rem;
-}
-.onepass-wrapper .onepass-activity .user-action__select-date {
-  width: 176px;
-}
-.onepass-wrapper .onepass-activity .user-action__select-date::-webkit-calendar-picker-indicator {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%238f9093" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
 }
 .onepass-wrapper .onepass-activity .user-action__button--browse-vendor {
   font-size: 0.9375rem;
   padding: 0.65rem 1.45rem;
+  margin: 0 0 1rem 0;
 }
-.onepass-wrapper .onepass-activity .user-action__select-activity,
+.onepass-wrapper .onepass-activity .user-action__select-tutor {
+  margin: 0 0 1rem 0;
+}
+.onepass-wrapper .onepass-activity .user-action__select-date {
+  width: 100%;
+  margin: 0 0 1rem 0;
+}
+.onepass-wrapper .onepass-activity .user-action__select-date::-webkit-calendar-picker-indicator {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%238f9093" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+}
+.onepass-wrapper .onepass-activity .user-action__course-time-wrapper {
+  margin: 0 0 1rem 0;
+}
+.onepass-wrapper .onepass-activity .user-action__course-time-wrapper label {
+  margin: 0 0.25rem 0 0;
+}
+/* .onepass-wrapper .onepass-activity .user-action__select-activity {
+  width: 200px;
+}
+.onepass-wrapper .onepass-activity .activity__week-day,
+.onepass-wrapper .onepass-activity .user-action__select-tutor {
+  width: 110px;
+}
+
+.onepass-wrapper .onepass-activity .user-action__select-date {
+  width: 176px;
+} */
+/* .onepass-wrapper .onepass-activity .user-action__select-activity,
 .onepass-wrapper .onepass-activity .user-action__button--browse-vendor,
 .onepass-wrapper .onepass-activity .user-action__select-tutor,
 .onepass-wrapper .onepass-activity .user-action__course-time-wrapper,
@@ -2057,6 +2101,144 @@ h6 {
 }
 .onepass-wrapper .onepass-activity .onepass-activity__button--book {
   margin-left: 0.5rem;
+} */
+@media (min-width: 768px) {
+  .onepass-wrapper .onepass-activity {
+    padding: 1.5rem;
+  }
+  .onepass-wrapper .onepass-activity .activity__week-day {
+    width: 30%;
+    height: 36px;
+  }
+  .onepass-wrapper .onepass-activity .activity__user-action {
+    width: 70%;
+  }
+  .onepass-wrapper .onepass-activity .onepass-activity__button--book {
+    margin: 0 0 0 auto;
+  }
+  .onepass-wrapper .onepass-activity .user-action__select-tutor {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .onepass-wrapper .onepass-activity .activity__week-day {
+    width: 30%;
+    height: auto;
+    font-size: 1.15rem;
+  }
+  .onepass-wrapper .onepass-activity .activity__user-action {
+    width: 100%;
+  }
+  .onepass-wrapper .onepass-activity .user-action__select-activity {
+    width: 150px;
+  }
+  .onepass-wrapper .onepass-activity .user-action__button--browse-vendor {
+    margin: 0 0.5rem 1rem 0.35rem;
+  }
+  .onepass-wrapper .onepass-activity .user-action__select-tutor {
+    width: 135px;
+  }
+  .onepass-wrapper .onepass-activity .user-action__select-date {
+    width: 176px;
+    margin: 0 0 1rem 0;
+  }
+  .onepass-wrapper .onepass-activity .user-action__course-time-wrapper {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+  .onepass-wrapper .onepass-activity .user-action__course-time {
+    width: 100px;
+  }
+}
+@media (min-width: 1200px) {
+  .onepass-wrapper .onepass-activity .activity__week-day {
+    width: 120px;
+    margin: 0;
+    height: auto;
+    font-size: 1rem;
+  }
+  /* .onepass-wrapper .onepass-activity .activity__user-action {
+    width: 86%;
+    margin: 1.25rem 0 0 0;
+  } */
+  .onepass-wrapper .onepass-activity .user-action__select-activity {
+    margin: 0;
+    font-size: 0.9rem;
+    width: 130px;
+  }
+  .onepass-wrapper .onepass-activity .user-action__course-time-wrapper {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 0 0.5rem;
+    width: 80px;
+  }
+
+  .onepass-wrapper .onepass-activity .user-action__course-time-wrapper label,
+  .onepass-wrapper .onepass-activity .user-action__course-time-wrapper .user-action__course-time {
+    font-size: 0.8rem;
+  }
+  .onepass-wrapper .onepass-activity .user-action__course-time-wrapper label {
+    display: block;
+    width: 100%;
+  }
+  .onepass-wrapper .onepass-activity .user-action__course-time-wrapper .user-action__course-time {
+    width: 80px;
+  }
+  .onepass-wrapper .onepass-activity .user-action__select-tutor {
+    width: 80px;
+    font-size: 1rem;
+  }
+  .onepass-wrapper .onepass-activity .user-action__button--browse-vendor {
+    margin: 0 0.35rem 0rem 0.35rem;
+    font-size: 0.9rem;
+    padding: 0.65rem 1rem;
+  }
+  .onepass-wrapper .onepass-activity .user-action__select-date {
+    font-size: 0.9rem;
+    width: 166px;
+  }
+  .onepass-wrapper .onepass-activity .user-action__select-date,
+  .onepass-wrapper .onepass-activity .user-action__select-tutor {
+    margin: 0 0.25rem;
+  }
+}
+@media (min-width: 1300px) {
+  .onepass-wrapper .onepass-activity .activity__week-day {
+    width: 118px;
+    font-size: 1.15rem;
+  }
+  .onepass-wrapper .onepass-activity .user-action__select-activity {
+    margin: 0 0.25rem 0 0;
+    font-size: 1rem;
+    width: 140px;
+  }
+  .onepass-wrapper .onepass-activity .user-action__button--browse-vendor {
+    font-size: 1rem;
+    padding: 0.65rem 1.4rem;
+    margin: 0 0.5rem;
+  }
+  .onepass-wrapper .onepass-activity .user-action__course-time-wrapper {
+    width: 90px;
+    margin: 0 3rem 0 0;
+  }
+  .onepass-wrapper .onepass-activity .user-action__course-time-wrapper label,
+  .onepass-wrapper .onepass-activity .user-action__course-time-wrapper .user-action__course-time {
+    font-size: 0.9rem;
+  }
+  .onepass-wrapper .onepass-activity .user-action__course-time-wrapper .user-action__course-time {
+    width: 90px;
+  }
+  .onepass-wrapper .onepass-activity .user-action__select-date {
+    font-size: 1rem;
+    width: 176px;
+    margin: 0 0.5rem 0 0;
+  }
+  .onepass-wrapper .onepass-activity .user-action__select-tutor {
+    width: 120px;
+    font-size: 1.15rem;
+  }
 }
 
 /* Browse vendor */
@@ -2069,7 +2251,8 @@ h6 {
   padding-top: 4rem;
 }
 .modal-browse-vendors .browse-vendors__filter-container .form-control {
-  width: 250px;
+  width: 135px;
+  font-size: 0.8rem;
 }
 .modal-browse-vendors .modal-browse-vendors__button--close {
   position: absolute;
@@ -2083,11 +2266,17 @@ h6 {
   align-items: center;
   justify-content: center;
   background: var(--colorRandomSkyblue);
-  opacity: 1!important;
+  opacity: 1 !important;
   border-radius: 5px;
 }
 .modal-browse-vendors .modal-browse-vendors__button--close span {
   margin-top: -3px;
+}
+.vendor .vendor__content {
+  padding: 1.25rem 0;
+}
+.vendor .vendor__title {
+  font-size: 1.15rem;
 }
 .vendor .vendor__fee {
   color: var(--colorPrimary);
@@ -2105,9 +2294,9 @@ h6 {
   color: var(--colorAccent);
 }
 .vendor .vendor__specification .specification__button {
-  padding: 0.35rem;
-  font-size: 0.85rem;
-  margin-right: 0.35rem;
+  padding: 0.25rem;
+  font-size: 0.65rem;
+  margin-right: 0.15rem;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -2134,7 +2323,7 @@ h6 {
 .vendor .eligibility-list .list-item {
   margin-right: 0.5rem;
   line-height: 1em;
-  font-size: 0.9375rem;
+  font-size: 0.75rem;
   color: var(--colorPrimary);
   font-weight: 700;
 }
@@ -2143,12 +2332,65 @@ h6 {
   border: 1px solid var(--colorPrimary);
   border-width: 0 1px 0 1px;
 }
+.vendor .vendor__button--select {
+  padding: 0.65rem 1.4rem;
+  font-size: 0.9rem;
+}
 /* .vendor .vendor__button-cta-wrapper {
 margin: 1rem 0 0 0;
 } */
-
-
-
-
-
-
+@media (min-width: 768px) {
+  .modal-browse-vendors .browse-vendors__filter-container .form-control {
+    width: 175px;
+    font-size: 0.9rem;
+  }
+  .vendor .vendor__button--select {
+    padding: 0.75rem 1.6rem;
+    font-size: 0.9rem;
+  }
+  .vendor .vendor__title {
+    font-size: 1.5rem;
+  }
+  .vendor .vendor__specification .specification__button {
+    padding: 0.35rem;
+    font-size: 0.85rem;
+    margin-right: 0.35rem;
+  }
+  .vendor .eligibility-list .list-item {
+    font-size: 0.9375rem;
+  }
+}
+@media (min-width: 992px) {
+  .modal-browse-vendors .browse-vendors__filter-container .form-control {
+    width: 250px;
+    font-size: 0.9rem;
+  }
+  .vendor .vendor__button--select {
+    padding: 0.65rem 1.3rem;
+    font-size: 0.85rem;
+  }
+  .vendor .vendor__title {
+    font-size: 1.25rem;
+  }
+  .vendor .vendor__specification .specification__button {
+    padding: 0.25rem;
+    font-size: 0.8rem;
+  }
+  .vendor .vendor__content {
+    padding: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .vendor .vendor__title {
+    font-size: 1.5rem;
+  }
+  .vendor .vendor__button--select {
+    padding: 0.8rem 1.75rem;
+    font-size: 1rem;
+  }
+  .vendor .vendor__specification .specification__button {
+    padding: 0.35rem;
+    font-size: 0.85rem;
+    margin-right: 0.35rem;
+  }
+}
