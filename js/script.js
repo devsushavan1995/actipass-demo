@@ -263,10 +263,28 @@ $(document).ready(function () {
   });
   // adding active class to nav links as per page
   var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
-  $('ul a').each(function() {
-   if (this.href === path) {
-     $('ul a').removeClass('active');
-    $(this).addClass('active');
-   }
+  $('ul a').each(function () {
+    if (this.href === path) {
+      $('ul a').removeClass('active');
+      $(this).addClass('active');
+    }
   });
+
+  // load more button for market place course page
+  var showOnPageload = 8; // set the number of course will shown on page load
+  var afterButtonClickLoad = 4; // number of courses on load more button click
+  $('.market-place-wrapper .course-container').slice(0, showOnPageload).show();
+  $('#courseButtonLoadMore').on('click', courseLoading);
+  function courseLoading(e) {
+    // click event for load more
+    e.preventDefault();
+    $('#courseButtonLoadMore .spinner-border').removeClass('d-none');
+    setTimeout(function () {
+      $('.market-place-wrapper .course-container:hidden').slice(0, afterButtonClickLoad).show(); // select next 10 hidden divs and show them
+      $('#courseButtonLoadMore .spinner-border').addClass('d-none');
+    }, 1500);
+    if ($('.market-place-wrapper .course-container:hidden').length == 0) {
+      $(this).removeClass('d-flex').addClass('d-none');
+    }
+  }
 });
