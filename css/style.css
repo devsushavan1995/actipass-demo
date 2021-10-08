@@ -2305,6 +2305,20 @@ h6 {
   opacity: 1 !important;
   border-radius: 5px;
 }
+.modal-browse-vendors .modal-dialog-scrollable .modal-body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgb(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgb(0, 0, 0, 0.3);
+} 
+.modal-browse-vendors .modal-dialog-scrollable .modal-body::-webkit-scrollbar {
+  width: 0.5em!important;
+}
+.modal-browse-vendors .modal-dialog-scrollable .modal-body::-webkit-scrollbar-thumb {
+  background: var(--colorRandomSkyblue)!important;
+  border-radius: 16px;
+  -webkit-box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
+  box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
+}
+
 .modal-browse-vendors .modal-browse-vendors__button--close span {
   margin-top: -3px;
 }
