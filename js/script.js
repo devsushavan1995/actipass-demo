@@ -280,11 +280,31 @@ $(document).ready(function () {
     e.preventDefault();
     $('#courseButtonLoadMore .spinner-border').removeClass('d-none');
     setTimeout(function () {
-      $('.market-place-wrapper .course-container:hidden').slice(0, afterButtonClickLoad).show(); // select next 10 hidden divs and show them
+      $('.market-place-wrapper .course-container:hidden').slice(0, afterButtonClickLoad).show();
       $('#courseButtonLoadMore .spinner-border').addClass('d-none');
     }, 1500);
     if ($('.market-place-wrapper .course-container:hidden').length == 0) {
       $(this).removeClass('d-flex').addClass('d-none');
     }
   }
+
+  // Schedule calender for showing events on date
+  $('#scheduleCalenderContainer').simpleCalendar({
+    disableEmptyDetails: true,
+    events: [
+      {
+        startDate: new Date(new Date().setHours(new Date().getHours() + 24)).toDateString(),
+
+        endDate: new Date(new Date().setHours(new Date().getHours() + 25)).toISOString(),
+
+        summary: 'Spanish Learning Class',
+      },
+    ],
+    onDateSelect:function (date, events) {
+      var day = $('.schedule-wrapper .schedule__calender-container .day');
+      if(day.hasClass('has-event')) {
+        console.log('has event today');
+      }
+    }
+  });
 });
