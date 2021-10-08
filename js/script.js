@@ -301,9 +301,9 @@ $(document).ready(function () {
       },
     ],
     onDateSelect:function (date, events) {
-      var day = $('.schedule-wrapper .schedule__calender-container .day');
-      if(day.hasClass('has-event')) {
-        console.log('has event today');
+      //console.log(events.length);
+      if(events.length > 0) {
+        $('#showEventModal').modal('show');
       }
     }
   });

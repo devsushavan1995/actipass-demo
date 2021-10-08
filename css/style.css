@@ -251,9 +251,20 @@ h6 {
 .button__secondary:hover {
   color: #fff;
 }
+.button__alternative {
+  color: #fff;
+  text-shadow: 0 2px 4px var(--colorPrimary);
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--colorRandomGreen), to(#0d6e58)));
+  background: -o-linear-gradient(top, var(--colorRandomGreen), #0d6e58);
+  background: linear-gradient(to bottom, var(--colorRandomGreen), #0d6e58);
+}
+.button__alternative:hover {
+  color: #fff;
+}
 /* .button__primary--no-shadow {
   -webkit-box-shadow: none;
   box-shadow: none;
+  #46ebc7
 } */
 .button__red {
   background: #ff3636;
@@ -2663,16 +2674,16 @@ margin: 1rem 0 0 0;
 
 /* Schedule page */
 .schedule-wrapper .schedule__calender-container {
-  box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  margin: 0 30%;
+  font-size: 70%;
 }
 .schedule-wrapper .schedule__calender-container h2.month {
   color: var(--colorPrimary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 .schedule-wrapper .schedule__calender-container header {
   padding-top: 1.5rem;
@@ -2680,18 +2691,17 @@ margin: 1rem 0 0 0;
 .schedule-wrapper .schedule__calender-container h2.month .year {
   color: var(--colorPrimary);
   margin-left: 0.5rem;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 .schedule-wrapper .schedule__calender-container .calendar header .btn-prev {
-  top: 24px;
-  left: 2px;
-  transform: rotate(
--180deg);
+  top: 16px;
+  left: 8px;
+  transform: rotate(-180deg);
 }
 .schedule-wrapper .schedule__calender-container .calendar header .btn-next {
-  top: 24px;
-  right: 2px;
+  top: 16px;
+  right: 8px;
 }
 .schedule-wrapper .schedule__calender-container .calendar header .btn-prev,
 .schedule-wrapper .schedule__calender-container .calendar header .btn-next {
@@ -2714,10 +2724,102 @@ margin: 1rem 0 0 0;
 }
 .schedule-wrapper .schedule__calender-container .calendar .event-container .event {
   background: #fff;
-  box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
   color: var(--colorPrimary);
 }
 .schedule-wrapper .schedule__calender-container .calendar .event-container .close {
   color: #fff;
   opacity: 1;
+}
+.schedule-wrapper .schedule__calender-container .calendar .filler {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
+.schedule-wrapper .schedule__calender-container .event-container {
+  display: none !important;
+}
+/* .modal-show-event {
+  position: relative;
+  background: #fff;
+} */
+
+.modal-show-event .modal-content {
+  border-radius: 10px;
+}
+.modal-show-event button.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+  background: var(--colorRandomSkyblue);
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1 !important;
+  border-radius: 5px;
+}
+.modal-show-event button.close span {
+  margin-top: -3px;
+}
+.modal-show-event .modal-body {
+  background: #fff;
+  padding: 4rem 2rem 2.5rem;
+  border: 0;
+  border-radius: 10px;
+}
+.modal-show-event .event {
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  margin: 0 0 1.25rem 0;
+}
+.modal-show-event .event .event__title {
+  color: var(--colorPrimary);
+  margin: 0 0 0.75rem 0;
+}
+.modal-show-event .event .event__date-time-container {
+  color: var(--colorPrimary);
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+.modal-show-event .event .event__date-time-container i {
+  color: var(--colorRandomSkyblue);
+}
+@media (min-width: 768px) {
+  .schedule-wrapper .schedule__calender-container {
+    font-size: 100%;
+    margin: 0 20%;
+  }
+  .schedule-wrapper .schedule__calender-container h2.month,
+  .schedule-wrapper .schedule__calender-container h2.month .year {
+    font-size: 1.5rem;
+  }
+  .schedule-wrapper .schedule__calender-container .calendar header .btn-prev,
+  .schedule-wrapper .schedule__calender-container .calendar header .btn-next {
+    top: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .schedule-wrapper .schedule__calender-container {
+    margin: 0 30%;
+  }
+  .schedule-wrapper .schedule__calender-container h2.month,
+  .schedule-wrapper .schedule__calender-container h2.month .year {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .schedule-wrapper .schedule__calender-container h2.month,
+  .schedule-wrapper .schedule__calender-container h2.month .year {
+    font-size: 2rem;
+  }
+  .schedule-wrapper .schedule__calender-container .calendar header .btn-prev,
+  .schedule-wrapper .schedule__calender-container .calendar header .btn-next {
+    top: 24px;
+  }
 }
