@@ -3023,6 +3023,7 @@ margin: 1rem 0 0 0;
 .booking-wrapper .nav-tabs .nav-link:hover,
 .booking-wrapper .nav-tabs .nav-link.active {
   color: var(--colorRandomSkyblue);
+  background: transparent;
 }
 .booking-wrapper nav a.nav-link.acitve {
   color: var(--colorRandomSkyblue) !important;
