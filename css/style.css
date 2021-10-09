@@ -2920,6 +2920,7 @@ margin: 1rem 0 0 0;
 .profile-wrapper .profile-form-container,
 .profile-wrapper .profile-child-list-wrapper {
   padding: 2rem 1.25rem;
+  -webkit-box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
 }
@@ -2945,6 +2946,8 @@ margin: 1rem 0 0 0;
 .profile-wrapper .profile-child-list-wrapper .profile-child-list .child-list__item-wrapper .list__item {
   padding: 0.5rem 0.5rem 0rem 0.5rem;
   border-radius: 10px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .profile-wrapper .profile-child-list-wrapper .profile-child-list .child-list__item-wrapper .list__item .item__icon {
@@ -2953,8 +2956,14 @@ margin: 1rem 0 0 0;
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-right: 0.5rem;
 }
@@ -3000,6 +3009,8 @@ margin: 1rem 0 0 0;
   height: 2px;
   background: var(--colorRandomSkyblue);
   width: 0%;
+  -webkit-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
   transition: width 0.3s ease;
   position: absolute;
   bottom: 0;
@@ -3043,8 +3054,14 @@ margin: 1rem 0 0 0;
   left: 24px;
 }
 .booking-wrapper .booking-container .child-profile .child-profile__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 40px;
   height: 40px;
@@ -3054,6 +3071,7 @@ margin: 1rem 0 0 0;
 }
 .booking-wrapper .booking-container .swiper-slide .course {
   padding: 1.15rem;
+  -webkit-box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
 }
@@ -3105,7 +3123,11 @@ margin: 1rem 0 0 0;
 }
 @media (min-width: 576px) {
   .booking-wrapper .booking-container .swiper-slide .course .course__details {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 }
@@ -3205,8 +3227,14 @@ margin: 1rem 0 0 0;
 }
 .support-wrapper .support-direct-col {
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 3rem 1rem;
 }
