@@ -1802,7 +1802,7 @@ h6 {
 }
 /* dashboard content area */
 .dashboard-wrapper .dashboard__content-area {
-  margin-left: 250px;
+  margin-left: 0px;
   overflow: hidden;
   padding: 6.5rem 1.5rem 3rem 1.5rem;
   min-height: 100vh;
@@ -1970,6 +1970,9 @@ h6 {
   border-radius: 50%;
 }
 @media (min-width: 768px) {
+  .dashboard-wrapper .dashboard__content-area {
+    margin-left: 250px;
+  }
   .dashboard-wrapper .dashboard__content-area .dashboard__content .modal__child-add .modal-dialog {
     max-width: 700px;
   }
@@ -2875,4 +2878,232 @@ margin: 1rem 0 0 0;
   .schedule-wrapper .schedule__calender-container .calendar header .btn-next {
     top: 24px;
   }
+}
+
+/* Profile Page */
+.profile-wrapper .profile-form-container,
+.profile-wrapper .profile-child-list-wrapper {
+  padding: 2rem 1.25rem;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+.profile-wrapper .profile-form-container .profile-form .input__container {
+  margin: 0 0 1.25rem 0;
+}
+.profile-wrapper .profile-form-container .profile-form .input__container .profile-form__input {
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  width: 100%;
+  color: var(--colorPrimary);
+}
+.profile-wrapper .profile-form-container .profile-form .input__container .profile-form__input.profile-form__input--firstname {
+  margin: 0 0 1.25rem 0;
+}
+.profile-wrapper .profile-child-list-wrapper .profile-child-list {
+  border-bottom: 1px solid #ddd;
+}
+.profile-wrapper .profile-child-list-wrapper .profile-child-list .child-list__item-wrapper {
+  margin: 0 0 1.25rem 0;
+}
+.profile-wrapper .profile-child-list-wrapper .profile-child-list .child-list__item-wrapper .list__item {
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.profile-wrapper .profile-child-list-wrapper .profile-child-list .child-list__item-wrapper .list__item .item__icon {
+  color: #fff;
+  background: var(--colorRandomSkyblue);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+}
+.profile-wrapper .profile-child-list-wrapper .profile-child-list .child-list__item-wrapper .list__item:hover {
+  background: var(--colorPrimary);
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .profile-wrapper .profile-form-container .profile-form .input__container .profile-form__input {
+    padding: 0.9375rem;
+  }
+}
+@media (min-width: 1200px) {
+  .profile-wrapper .profile-form-container .profile-form .input__container .profile-form__input.profile-form__input--firstname {
+    margin: 0 0.25rem 0 0;
+  }
+  .profile-wrapper .profile-form-container .profile-form .input__container .profile-form__input.profile-form__input--lastname {
+    margin: 0 0 0 0.25rem;
+  }
+  .profile-wrapper .profile-form-container,
+  .profile-wrapper .profile-child-list-wrapper {
+    padding: 2.25rem 1.5rem;
+  }
+}
+@media (min-width: 1300px) {
+  .profile-wrapper .profile-form-container,
+  .profile-wrapper .profile-child-list-wrapper {
+    padding: 2.25rem;
+  }
+}
+
+/* Booking page */
+.booking-wrapper .nav-tabs .nav-link {
+  font-size: 1.25rem;
+  color: var(--colorPrimary);
+  font-weight: 600;
+  position: relative;
+  padding: 0.5rem;
+}
+.booking-wrapper .nav-tabs .nav-link:after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: var(--colorRandomSkyblue);
+  width: 0%;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom:0;
+  left:0;
+}
+.booking-wrapper .nav-tabs .nav-link:hover:after,
+.booking-wrapper .nav-tabs .nav-link.active:after {
+  width: 100%;
+}
+.booking-wrapper .nav-tabs .nav-link:hover,
+.booking-wrapper .nav-tabs .nav-link.active {
+  color: var(--colorRandomSkyblue);
+}
+.booking-wrapper nav a.nav-link.acitve {
+  color: var(--colorRandomSkyblue)!important;
+}
+.booking-wrapper .nav-tabs .nav-link:nth-child(1) {
+  margin-right: 0.75rem;
+}
+.booking-wrapper .booking-container {
+  padding: 1rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  position: relative;
+  margin: 0 0 1.875rem 0;
+  background: #fff;
+}
+.booking-wrapper .booking-container .booking-courses-swiper {
+  margin: 0 -1rem;
+  padding: 0 0 2.5rem 0;
+}
+.booking-wrapper .booking-container .swiper-wrapper {
+  padding-top: 3.5rem;
+}
+.booking-wrapper .booking-container .swiper-slide {
+  padding: 1rem;
+}
+.booking-wrapper .booking-container .child-profile {
+  position: absolute;
+  top: 2px;
+  left: 24px;
+}
+.booking-wrapper .booking-container .child-profile .child-profile__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--colorRandomSkyblue);
+  color: #fff;
+}
+.booking-wrapper .booking-container .swiper-slide .course {
+  padding: 1.15rem;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+.booking-wrapper .booking-container .swiper-slide .course .course__vendor-title {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
+}
+.booking-wrapper .booking-container .swiper-slide .course .course__title {
+  font-size: 1rem;
+  color: var(--colorRandomSkyblue);
+  margin: 0 0 1rem 0;
+}
+.booking-wrapper .booking-container .swiper-slide .course .course__details .course__details-item {
+  color: var(--colorPara);
+  font-size: 0.9375rem;
+  margin: 0 0 0.85rem 0;
+}
+.booking-wrapper .booking-container .swiper-slide .course .course__button--cancel {
+  padding: 0.6rem 1.3rem;
+  font-size: 0.9rem;
+}
+.booking-wrapper .booking-container .swiper-button-prev, 
+.booking-wrapper .booking-container .swiper-button-next {
+  top:90%;
+  left: auto;
+  margin-top:0;
+  width: auto;
+  display: inline-block;
+}
+.booking-wrapper .booking-container .swiper-button-prev {
+  right: 60px!important;
+}
+.booking-wrapper .booking-container .swiper-button-next {
+  right: 24px;
+}
+.booking-wrapper .booking-container  .swiper-button-next:after, 
+.booking-wrapper .booking-container  .swiper-button-prev:after {
+  font-size: 0.65rem;
+  color: #fff;
+  background: var(--colorPrimary);
+  padding: 0.75rem;
+  border-radius: 5px;
+}
+@media (min-width: 576px) {
+  .booking-wrapper .booking-container .swiper-slide .course .course__details {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  .booking-wrapper .booking-container {
+    padding: 1.25rem;
+  }
+  .booking-wrapper .booking-container .swiper-wrapper {
+    padding-top: 4rem;
+}
+.booking-wrapper .booking-container .swiper-button-prev, 
+.booking-wrapper .booking-container .swiper-button-next {
+  top:12px;
+  left: auto;
+  margin-top:0;
+  width: auto;
+  display: inline-block;
+}
+.booking-wrapper .booking-container .swiper-button-prev {
+  right: 60px!important;
+}
+.booking-wrapper .booking-container .swiper-button-next {
+  right: 20px;
+}
+.booking-wrapper .booking-container  .swiper-button-next:after, 
+.booking-wrapper .booking-container  .swiper-button-prev:after {
+  font-size: 1rem;
+  padding: 0.75rem;
+}
+
+.booking-wrapper .booking-container .booking-courses-swiper {
+  padding: 0;
+}
+}
+@media (min-width: 992px) {
+  .booking-wrapper .booking-container .swiper-slide .course .course__vendor-title {
+    font-size: 1.4rem;
+}
+.booking-wrapper .booking-container .swiper-slide .course .course__button--cancel {
+  padding: 0.75rem 1.6rem;
+  font-size: 0.95rem;
+}
 }
