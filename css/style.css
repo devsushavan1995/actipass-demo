@@ -3181,6 +3181,7 @@ margin: 1rem 0 0 0;
 /* Customer Support Page */
 .support-wrapper {
   padding: 1.25rem;
+  border-radius: 10px;
 }
 .support-wrapper .support__subheading {
   color: var(--colorRandomSkyblue);
