@@ -235,7 +235,7 @@ h6 {
 } */
 .button__primary {
   color: #fff;
-  text-shadow: 0 2px 4px #fc6b04;
+  text-shadow: 0 2px 4px #8b3900;
   background: -o-linear-gradient(top, var(--colorRandomYellow), #fc6b04);
   background: -webkit-gradient(linear, left top, left bottom, from(var(--colorRandomYellow)), to(#fc6b04));
   background: linear-gradient(to bottom, var(--colorRandomYellow), #fc6b04);
@@ -401,6 +401,32 @@ h6 {
     top: 80%;
     right: 3%;
   }
+}
+/* modal common styles */
+.modal .close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 1.5rem;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: var(--colorRandomSkyblue);
+  opacity: 1 !important;
+  border-radius: 5px;
+  z-index: 10;
+}
+.modal .close .span {
+  margin-top: -3px;
 }
 
 /* Header */
@@ -1928,14 +1954,8 @@ h6 {
   padding: 1.875rem 1.15rem;
 }
 .dashboard-wrapper .dashboard__content-area .dashboard__content .modal__child-add .modal__button--close {
-  position: absolute;
-  top: -2px;
-  right: 2px;
-  color: var(--colorPrimary);
-  z-index: 2;
-  opacity: 1;
-  font-size: 1.5rem;
-  padding: 0.75rem;
+  top: 12px;
+  right: 12px;
 }
 .dashboard-wrapper .dashboard__content-area .dashboard__content .modal__child-add .modal-dialog .modal-content {
   border-radius: 10px;
@@ -1946,6 +1966,7 @@ h6 {
 }
 .dashboard-wrapper .dashboard__content-area .dashboard__content .form__addChild .input__container {
   margin: 0 0 1.25rem 0;
+  position: relative;
 }
 .dashboard-wrapper .dashboard__content-area .dashboard__content .form__addChild .input__container label {
   display: block;
@@ -1961,9 +1982,24 @@ h6 {
   padding: 0.75rem;
   border-radius: 10px;
 }
+.dashboard-wrapper .dashboard__content-area .dashboard__content .form__addChild .input__container.input__container--for-date .ui-button {
+  position: absolute;
+  top: 40px;
+  right: 12px;
+  padding: 0;
+  border: none;
+  /* font-size: 1.5rem; */
+  background: transparent;
+}
+.dashboard-wrapper .dashboard__content-area .dashboard__content .form__addChild .input__container.input__container--for-date .ui-button .ui-icon {
+  background-image: url('../assets/images/calendar.png');
+  background-position: center center;
+  width: 24px;
+  height: 24px;
+}
 .dashboard-wrapper .dashboard__content-area .dashboard__content .modal__child-add .child-profile__container {
   padding: 1.5rem 0;
-  border-top: 1px solid var(--colorPrimary);
+  border-top: 1px solid #aaa;
 }
 .dashboard-wrapper .dashboard__content-area .dashboard__content .modal__child-add.modal__child-select .child-profile__image img {
   width: 40px;
@@ -2959,15 +2995,15 @@ margin: 1rem 0 0 0;
   padding: 0.5rem;
 }
 .booking-wrapper .nav-tabs .nav-link:after {
-  content: "";
+  content: '';
   display: block;
   height: 2px;
   background: var(--colorRandomSkyblue);
   width: 0%;
   transition: width 0.3s ease;
   position: absolute;
-  bottom:0;
-  left:0;
+  bottom: 0;
+  left: 0;
 }
 .booking-wrapper .nav-tabs .nav-link:hover:after,
 .booking-wrapper .nav-tabs .nav-link.active:after {
@@ -2978,7 +3014,7 @@ margin: 1rem 0 0 0;
   color: var(--colorRandomSkyblue);
 }
 .booking-wrapper nav a.nav-link.acitve {
-  color: var(--colorRandomSkyblue)!important;
+  color: var(--colorRandomSkyblue) !important;
 }
 .booking-wrapper .nav-tabs .nav-link:nth-child(1) {
   margin-right: 0.75rem;
@@ -3035,26 +3071,32 @@ margin: 1rem 0 0 0;
   font-size: 0.9375rem;
   margin: 0 0 0.85rem 0;
 }
+.booking-wrapper .booking-container .swiper-slide .course .course__details .course__details-item.course__details-item--date {
+  color: #fd7084;
+}
+.booking-wrapper .booking-container .swiper-slide .course .course__details .course__details-item.course__details-item--day {
+  color: #00a586;
+}
 .booking-wrapper .booking-container .swiper-slide .course .course__button--cancel {
   padding: 0.6rem 1.3rem;
   font-size: 0.9rem;
 }
-.booking-wrapper .booking-container .swiper-button-prev, 
+.booking-wrapper .booking-container .swiper-button-prev,
 .booking-wrapper .booking-container .swiper-button-next {
-  top:90%;
+  top: 90%;
   left: auto;
-  margin-top:0;
+  margin-top: 0;
   width: auto;
   display: inline-block;
 }
 .booking-wrapper .booking-container .swiper-button-prev {
-  right: 60px!important;
+  right: 60px !important;
 }
 .booking-wrapper .booking-container .swiper-button-next {
   right: 24px;
 }
-.booking-wrapper .booking-container  .swiper-button-next:after, 
-.booking-wrapper .booking-container  .swiper-button-prev:after {
+.booking-wrapper .booking-container .swiper-button-next:after,
+.booking-wrapper .booking-container .swiper-button-prev:after {
   font-size: 0.65rem;
   color: #fff;
   background: var(--colorPrimary);
@@ -3073,37 +3115,115 @@ margin: 1rem 0 0 0;
   }
   .booking-wrapper .booking-container .swiper-wrapper {
     padding-top: 4rem;
-}
-.booking-wrapper .booking-container .swiper-button-prev, 
-.booking-wrapper .booking-container .swiper-button-next {
-  top:12px;
-  left: auto;
-  margin-top:0;
-  width: auto;
-  display: inline-block;
-}
-.booking-wrapper .booking-container .swiper-button-prev {
-  right: 60px!important;
-}
-.booking-wrapper .booking-container .swiper-button-next {
-  right: 20px;
-}
-.booking-wrapper .booking-container  .swiper-button-next:after, 
-.booking-wrapper .booking-container  .swiper-button-prev:after {
-  font-size: 1rem;
-  padding: 0.75rem;
-}
+  }
+  .booking-wrapper .booking-container .swiper-button-prev,
+  .booking-wrapper .booking-container .swiper-button-next {
+    top: 12px;
+    left: auto;
+    margin-top: 0;
+    width: auto;
+    display: inline-block;
+  }
+  .booking-wrapper .booking-container .swiper-button-prev {
+    right: 60px !important;
+  }
+  .booking-wrapper .booking-container .swiper-button-next {
+    right: 20px;
+  }
+  .booking-wrapper .booking-container .swiper-button-next:after,
+  .booking-wrapper .booking-container .swiper-button-prev:after {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
 
-.booking-wrapper .booking-container .booking-courses-swiper {
-  padding: 0;
-}
+  .booking-wrapper .booking-container .booking-courses-swiper {
+    padding: 0px 0 0.75rem 0;
+  }
 }
 @media (min-width: 992px) {
   .booking-wrapper .booking-container .swiper-slide .course .course__vendor-title {
     font-size: 1.4rem;
+  }
+  .booking-wrapper .booking-container .swiper-slide .course .course__button--cancel {
+    padding: 0.75rem 1.6rem;
+    font-size: 0.95rem;
+  }
 }
-.booking-wrapper .booking-container .swiper-slide .course .course__button--cancel {
-  padding: 0.75rem 1.6rem;
-  font-size: 0.95rem;
+
+/* Wallet wrapper */
+.wallet-wrapper {
+  padding: 1.25rem;
+  border-radius: 10px;
 }
+.wallet-wrapper .wallet__balance {
+  color: var(--colorRandomSkyblue);
+}
+.wallet-wrapper .coupon-code-form .coupon-code-form {
+  width: 300px;
+}
+.wallet-wrapper .coupon-code-form .coupon-code-form__input {
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .wallet-wrapper {
+    padding: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .wallet-wrapper {
+    padding: 1.875rem;
+  }
+}
+
+/* Customer Support Page */
+.support-wrapper {
+  padding: 1.25rem;
+}
+.support-wrapper .support__subheading {
+  color: var(--colorRandomSkyblue);
+}
+.support-wrapper .support-form .input__container {
+  margin: 0 0 1.25rem 0;
+}
+.support-wrapper .support-form label {
+  color: var(--colorPara);
+  display: block;
+  margin: 0 0 0.5rem 0;
+}
+.support-wrapper .support-form .support-form__input {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  border-radius: 10px;
+}
+.support-wrapper .support-form .support-form__input.support-form__input--textarea {
+  height: 130px;
+}
+.support-wrapper .support-direct-col {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+.support-wrapper .support-direct__cta--link {
+  color: #fff;
+  text-decoration: underline !important;
+}
+@media (min-width: 768px) {
+  .support-wrapper {
+    padding: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .support-wrapper {
+    padding: 1.875rem;
+  }
+  .support-wrapper .support-form label {
+    width: 240px;
+    margin-top: 0.5rem;
+  }
 }

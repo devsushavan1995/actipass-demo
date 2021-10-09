@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Actipass | Profile</title>
+    <title>Actipass | Customer Support</title>
   </head>
   <body>
     <section class="dashboard-wrapper">
@@ -185,67 +185,43 @@
         <!-- dashboard top navigation ends -->
         <!-- dashboard content starts -->
         <div class="dashboard__content">
-          <div class="profile-wrapper">
+          <div class="support-wrapper bg--white">
+            <h3 class="support__heading text--primary mb-1">Facing any issues with Actipass?</h3>
+            <h5 class="support__subheading mb-5">Let us know your problem so that we can help you.</h5>
             <div class="row">
-              <div class="col-12 col-md-6 col-lg-7">
-                <!-- profile form starts -->
-                <div class="profile-form-container bg--white mb-5">
-                  <h4 class="form__greeting-heading text--primary mb-4">
-                    Hello,
-                    <span class="heading__user">John Doe</span>
-                  </h4>
-                  <form action="#" class="profile-form" id="profileAddForm">
-                    <div class="input__container d-xl-flex">
-                      <input type="text" class="profile-form__input profile-form__input--firstname" placeholder="First Name*" name="firstname" required />
-                      <input type="text" class="profile-form__input profile-form__input--lastname" placeholder="Last Name*" name="lastname" required />
-                    </div>
-                    <div class="input__container">
-                      <input type="email" class="profile-form__input" placeholder="Email Address*" name="email" required />
-                    </div>
-                    <div class="input__container">
-                      <input type="tel" class="profile-form__input" placeholder="Phone Number*" name="phone" required />
-                    </div>
-                    <div class="input__container">
-                      <input type="text" class="profile-form__input" placeholder="Billing Address*" name="billingAddress" required />
-                    </div>
-                    <div class="input__container">
-                      <input type="text" class="profile-form__input" placeholder="Referral Code" name="refcode" />
-                    </div>
-                    <div class="d-flex justify-content-end">
-                    <button type="submit" class="button button__primary profile-form__button--submit">Save</button>
-                    </div>
-                  </form>
-                </div>
-                <!-- profile form starts -->
-              </div>
-              <div class="col-12 col-md-6 col-lg-5">
-                <div class="profile-child-list-wrapper bg--white">
-                  <ul class="profile-child-list">
-                    <!--single child profile -->
-                    <li class="child-list__item-wrapper">
-                      <a href="javascript:void(0)" class="list__item d-flex w-100 align-items-center text--primary">
-                        <h5 class="item__icon">
-                          <i class="bi bi-person-check"></i>
-                        </h5>
-                        <h5 class="item__title">Child 1</h5>
-                      </a>
-                    </li>
-                    <!--single child profile -->
-                    <li class="child-list__item-wrapper">
-                      <a href="javascript:void(0)" class="list__item d-flex w-100 align-items-center text--primary">
-                        <h5 class="item__icon">
-                          <i class="bi bi-person-check"></i>
-                        </h5>
-                        <h5 class="item__title">Child 2</h5>
-                      </a>
-                    </li>
-                  </ul>
-                  <div class="d-flex justify-content-center pt-4">
-                    <a href="#" class="button button__secondary profile-child-list__button--add">
-                      Add
-                      <i class="bi bi-plus"></i>
-                    </a>
+              <div class="col-12 col-md-12 col-lg-7 mb-5 mb-md-0">
+                <form action="#" class="support-form pr-lg-5">
+                  <div class="input__container d-lg-flex">
+                    <label for="Issue Category">Issue Regarding?</label>
+                    <select class="custom-select" id="supportIssueCategory">
+                      <option selected>Choose from below list</option>
+                      <option value="sales-related">Sales Related</option>
+                      <option value="class-related">Class Related</option>
+                      <option value="3">Others</option>
+                    </select>
                   </div>
+                  <div class="input__container d-lg-flex">
+                    <label for="Subject">Subject</label>
+                    <input type="text" name="issueSubject" class="support-form__input" required />
+                  </div>
+                  <div class="input__container d-lg-flex">
+                    <label for="Brief">Brief About Issue</label>
+                    <textarea name="issueBrief" class="support-form__input support-form__input--textarea"></textarea>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <button type="submit" class="button button__primary support-form__button--submit">Submit</button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-12 col-md-12 col-lg-5 bg--randomSkyblue support-direct-col mt-5 mt-lg-0">
+                <div class="support-direct-wrapper">
+                  <h4 class="support__heading text-center text--gray">
+                    You can also send mail at<br />
+                    <a href="mailto:support@actipass.in" class="support-direct__cta--link">support@actipass.in</a><br />
+                    or<br />
+                    Call us on<br />
+                    <a href="tel:+123 4567890" class="support-direct__cta--link">+123 4567890</a>
+                  </h4>
                 </div>
               </div>
             </div>
