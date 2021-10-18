@@ -236,20 +236,28 @@ $(document).ready(function () {
   });
 
   // admin dashboard fluid
-  var dashboardSidebarTogglerEl = $('.dashboard-wrapper .dashboard__sidebar--toggler');
+  var dashboardSidebarTogglerEl1 = $('#dashboardSidebarToggler1');
+  var dashboardSidebarTogglerEl2 = $('#dashboardSidebarToggler2');
   var dashboardSidebarEl = $('.dashboard-wrapper .dashboard__sidebar');
   var dashboardContentAreaEl = $('.dashboard-wrapper .dashboard__content-area');
   var dashboardTopbarEl = $('.dashboard-wrapper .dashboard__topbar');
-  if ($(window).width() < 992) {
-    dashboardSidebarEl.addClass('dashboard__sidebar--shrinked');
-    dashboardContentAreaEl.addClass('dashboard__content-area--fluid');
-    dashboardTopbarEl.addClass('dashboard__topbar--fluid');
-  }
-  dashboardSidebarTogglerEl.on('click', function () {
+  var dashboardOverlayEl = $('.dashboard-wrapper .dashboard__overlay');
+  console.log(dashboardOverlayEl);
+  dashboardSidebarTogglerEl1.on('click', dashboardToggling);
+  dashboardSidebarTogglerEl2.on('click', dashboardToggling);
+ 
+  function dashboardToggling() {
+    dashboardOverlayEl.addClass('dashboard__overlay--active');
     dashboardSidebarEl.toggleClass('dashboard__sidebar--shrinked');
     dashboardContentAreaEl.toggleClass('dashboard__content-area--fluid');
     dashboardTopbarEl.toggleClass('dashboard__topbar--fluid');
-  });
+    if(dashboardOverlayEl.hasClass('dashboard__overlay--active')) {
+      dashboardOverlayEl.on('click', function() {
+        $(this).removeClass('dashboard__overlay--active');
+        dashboardSidebarEl.removeClass('dashboard__sidebar--shrinked');
+      })
+    }
+ }
 
   // toggle buttons for select activity
   //$('input.cb-value').prop("checked", true);

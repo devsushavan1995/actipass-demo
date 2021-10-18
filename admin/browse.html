@@ -19,13 +19,14 @@
   </head>
   <body>
     <section class="dashboard-wrapper">
+      <div class="dashboard__overlay d-lg-none"></div>
       <div class="dashboard__sidebar">
         <!-- sidebar logo starts -->
         <div class="sidebar__logo-wrapper d-flex justify-content-between">
           <a href="#" class="logo--linked">
             <img src="/assets/images/actipass_logo.png" class="logo" alt="Actipass Logo" />
           </a>
-          <button class="dashboard__sidebar--toggler">
+          <button class="dashboard__sidebar--toggler" id="dashboardSidebarToggler1">
             <i class="bi bi-list"></i>
           </button>
         </div>
@@ -135,7 +136,11 @@
       </div>
       <div class="dashboard__content-area bg--light1">
         <!-- dashboard top navigation starts -->
-        <nav class="dashboard__topbar d-flex align-items-center justify-content-end justify-content-lg-between">
+        <nav class="dashboard__topbar d-flex align-items-center justify-content-between">
+          <!-- alternative button toggler for sidebar-->
+          <button class="dashboard__sidebar--toggler d-lg-none" id="dashboardSidebarToggler2">
+            <i class="bi bi-list"></i>
+          </button>
           <ul class="topbar__nav d-none d-lg-block">
             <li class="nav__item">
               <a href="#" class="nav__item--link">Home</a>
@@ -203,253 +208,66 @@
                 </select>
               </div>
             </div>
-            <div class="browse-activities__body vendors-wrapper">
+            <div class="browse-activities__body vendors-wrapper px-3 row flex-wrap">
               <!-- single vendor item (browse) -->
-              <div class="vendor bg--white mb-4">
-                <div class="row align-items-lg-center">
-                  <div class="col-12 col-sm-12 col-md-4 col-lg-6 col-xl-4">
-                    <div class="vendor__image-container">
-                      <img src="../assets/images/dummy-600x500.png" alt="vendor-profile-image" />
-                    </div>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-8">
-                    <div class="row">
-                      <div class="col-12 col-md-12 col-lg-12 col-xl-8 pl-lg-1">
-                        <div class="vendor__content">
-                          <h4 class="vendor__title text--primary">Little Hands</h4>
-                          <h6 class="vendor__fee">Price Starts from<span class="fee">Rs. XXX</span></h6>
-                          <div class="vendor__review-container">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                          </div>
-                          <div class="vendor__specification d-flex flex-wrap flex-md-nowrap">
-                            <button class="specification__button specification__button specification__button--one-pass" disabled>
-                              <span class="button__text">One Pass</span>
-                              <span class="button__icon"><i class="bi bi-link-45deg"></i></span>
-                            </button>
-                            <button class="specification__button specification__button--play-video">
-                              <span class="button__text">Play Video</span>
-                              <span class="button__icon"><i class="bi bi-play-circle"></i></span>
-                            </button>
-                            <button class="specification__button specification__button--verified" disabled>
-                              <span class="button__text">Verified</span>
-                              <span class="button__icon"><i class="bi bi-hand-thumbs-up"></i></span>
-                            </button>
-                            <button class="specification__button specification__button--top-5" disabled>
-                              <span class="button__text">Top 5</span>
-                              <span class="button__icon"><i class="bi bi-person-check"></i></span>
-                            </button>
-                          </div>
-                          <div class="vendor__eligibility-container">
-                            <ul class="eligibility-list d-flex flex-wrap flex-md-nowrap align-items-center">
-                              <li class="list-item">Age Group: 2-14</li>
-                              <li class="list-item">Dance</li>
-                              <li class="list-item">Location: Santacruz</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-12 col-lg-12 col-xl-4 d-lg-flex flex-wrap align-items-center pl-lg-1">
-                        <div class="vendor__button-cta-wrapper">
-                          <a href="#" class="button button__secondary vendor__button--book-a-demo">Book A Demo Session</a>
-                        </div>
-                        <div class="vendor__button-cta-wrapper">
-                          <a href="#" class="button button__primary vendor__button--book-activity">Book Activity</a>
-                        </div>
-                        <div class="vendor__button-cta-wrapper">
-                          <a href="#" class="button button__alternative vendor__button-Know More">Know More</a>
-                        </div>
+              <div class="vendor__container">
+                <div class="vendor bg--white">
+                  <div class="row align-items-lg-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                      <div class="vendor__image-container">
+                        <img src="../assets/images/dummy-600x500.png" alt="vendor-profile-image" />
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <!-- single vendor item (browse) -->
-              <div class="vendor bg--white mb-4">
-                <div class="row align-items-lg-center">
-                  <div class="col-12 col-sm-12 col-md-4 col-lg-6 col-xl-4">
-                    <div class="vendor__image-container">
-                      <img src="../assets/images/dummy-600x500.png" alt="vendor-profile-image" />
-                    </div>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-8">
-                    <div class="row">
-                      <div class="col-12 col-md-12 col-lg-12 col-xl-8 pl-lg-1">
-                        <div class="vendor__content">
-                          <h4 class="vendor__title text--primary">Little Hands</h4>
-                          <h6 class="vendor__fee">Price Starts from<span class="fee">Rs. XXX</span></h6>
-                          <div class="vendor__review-container">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                          </div>
-                          <div class="vendor__specification d-flex flex-wrap flex-md-nowrap">
-                            <button class="specification__button specification__button specification__button--one-pass" disabled>
-                              <span class="button__text">One Pass</span>
-                              <span class="button__icon"><i class="bi bi-link-45deg"></i></span>
-                            </button>
-                            <button class="specification__button specification__button--play-video">
-                              <span class="button__text">Play Video</span>
-                              <span class="button__icon"><i class="bi bi-play-circle"></i></span>
-                            </button>
-                            <button class="specification__button specification__button--verified" disabled>
-                              <span class="button__text">Verified</span>
-                              <span class="button__icon"><i class="bi bi-hand-thumbs-up"></i></span>
-                            </button>
-                            <button class="specification__button specification__button--top-5" disabled>
-                              <span class="button__text">Top 5</span>
-                              <span class="button__icon"><i class="bi bi-person-check"></i></span>
-                            </button>
-                          </div>
-                          <div class="vendor__eligibility-container">
-                            <ul class="eligibility-list d-flex flex-wrap flex-md-nowrap align-items-center">
-                              <li class="list-item">Age Group: 2-14</li>
-                              <li class="list-item">Dance</li>
-                              <li class="list-item">Location: Santacruz</li>
-                            </ul>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-8">
+                      <div class="row">
+                        <div class="col-12 col-md-12 col-lg-12 col-xl-8 pl-lg-1">
+                          <div class="vendor__content">
+                            <h4 class="vendor__title text--primary">Little Hands</h4>
+                            <h6 class="vendor__fee">Price Starts from<span class="fee">Rs. XXX</span></h6>
+                            <div class="vendor__review-container">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="vendor__specification d-flex flex-wrap flex-md-nowrap">
+                              <button class="specification__button specification__button specification__button--one-pass" disabled>
+                                <span class="button__text">One Pass</span>
+                                <span class="button__icon"><i class="bi bi-link-45deg"></i></span>
+                              </button>
+                              <button class="specification__button specification__button--play-video">
+                                <span class="button__text">Play Video</span>
+                                <span class="button__icon"><i class="bi bi-play-circle"></i></span>
+                              </button>
+                              <button class="specification__button specification__button--verified" disabled>
+                                <span class="button__text">Verified</span>
+                                <span class="button__icon"><i class="bi bi-hand-thumbs-up"></i></span>
+                              </button>
+                              <button class="specification__button specification__button--top-5" disabled>
+                                <span class="button__text">Top 5</span>
+                                <span class="button__icon"><i class="bi bi-person-check"></i></span>
+                              </button>
+                            </div>
+                            <div class="vendor__eligibility-container">
+                              <ul class="eligibility-list d-flex flex-wrap flex-lg-nowrap align-items-center">
+                                <li class="list-item">Age Group: 2-14</li>
+                                <li class="list-item">Dance</li>
+                                <li class="list-item">Location: Santacruz</li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-12 col-md-12 col-lg-12 col-xl-4 d-lg-flex flex-wrap align-items-center pl-lg-1">
-                        <div class="vendor__button-cta-wrapper">
-                          <a href="#" class="button button__secondary vendor__button--book-a-demo">Book A Demo Session</a>
-                        </div>
-                        <div class="vendor__button-cta-wrapper">
-                          <a href="#" class="button button__primary vendor__button--book-activity">Book Activity</a>
-                        </div>
-                        <div class="vendor__button-cta-wrapper">
-                          <a href="#" class="button button__alternative vendor__button-Know More">Know More</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- single vendor item (browse) -->
-              <div class="vendor bg--white mb-4">
-                <div class="row align-items-lg-center">
-                  <div class="col-12 col-sm-12 col-md-4 col-lg-6 col-xl-4">
-                    <div class="vendor__image-container">
-                      <img src="../assets/images/dummy-600x500.png" alt="vendor-profile-image" />
-                    </div>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-8">
-                    <div class="row">
-                      <div class="col-12 col-md-12 col-lg-12 col-xl-8 pl-lg-1">
-                        <div class="vendor__content">
-                          <h4 class="vendor__title text--primary">Little Hands</h4>
-                          <h6 class="vendor__fee">Price Starts from<span class="fee">Rs. XXX</span></h6>
-                          <div class="vendor__review-container">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
+                        <div class="col-12 col-md-12 col-lg-12 col-xl-4 d-lg-flex flex-wrap align-items-center pl-lg-1">
+                          <div class="vendor__button-cta-wrapper">
+                            <a href="#" class="button button__secondary vendor__button--book-a-demo">Book A Demo Session</a>
                           </div>
-                          <div class="vendor__specification d-flex flex-wrap flex-md-nowrap">
-                            <button class="specification__button specification__button specification__button--one-pass" disabled>
-                              <span class="button__text">One Pass</span>
-                              <span class="button__icon"><i class="bi bi-link-45deg"></i></span>
-                            </button>
-                            <button class="specification__button specification__button--play-video">
-                              <span class="button__text">Play Video</span>
-                              <span class="button__icon"><i class="bi bi-play-circle"></i></span>
-                            </button>
-                            <button class="specification__button specification__button--verified" disabled>
-                              <span class="button__text">Verified</span>
-                              <span class="button__icon"><i class="bi bi-hand-thumbs-up"></i></span>
-                            </button>
-                            <button class="specification__button specification__button--top-5" disabled>
-                              <span class="button__text">Top 5</span>
-                              <span class="button__icon"><i class="bi bi-person-check"></i></span>
-                            </button>
+                          <div class="vendor__button-cta-wrapper">
+                            <a href="#" class="button button__primary vendor__button--book-activity">Book Activity</a>
                           </div>
-                          <div class="vendor__eligibility-container">
-                            <ul class="eligibility-list d-flex flex-wrap flex-md-nowrap align-items-center">
-                              <li class="list-item">Age Group: 2-14</li>
-                              <li class="list-item">Dance</li>
-                              <li class="list-item">Location: Santacruz</li>
-                            </ul>
+                          <div class="vendor__button-cta-wrapper">
+                            <a href="#" class="button button__alternative vendor__button-Know More">Know More</a>
                           </div>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-12 col-lg-12 col-xl-4 d-lg-flex flex-wrap align-items-center pl-lg-1">
-                        <div class="vendor__button-cta-wrapper">
-                          <a href="#" class="button button__secondary vendor__button--book-a-demo">Book A Demo Session</a>
-                        </div>
-                        <div class="vendor__button-cta-wrapper">
-                          <a href="#" class="button button__primary vendor__button--book-activity">Book Activity</a>
-                        </div>
-                        <div class="vendor__button-cta-wrapper">
-                          <a href="#" class="button button__alternative vendor__button-Know More">Know More</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- single vendor item (browse) -->
-              <div class="vendor bg--white mb-4">
-                <div class="row align-items-lg-center">
-                  <div class="col-12 col-sm-12 col-md-4 col-lg-6 col-xl-4">
-                    <div class="vendor__image-container">
-                      <img src="../assets/images/dummy-600x500.png" alt="vendor-profile-image" />
-                    </div>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-8">
-                    <div class="row">
-                      <div class="col-12 col-md-12 col-lg-12 col-xl-8 pl-lg-1">
-                        <div class="vendor__content">
-                          <h4 class="vendor__title text--primary">Little Hands</h4>
-                          <h6 class="vendor__fee">Price Starts from<span class="fee">Rs. XXX</span></h6>
-                          <div class="vendor__review-container">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                          </div>
-                          <div class="vendor__specification d-flex flex-wrap flex-md-nowrap">
-                            <button class="specification__button specification__button specification__button--one-pass" disabled>
-                              <span class="button__text">One Pass</span>
-                              <span class="button__icon"><i class="bi bi-link-45deg"></i></span>
-                            </button>
-                            <button class="specification__button specification__button--play-video">
-                              <span class="button__text">Play Video</span>
-                              <span class="button__icon"><i class="bi bi-play-circle"></i></span>
-                            </button>
-                            <button class="specification__button specification__button--verified" disabled>
-                              <span class="button__text">Verified</span>
-                              <span class="button__icon"><i class="bi bi-hand-thumbs-up"></i></span>
-                            </button>
-                            <button class="specification__button specification__button--top-5" disabled>
-                              <span class="button__text">Top 5</span>
-                              <span class="button__icon"><i class="bi bi-person-check"></i></span>
-                            </button>
-                          </div>
-                          <div class="vendor__eligibility-container">
-                            <ul class="eligibility-list d-flex flex-wrap flex-md-nowrap align-items-center">
-                              <li class="list-item">Age Group: 2-14</li>
-                              <li class="list-item">Dance</li>
-                              <li class="list-item">Location: Santacruz</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-12 col-lg-12 col-xl-4 d-lg-flex flex-wrap align-items-center pl-lg-1">
-                        <div class="vendor__button-cta-wrapper">
-                          <a href="#" class="button button__secondary vendor__button--book-a-demo">Book A Demo Session</a>
-                        </div>
-                        <div class="vendor__button-cta-wrapper">
-                          <a href="#" class="button button__primary vendor__button--book-activity">Book Activity</a>
-                        </div>
-                        <div class="vendor__button-cta-wrapper">
-                          <a href="#" class="button button__alternative vendor__button-Know More">Know More</a>
                         </div>
                       </div>
                     </div>

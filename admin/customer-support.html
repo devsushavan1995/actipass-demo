@@ -19,13 +19,14 @@
   </head>
   <body>
     <section class="dashboard-wrapper">
+      <div class="dashboard__overlay d-lg-none"></div>
       <div class="dashboard__sidebar">
         <!-- sidebar logo starts -->
         <div class="sidebar__logo-wrapper d-flex justify-content-between">
           <a href="#" class="logo--linked">
             <img src="/assets/images/actipass_logo.png" class="logo" alt="Actipass Logo" />
           </a>
-          <button class="dashboard__sidebar--toggler">
+          <button class="dashboard__sidebar--toggler" id="dashboardSidebarToggler1">
             <i class="bi bi-list"></i>
           </button>
         </div>
@@ -135,7 +136,11 @@
       </div>
       <div class="dashboard__content-area bg--light1">
         <!-- dashboard top navigation starts -->
-        <nav class="dashboard__topbar d-flex align-items-center justify-content-end justify-content-lg-between">
+        <nav class="dashboard__topbar d-flex align-items-center justify-content-between">
+          <!-- alternative button toggler for sidebar-->
+          <button class="dashboard__sidebar--toggler d-lg-none" id="dashboardSidebarToggler2">
+            <i class="bi bi-list"></i>
+          </button>
           <ul class="topbar__nav d-none d-lg-block">
             <li class="nav__item">
               <a href="#" class="nav__item--link">Home</a>
