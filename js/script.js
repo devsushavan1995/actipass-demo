@@ -245,19 +245,19 @@ $(document).ready(function () {
   console.log(dashboardOverlayEl);
   dashboardSidebarTogglerEl1.on('click', dashboardToggling);
   dashboardSidebarTogglerEl2.on('click', dashboardToggling);
- 
+
   function dashboardToggling() {
     dashboardOverlayEl.addClass('dashboard__overlay--active');
     dashboardSidebarEl.toggleClass('dashboard__sidebar--shrinked');
     dashboardContentAreaEl.toggleClass('dashboard__content-area--fluid');
     dashboardTopbarEl.toggleClass('dashboard__topbar--fluid');
-    if(dashboardOverlayEl.hasClass('dashboard__overlay--active')) {
-      dashboardOverlayEl.on('click', function() {
+    if (dashboardOverlayEl.hasClass('dashboard__overlay--active')) {
+      dashboardOverlayEl.on('click', function () {
         $(this).removeClass('dashboard__overlay--active');
         dashboardSidebarEl.removeClass('dashboard__sidebar--shrinked');
-      })
+      });
     }
- }
+  }
 
   // toggle buttons for select activity
   //$('input.cb-value').prop("checked", true);
@@ -370,7 +370,7 @@ $(document).ready(function () {
   $('#addChildDatePicker')
     .datepicker({
       showOn: 'both',
-      dateFormat: "dd-mm-yy",
+      dateFormat: 'dd-mm-yy',
     })
     .next('button')
     .button({
@@ -379,4 +379,24 @@ $(document).ready(function () {
       },
       text: false,
     });
+
+  // // Data Picker Initialization
+  // $('.datepicker').datepicker();
+
+  // $('.date-trigger').on('focus', function () {
+  //   console.log($(this));
+  //   $('.fa-calendar').click();
+  // });
+  $('.onepassDatepicker')
+  .datepicker({
+    showOn: 'both',
+    dateFormat: 'dd-mm-yy',
+  })
+  .next('button')
+  .button({
+    icons: {
+      primary: 'ui-icon-calendar',
+    },
+    text: false,
+  });
 });
