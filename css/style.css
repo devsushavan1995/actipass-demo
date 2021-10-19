@@ -263,6 +263,11 @@ h6 {
 .button__alternative:hover {
   color: #fff;
 }
+.button__subscribe {
+  color: #fff;
+  text-shadow: 0 2px 4px #8b3900;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fe3838), to(#fc6b04));background: -o-linear-gradient(top, #fe3838, #fc6b04);background: linear-gradient(to bottom, #fe3838, #fc6b04);
+}
 /* .button__primary--no-shadow {
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -1257,7 +1262,7 @@ h6 {
 }
 .trending-activities-section .activity-category .activity-category__title {
   color: var(--colorPrimary);
-  margin: 0 0 1.25rem 0;
+  margin: 1.25rem 0 1.25rem 0;
 }
 .trending-activities-section .activity-category .activity-category__description {
   color: var(--colorPara);
@@ -1305,6 +1310,10 @@ h6 {
   transform: translateY(-10px);
 }
 @media (min-width: 768px) {
+  .trending-activities-section .activity-category .activity-category__title {
+    color: var(--colorPrimary);
+    margin: 1.25rem 0 1.25rem 0;
+  }
   .trending-activities-section .activity-category .activity-category__image-container {
     margin: 0 1rem -1rem 0;
   }
@@ -1326,6 +1335,10 @@ h6 {
   } */
 }
 @media (min-width: 992px) {
+  .trending-activities-section .activity-category .activity-category__title {
+    color: var(--colorPrimary);
+    margin: 1.25rem 0 1.25rem 0;
+  }
   .trending-activities-section .activity-category.activity-category--sport {
     margin: 0 1.5rem 4.5rem 0;
   }
@@ -3173,10 +3186,10 @@ margin: 1rem 0 0 0;
 .booking-wrapper .booking-container {
   padding: 1rem 0.8rem;
   border-radius: 10px;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   position: relative;
   margin: 0 0 1.875rem 0;
-  background: #fff;
+  /* background: #fff; */
 }
 .booking-wrapper .booking-container .booking-courses-swiper {
   margin: 0 -1rem;
@@ -3347,6 +3360,7 @@ margin: 1rem 0 0 0;
 }
 .support-wrapper .support__subheading {
   color: var(--colorRandomSkyblue);
+  font-weight: 500;
 }
 .support-wrapper .support-form .input__container {
   margin: 0 0 1.25rem 0;
@@ -3594,7 +3608,7 @@ color: #1665c4;
   width: 200px;
 }
 .forum-wrapper .people-interaction-wrapper .people-interaction-container {
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
   height: 240px;
   overflow-y: scroll;
@@ -3603,7 +3617,21 @@ color: #1665c4;
   font-size: 1.062rem;
 }
 .forum-wrapper .people-interaction-wrapper .people-interaction-container::-webkit-scrollbar {
-  width: 0px;
+  width: 2px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 .forum-wrapper .people-interaction-wrapper .people-interaction-container .people__list .people__list-item {
   margin: 0 0 1rem 0;
