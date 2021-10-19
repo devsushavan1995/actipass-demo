@@ -3442,7 +3442,7 @@ color: #1665c4;
   border-radius: 10px;
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 2rem 0;
 }
 .forum-wrapper .post .engagement__record {
   font-size: 1rem;
@@ -3641,5 +3641,37 @@ color: #1665c4;
   }
   .forum-wrapper .people-interaction-wrapper .people-interaction-container .people-interaction__button--more {
     font-size: 0.9rem;
+  }
+}
+
+/* Billing Information */
+.billing-wrapper .table {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  border-width: 0 1px 1px 1px;
+}
+.billing-wrapper .table th,
+.billing-wrapper .table tr,
+.billing-wrapper .table td {
+  font-family: var(--fontBase);
+}
+.billing-wrapper .table .service-details__activity-heading {
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.billing-wrapper .table th,
+.billing-wrapper .table td {
+  padding: 0.75rem;
+}
+.billing-wrapper .table .billing__button--download-invoice {
+  font-size: 0.9rem;
+}
+.billing-wrapper .table .billing__button--download-invoice .button__icon {
+  display: none;
+}
+@media (min-width: 768px) {
+  .billing-wrapper .table .billing__button--download-invoice .button__icon {
+    display: inline-block;
+    margin-left: 0.25rem;
   }
 }
