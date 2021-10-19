@@ -399,4 +399,59 @@ $(document).ready(function () {
     },
     text: false,
   });
+
+  // forum like button 
+  $('.engagement__button--like').click(function(){
+    $(this).toggleClass('is-active');
+})
+
+ // story swiper
+ var swiperTutorTopRated = new Swiper('.story-swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  autoplay: true,
+  delay: 5000,
+  pauseOnMouseEnter: true,
+  slidesPerView: 1,
+  spaceBetween: 10,
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 15,
+    },
+  },
+  pagination: false,
+  /* If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    renderCustom: function (swiper, current, total) {
+      var names = [];
+      $('.swiper-wrapper .swiper-slide').each(function (i) {
+        names.push($(this).data('name'));
+      });
+      var text = '<ul>';
+      for (let i = 1; i <= total; i++) {
+        if (current == i) {
+          text += `<li class="swiper-pagination-bullet active">${names[i]}</li>`;
+        } else {
+          text += `<li class="swiper-pagination-bullet">${names[i]}</li>`;
+        }
+      }
+      text += '</ul>';
+      return text;
+    },
+  },
+  */
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
 });

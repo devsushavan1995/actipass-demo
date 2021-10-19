@@ -3396,3 +3396,250 @@ margin: 1rem 0 0 0;
     margin-top: 0.5rem;
   }
 }
+
+/* Forum / Community page */
+.filelabel {
+  width: 120px;
+  border: 2px dashed grey;
+  border-radius: 5px;
+  display: block;
+  padding: 5px;
+  transition: border 300ms ease;
+  cursor: pointer;
+  text-align: center;
+  margin: 0;
+}
+.filelabel i {
+  display: block;
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+.filelabel i,
+.filelabel .title {
+color: grey;
+transition: 200ms color;
+}
+.filelabel:hover {
+border: 2px solid #1665c4;
+}
+.filelabel:hover i,
+.filelabel:hover .title {
+color: #1665c4;
+}
+#FileInput{
+  display:none;
+}
+.forum-wrapper .create-post-form .create-post__input {
+  width: 100%;
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  height: 80px;
+  color: var(--colorPrimary);
+  font-size: 0.9375rem;
+}
+.forum-wrapper .post {
+  border-radius: 10px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  margin: 0 0 1.5rem 0;
+}
+.forum-wrapper .post .engagement__record {
+  font-size: 1rem;
+}
+.forum-wrapper .post .engagement__record--like {
+  color: var(--colorRandomPink);
+}
+.forum-wrapper .post .engagement__record--comment {
+  color: var(--colorRandomGreen);
+}
+.forum-wrapper .post .post__title .post__title--link {
+  color: var(--colorPrimary);
+}
+.forum-wrapper .post .post__title .post__title--link:hover {
+  color: var(--colorRandomSkyblue);
+}
+.forum-wrapper .post .engagement__button--comment {
+  font-weight: 600;
+  color: var(--colorPrimary);
+}
+.forum-wrapper .post .engagement__button--comment:hover {
+  color: var(--colorRandomSkyblue);
+}
+.forum-wrapper .post .engagement-comment-form .comment-form__input {
+  width: 100%;
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  height: 80px;
+  color: var(--colorPrimary);
+  font-size: 0.9375rem;
+}
+.forum-wrapper .post .engagement__cta-header {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+.forum-wrapper .engagement-like-wrapper .engagement__button--like {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-decoration: none;
+  overflow: hidden;
+}
+.forum-wrapper .engagement-like-wrapper .engagement__button--like  .post__like-overay {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--colorRandomPink);
+  transform: scale(0);
+  transition: all 0.4s;
+  z-index: 0;
+}
+.forum-wrapper .engagement-like-wrapper .engagement__button--like  i.not-liked {
+  display: block;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  margin-top: 4px;
+}
+.forum-wrapper .engagement-like-wrapper .engagement__button--like  i.is-liked {
+  display: none;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  margin-top: 4px;
+}
+.forum-wrapper .engagement-like-wrapper .engagement__button--like.is-active .post__like-overay {
+  transform: scale(1);
+}
+.forum-wrapper .engagement-like-wrapper .engagement__button--like.is-active i.not-liked {
+  display: none;
+}
+.forum-wrapper .engagement-like-wrapper .engagement__button--like.is-active i.is-liked {
+  display: block;
+}
+
+@-webkit-keyframes bouncy {
+  from, to {
+    -webkit-transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+  }
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+  }
+}
+@keyframes bouncy {
+  from, to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+.forum-wrapper .bouncy {
+  -webkit-animation: bouncy 0.6s;
+  animation: bouncy 0.6s;
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* .link-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #6dacff;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+}
+.link-button img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+.link-button:hover {
+  transform: scale(1.1) rotate(180deg);
+  background: #ff4f8f;
+} */
+.forum-wrapper .people-interaction-wrapper {
+  position: fixed;
+  right:0;
+  width: 200px;
+}
+.forum-wrapper .people-interaction-wrapper .people-interaction-container {
+  border-radius: 10px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  height: 240px;
+  overflow-y: scroll;
+}
+.forum-wrapper .people-interaction-wrapper .people-interaction-container h5 {
+  font-size: 1.062rem;
+}
+.forum-wrapper .people-interaction-wrapper .people-interaction-container::-webkit-scrollbar {
+  width: 0px;
+}
+.forum-wrapper .people-interaction-wrapper .people-interaction-container .people__list .people__list-item {
+  margin: 0 0 1rem 0;
+}
+.forum-wrapper .people-interaction-wrapper .people-interaction-container .people__list .people__list-item .people__profile-image {
+  border-radius: 50%;
+  width: 32px;
+}
+.forum-wrapper .people-interaction-wrapper .people-interaction-container .people__list .people__list-item .people__name {
+  font-weight: 600;
+}
+.forum-wrapper .people-interaction-wrapper .people-interaction-container .people-interaction__button--more {
+  font-size: 0.75rem;
+}
+@media (min-width: 1200px) {
+  .forum-wrapper .people-interaction-wrapper {
+    width: 240px;
+  }
+  .forum-wrapper .people-interaction-wrapper .people-interaction-container .people__list .people__list-item .people__profile-image {
+    width: 40px;
+  }
+  .forum-wrapper .people-interaction-wrapper .people-interaction-container h5 {
+    font-size: 1.25rem;
+  }
+  .forum-wrapper .people-interaction-wrapper .people-interaction-container .people-interaction__button--more {
+    font-size: 0.85rem;
+  }
+}
+@media (min-width: 1300px) {
+  .forum-wrapper .people-interaction-wrapper {
+    width: 270px;
+  }
+  .forum-wrapper .people-interaction-wrapper .people-interaction-container .people__list .people__list-item .people__profile-image {
+    width: 50px;
+  }
+  .forum-wrapper .people-interaction-wrapper .people-interaction-container .people-interaction__button--more {
+    font-size: 0.9rem;
+  }
+}
