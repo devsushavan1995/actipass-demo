@@ -279,8 +279,8 @@ $(document).ready(function () {
   });
 
   // load more button for market place course page
-  var showOnPageload = 8; // set the number of course will shown on page load
-  var afterButtonClickLoad = 4; // number of courses on load more button click
+  var showOnPageload = 6; // set the number of course will shown on page load
+  var afterButtonClickLoad = 3; // number of courses on load more button click
   $('.market-place-wrapper .course-container').slice(0, showOnPageload).show();
   $('#courseButtonLoadMore').on('click', courseLoading);
   function courseLoading(e) {
