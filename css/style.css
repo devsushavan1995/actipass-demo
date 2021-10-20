@@ -2093,6 +2093,8 @@ h6 {
   font-size: 1.062rem;
   font-weight: 600;
   position: relative;
+  padding: 0 0.25rem 0.75rem 0.25rem;
+  margin-left: 0.75rem;
 }
 .dashboard__content-home .content-home__header .nav-tabs .nav-link.active {
   background: transparent;
@@ -2103,9 +2105,12 @@ h6 {
   height: 2px;
   width: 0%;
   background: var(--colorRandomSkyblue);
+  position: absolute;
+  bottom: 0;
+  left: 0;
   transition: width 0.3s ease;
 }
-.dashboard__content-home .content-home__header .nav-tabs .nav-link.active:after
+.dashboard__content-home .content-home__header .nav-tabs .nav-link.active:after,
 .dashboard__content-home .content-home__header .nav-tabs .nav-link:hover:after {
   width: 100%;
 }
@@ -2143,6 +2148,40 @@ h6 {
 .dashboard__content-home .class-schedule.class-schedule--later-this-week .schedule__list .schedule__list-item .item__course-name {
   width: 50%;
 }
+
+/* Dashboard Leader board */
+.dashboard__content-home .child-progress__leaderboard .nav-tabs .nav-link {
+  border: none;
+  color: var(--colorPrimary);
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+  padding: 0 0.25rem 0.75rem 0.25rem;
+  margin-right: 0.75rem;
+}
+.dashboard__content-home .child-progress__leaderboard .nav-tabs .nav-link.active {
+  background: transparent;
+}
+.dashboard__content-home .child-progress__leaderboard .nav-tabs .nav-link:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: var(--colorRandomSkyblue);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+.dashboard__content-home .child-progress__leaderboard .nav-tabs .nav-link.active:after,
+.dashboard__content-home .child-progress__leaderboard .nav-tabs .nav-link:hover:after {
+  width: 100%;
+}
+.dashboard__content-home .child-progress__leaderboard .nav-tabs .nav-link:hover,
+.dashboard__content-home .child-progress__leaderboard .nav-tabs .nav-link.active {
+  color: var(--colorRandomSkyblue);
+}
+
 
 /* Dasboard content - select activity */
 .select-activity-wrapper .toggle-button-container .toggle-button__heading {
