@@ -193,8 +193,10 @@
         <!-- dashboard content starts -->
         <div class="dashboard__content">
           <!-- Button trigger modal -->
-          <button type="button" class="button button__primary mb-2" data-toggle="modal" data-target="#addChildModal">Add Child</button>
-          <button type="button" class="button button__primary ml-none ml-sm-2" data-toggle="modal" data-target="#selectChildModal">Select Child</button>
+          <div class="d-none">
+            <button type="button" class="button button__primary mb-2" data-toggle="modal" data-target="#addChildModal">Add Child</button>
+            <button type="button" class="button button__primary ml-none ml-sm-2" data-toggle="modal" data-target="#selectChildModal">Select Child</button>
+          </div>
 
           <!-- Add child Modal -->
           <div class="modal fade modal__child-add" id="addChildModal" tabindex="-1" aria-labelledby="addChildModalLabel" aria-hidden="true">
@@ -282,6 +284,543 @@
               </div>
             </div>
           </div>
+
+          <!-- dashboard main content -->
+          <div class="dashboard__content-home">
+            <div class="content-home__header mb-5">
+              <!-- search your child by nane -->
+              <div class="search-container d-none">
+                <input type="text" name="searchChild" placeholder="Search by your child name" id="searchResultByChildName" />
+              </div>
+              <!-- select your child by name -->
+              <div class="tab-navigation d-none">
+                <label class="m-0 mr-2">Select Your Child:</label>
+                <select id="select-box">
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+              </div>
+              <nav class="d-flex justify-content-end">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <a class="nav-link active" id="nav-childName1-tab" data-toggle="tab" href="#childName1" role="tab" aria-controls="nav-childName1" aria-selected="true">Child Name 1</a>
+                  <a class="nav-link" id="nav-childName2-tab" data-toggle="tab" href="#childName2" role="tab" aria-controls="nav-childName2" aria-selected="false">Child Name 2</a>
+                  <!-- <a class="nav-link" id="nav-childName3-tab" data-toggle="tab" href="#childName3" role="tab" aria-controls="nav-childName3" aria-selected="false">Child Name 3</a> -->
+                </div>
+              </nav>
+            </div>
+            <!-- <div id="tab-1" class="tab-content">
+                this is tab 1 content.
+              </div>
+              <div id="tab-2" class="tab-content">
+                This is tab 2 content.
+              </div>
+              <div id="tab-3" class="tab-content">
+                This is tab 3 content.
+              </div> -->
+            <!-- select child by tabs -->
+            <div class="tab-content content-home__body" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="childName1" role="tabpanel" aria-labelledby="nav-childName1-tab">
+                <div class="child-progress-wrapper">
+                  <div class="row">
+                    <div class="col-12 col-md-4 col-lg-4 mb-5">
+                      <div class="child-progress__chart-container">
+                        <canvas id="childName1Progress" width="400" height="400"></canvas>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 mb-5">
+                      <div class="class-schedule bg--white box-shadow--custom border-radius--custom-10 p-4 mb-5 h-100">
+                        <h6 class="text--primary mb-3">Today's Class</h6>
+                        <ul class="schedule__list">
+                          <li class="schedule__list-item">
+                            <span class="item__time">5:15 PM</span>
+                            <span class="item__course-name">French By Nupur</span>
+                          </li>
+                          <li class="schedule__list-item">
+                            <span class="item__time">9:15 PM</span>
+                            <span class="item__course-name">Chess</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 mb-5">
+                      <div class="class-schedule bg--white class-schedule--later-this-week box-shadow--custom border-radius--custom-10 p-4 h-100">
+                        <h6 class="text--primary mb-3">Later This Week</h6>
+                        <ul class="schedule__list">
+                          <li class="schedule__list-item">
+                            <span class="item__day">Wed</span>
+                            <span class="item__time">5:15 PM</span>
+                            <span class="item__course-name">French By Nupur</span>
+                          </li>
+                          <li class="schedule__list-item">
+                            <span class="item__day">Thrusday</span>
+                            <span class="item__time">9:15 PM</span>
+                            <span class="item__course-name">Chess</span>
+                          </li>
+                          <li class="schedule__list-item">
+                            <span class="item__day">Friday</span>
+                            <span class="item__time">9:15 PM</span>
+                            <span class="item__course-name">Badminton</span>
+                          </li>
+                          <li class="schedule__list-item">
+                            <span class="item__day">Sat</span>
+                            <span class="item__time">9:15 PM</span>
+                            <span class="item__course-name">Cricket</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 mb-5">
+                      <div class="table-responsive child-progress__certificate-table bg--white box-shadow--custom border-radius--custom-10">
+                        <table class="table">
+                          <thead class="bg--primary text--light">
+                            <tr>
+                              <th scope="col">Activity</th>
+                              <th scope="col">Level</th>
+                              <th scope="col">Certificate</th>
+                              <th scope="col">Brag it on social media</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row"><span class="child-progress__category">Football</span></th>
+                              <td><span class="child-progress__level">Advance</span></td>
+                              <td>
+                                <a href="#" class="button button__primary certificate__button--download d-inline-block">
+                                  <i class="bi bi-download"></i>
+                                </a>
+                              </td>
+                              <td>
+                                <a href="#" class="button button__secondary certificate__button--download d-inline-block">
+                                  <span class="button__text mr-1">Brag</span>
+                                  <span class="button__icon"><i class="bi bi-share-fill"></i></span>
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><span class="child-progress__category">Football</span></th>
+                              <td><span class="child-progress__level">Advance</span></td>
+                              <td>
+                                <a href="#" class="button button__primary certificate__button--download d-inline-block">
+                                  <i class="bi bi-download"></i>
+                                </a>
+                              </td>
+                              <td>
+                                <a href="#" class="button button__secondary certificate__button--download d-inline-block">
+                                  <span class="button__text mr-1">Brag</span>
+                                  <span class="button__icon"><i class="bi bi-share-fill"></i></span>
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><span class="child-progress__category">Football</span></th>
+                              <td><span class="child-progress__level">Advance</span></td>
+                              <td>
+                                <a href="#" class="button button__primary certificate__button--download d-inline-block">
+                                  <i class="bi bi-download"></i>
+                                </a>
+                              </td>
+                              <td>
+                                <a href="#" class="button button__secondary certificate__button--download d-inline-block">
+                                  <span class="button__text mr-1">Brag</span>
+                                  <span class="button__icon"><i class="bi bi-share-fill"></i></span>
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><span class="child-progress__category">Football</span></th>
+                              <td><span class="child-progress__level">Advance</span></td>
+                              <td>
+                                <a href="#" class="button button__primary certificate__button--download d-inline-block">
+                                  <i class="bi bi-download"></i>
+                                </a>
+                              </td>
+                              <td>
+                                <a href="#" class="button button__secondary certificate__button--download d-inline-block">
+                                  <span class="button__text mr-1">Brag</span>
+                                  <span class="button__icon"><i class="bi bi-share-fill"></i></span>
+                                </a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 mb-5">
+                      <div class="table-responsive child-progress__comparison-table bg--white box-shadow--custom border-radius--custom-10 mb-5">
+                        <table class="table">
+                          <thead class="bg--randomSkyblue text--light">
+                            <tr>
+                              <th scope="col">Activity</th>
+                              <th scope="col">Child One</th>
+                              <th scope="col">Friend One</th>
+                              <th scope="col">Friend Two</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row"><span class="child-progress__category">Football</span></th>
+                              <td><span class="child-progress__level">Advance</span></td>
+                              <td>
+                                <span class="friend-progress__level">Advance</span>
+                              </td>
+                              <td>
+                                <span class="friend-progress__level">Advance</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><span class="child-progress__category">Football</span></th>
+                              <td><span class="child-progress__level">Advance</span></td>
+                              <td>
+                                <span class="friend-progress__level">Advance</span>
+                              </td>
+                              <td>
+                                <span class="friend-progress__level">Advance</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><span class="child-progress__category">Football</span></th>
+                              <td><span class="child-progress__level">Advance</span></td>
+                              <td>
+                                <span class="friend-progress__level">Advance</span>
+                              </td>
+                              <td>
+                                <span class="friend-progress__level">Advance</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row"><span class="child-progress__category">Football</span></th>
+                              <td><span class="child-progress__level">Advance</span></td>
+                              <td>
+                                <span class="friend-progress__level">Advance</span>
+                              </td>
+                              <td>
+                                <span class="friend-progress__level">Advance</span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="child-progress__leaderboard">
+                    <h3 class="text--primary mb-4">Leaderboard</h3>
+                    <!-- Leader Board Tabs -->
+                    <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="leaderboardSports-tab" data-toggle="tab" href="#leaderboardSports" role="tab" aria-controls="leaderboardSports" aria-selected="true">Sports</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="leaderboardEducational-tab" data-toggle="tab" href="#leaderboardEducational" role="tab" aria-controls="leaderboardEducational" aria-selected="false">Educational</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="leaderboardPerformingArts-tab" data-toggle="tab" href="#leaderboardPerformingArts" role="tab" aria-controls="leaderboardPerformingArts" aria-selected="false">Performing Arts</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="leaderboardWellness-tab" data-toggle="tab" href="#leaderboardWellness" role="tab" aria-controls="leaderboardWellness" aria-selected="false">Wellness</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent2">
+                      <div class="tab-pane fade show active" id="leaderboardSports" role="tabpanel" aria-labelledby="leaderboardSports-tab">
+                        <div class="row">
+                          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <h5 class="text--primary mb-3">Football</h5>
+                            <div class="table-responsive border-radius--custom-10 box-shadow--custom">
+                              <table class="table table__sports--football">
+                                <thead class="bg--randomGreen text--light">
+                                  <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Points</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">Hiyaan Shah</th>
+                                    <td>90</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">John Doe</th>
+                                    <td>89</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">jane Doe</th>
+                                    <td>88</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Jenny Doe</th>
+                                    <td>87</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Ayan Shah</th>
+                                    <td>86</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <h5 class="text--primary mb-3">Basketball</h5>
+                            <div class="table-responsive border-radius--custom-10 box-shadow--custom">
+                              <table class="table table__sports--football">
+                                <thead class="bg--randomGreen text--light">
+                                  <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Points</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">Hiyaan Shah</th>
+                                    <td>90</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">John Doe</th>
+                                    <td>89</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">jane Doe</th>
+                                    <td>88</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Jenny Doe</th>
+                                    <td>87</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Ayan Shah</th>
+                                    <td>86</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <h5 class="text--primary mb-3">Karate</h5>
+                            <div class="table-responsive border-radius--custom-10 box-shadow--custom">
+                              <table class="table table__sports--football">
+                                <thead class="bg--randomGreen text--light">
+                                  <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Points</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">Hiyaan Shah</th>
+                                    <td>90</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">John Doe</th>
+                                    <td>89</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">jane Doe</th>
+                                    <td>88</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Jenny Doe</th>
+                                    <td>87</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Ayan Shah</th>
+                                    <td>86</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <h5 class="text--primary mb-3">Gymnastic</h5>
+                            <div class="table-responsive border-radius--custom-10 box-shadow--custom">
+                              <table class="table table__sports--football">
+                                <thead class="bg--randomGreen text--light">
+                                  <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Points</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">Hiyaan Shah</th>
+                                    <td>90</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">John Doe</th>
+                                    <td>89</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">jane Doe</th>
+                                    <td>88</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Jenny Doe</th>
+                                    <td>87</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Ayan Shah</th>
+                                    <td>86</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="leaderboardEducational" role="tabpanel" aria-labelledby="leaderboardEducational-tab">
+                        <div class="row">
+                          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <h5 class="text--primary mb-3">French Learning</h5>
+                            <div class="table-responsive border-radius--custom-10 box-shadow--custom">
+                              <table class="table table__sports--football">
+                                <thead class="bg--randomGreen text--light">
+                                  <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Points</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">Hiyaan Shah</th>
+                                    <td>90</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">John Doe</th>
+                                    <td>89</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">jane Doe</th>
+                                    <td>88</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Jenny Doe</th>
+                                    <td>87</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Ayan Shah</th>
+                                    <td>86</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <h5 class="text--primary mb-3">Art & Craft</h5>
+                            <div class="table-responsive border-radius--custom-10 box-shadow--custom">
+                              <table class="table table__sports--football">
+                                <thead class="bg--randomGreen text--light">
+                                  <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Points</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">Hiyaan Shah</th>
+                                    <td>90</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">John Doe</th>
+                                    <td>89</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">jane Doe</th>
+                                    <td>88</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Jenny Doe</th>
+                                    <td>87</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Ayan Shah</th>
+                                    <td>86</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <h5 class="text--primary mb-3">Story Telling</h5>
+                            <div class="table-responsive border-radius--custom-10 box-shadow--custom">
+                              <table class="table table__sports--football">
+                                <thead class="bg--randomGreen text--light">
+                                  <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Points</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">Hiyaan Shah</th>
+                                    <td>90</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">John Doe</th>
+                                    <td>89</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">jane Doe</th>
+                                    <td>88</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Jenny Doe</th>
+                                    <td>87</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Ayan Shah</th>
+                                    <td>86</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <h5 class="text--primary mb-3">Computer Coding</h5>
+                            <div class="table-responsive border-radius--custom-10 box-shadow--custom">
+                              <table class="table table__sports--football">
+                                <thead class="bg--randomGreen text--light">
+                                  <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Points</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">Hiyaan Shah</th>
+                                    <td>90</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">John Doe</th>
+                                    <td>89</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">jane Doe</th>
+                                    <td>88</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Jenny Doe</th>
+                                    <td>87</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">Ayan Shah</th>
+                                    <td>86</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="leaderboardPerformingArts" role="tabpanel" aria-labelledby="leaderboardPerformingArts-tab">...</div>
+                      <div class="tab-pane fade" id="leaderboardWellness" role="tabpanel" aria-labelledby="leaderboardWellness-tab">...</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="childName2" role="tabpanel" aria-labelledby="nav-childName2-tab">2</div>
+              <!-- <div class="tab-pane fade" id="childName3" role="tabpanel" aria-labelledby="nav-childName3-tab">
+                3
+              </div> -->
+            </div>
+          </div>
         </div>
         <!-- dashboard content ends -->
         <!-- dashboard footer starts -->
@@ -310,6 +849,7 @@
     <script src="../assets/vendors/animated-event-calender/dist/jquery.simple-calendar.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- custom js script -->
     <script src="../js/script.js"></script>
   </body>

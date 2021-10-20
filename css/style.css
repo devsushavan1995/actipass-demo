@@ -266,7 +266,9 @@ h6 {
 .button__subscribe {
   color: #fff;
   text-shadow: 0 2px 4px #8b3900;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fe3838), to(#fc6b04));background: -o-linear-gradient(top, #fe3838, #fc6b04);background: linear-gradient(to bottom, #fe3838, #fc6b04);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fe3838), to(#fc6b04));
+  background: -o-linear-gradient(top, #fe3838, #fc6b04);
+  background: linear-gradient(to bottom, #fe3838, #fc6b04);
 }
 /* .button__primary--no-shadow {
   -webkit-box-shadow: none;
@@ -333,6 +335,12 @@ h6 {
 }
 .text--gray {
   color: var(--colorLightBg2);
+}
+.box-shadow--custom {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+.border-radius--custom-10 {
+  border-radius: 10px;
 }
 /* common section styles */
 .section {
@@ -2078,6 +2086,64 @@ h6 {
   } */
 }
 
+/* Dashboard home contents styles */
+.dashboard__content-home .content-home__header .nav-tabs .nav-link {
+  border: none;
+  color: var(--colorPrimary);
+  font-size: 1.062rem;
+  font-weight: 600;
+  position: relative;
+}
+.dashboard__content-home .content-home__header .nav-tabs .nav-link.active {
+  background: transparent;
+}
+.dashboard__content-home .content-home__header .nav-tabs .nav-link:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: var(--colorRandomSkyblue);
+  transition: width 0.3s ease;
+}
+.dashboard__content-home .content-home__header .nav-tabs .nav-link.active:after
+.dashboard__content-home .content-home__header .nav-tabs .nav-link:hover:after {
+  width: 100%;
+}
+.dashboard__content-home .content-home__header .nav-tabs .nav-link:hover,
+.dashboard__content-home .content-home__header .nav-tabs .nav-link.active {
+  color: var(--colorRandomSkyblue);
+}
+.dashboard__content-home .content-home__header .nav-tabs {
+  border: 0;
+}
+.dashboard__content-home .class-schedule .schedule__list .schedule__list-item {
+  margin: 0 0 0.75rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.dashboard__content-home .class-schedule .schedule__list .schedule__list-item .item__time {
+  color: var(--colorRandomSkyblue);
+  font-size: 0.9375rem;
+  width: 25%;
+}
+.dashboard__content-home .class-schedule .schedule__list .schedule__list-item .item__course-name {
+  color: var(--colorPrimary);
+  font-weight: 700;
+  width: 75%;
+}
+.dashboard__content-home .class-schedule.class-schedule--later-this-week .schedule__list .schedule__list-item .item__day {
+  width: 25%;
+  color: var(--colorRandomPink);
+}
+.dashboard__content-home .class-schedule.class-schedule--later-this-week .schedule__list .schedule__list-item .item__time {
+  width: 25%;
+}
+.dashboard__content-home .class-schedule.class-schedule--later-this-week .schedule__list .schedule__list-item .item__course-name {
+  width: 50%;
+}
+
 /* Dasboard content - select activity */
 .select-activity-wrapper .toggle-button-container .toggle-button__heading {
   margin: 0;
@@ -2191,24 +2257,24 @@ h6 {
   width: 100%;
   margin: 0 0 1rem 0;
   display: block;
-    width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.onepass-wrapper .onepass-activity .user-action__select-date-container  {
+.onepass-wrapper .onepass-activity .user-action__select-date-container {
   position: relative;
-} 
-.onepass-wrapper  .user-action__select-date-container .ui-button {
+}
+.onepass-wrapper .user-action__select-date-container .ui-button {
   position: absolute;
   top: 5px;
   right: 15px;
@@ -2217,7 +2283,7 @@ h6 {
   /* font-size: 1.5rem; */
   background: transparent;
 }
-.onepass-wrapper  .user-action__select-date-container .ui-button .ui-icon {
+.onepass-wrapper .user-action__select-date-container .ui-button .ui-icon {
   background-image: url('../assets/images/calendar.png');
   background-position: center center;
   width: 24px;
@@ -3430,18 +3496,18 @@ margin: 1rem 0 0 0;
 }
 .filelabel i,
 .filelabel .title {
-color: grey;
-transition: 200ms color;
+  color: grey;
+  transition: 200ms color;
 }
 .filelabel:hover {
-border: 2px solid #1665c4;
+  border: 2px solid #1665c4;
 }
 .filelabel:hover i,
 .filelabel:hover .title {
-color: #1665c4;
+  color: #1665c4;
 }
-#FileInput{
-  display:none;
+#FileInput {
+  display: none;
 }
 .forum-wrapper .create-post-form .create-post__input {
   width: 100%;
@@ -3506,7 +3572,7 @@ color: #1665c4;
   text-decoration: none;
   overflow: hidden;
 }
-.forum-wrapper .engagement-like-wrapper .engagement__button--like  .post__like-overay {
+.forum-wrapper .engagement-like-wrapper .engagement__button--like .post__like-overay {
   display: block;
   position: absolute;
   top: 0;
@@ -3519,14 +3585,14 @@ color: #1665c4;
   transition: all 0.4s;
   z-index: 0;
 }
-.forum-wrapper .engagement-like-wrapper .engagement__button--like  i.not-liked {
+.forum-wrapper .engagement-like-wrapper .engagement__button--like i.not-liked {
   display: block;
   color: #fff;
   position: relative;
   z-index: 1;
   margin-top: 4px;
 }
-.forum-wrapper .engagement-like-wrapper .engagement__button--like  i.is-liked {
+.forum-wrapper .engagement-like-wrapper .engagement__button--like i.is-liked {
   display: none;
   color: #fff;
   position: relative;
@@ -3544,7 +3610,8 @@ color: #1665c4;
 }
 
 @-webkit-keyframes bouncy {
-  from, to {
+  from,
+  to {
     -webkit-transform: scale(1, 1);
   }
   25% {
@@ -3558,7 +3625,8 @@ color: #1665c4;
   }
 }
 @keyframes bouncy {
-  from, to {
+  from,
+  to {
     transform: scale(1, 1);
   }
   25% {
@@ -3604,7 +3672,7 @@ color: #1665c4;
 } */
 .forum-wrapper .people-interaction-wrapper {
   position: fixed;
-  right:0;
+  right: 0;
   width: 200px;
 }
 .forum-wrapper .people-interaction-wrapper .people-interaction-container {
@@ -3684,8 +3752,8 @@ color: #1665c4;
   font-family: var(--fontBase);
 }
 .billing-wrapper .table .service-details__activity-heading {
-    font-weight: 700;
-    font-size: 0.9rem;
+  font-weight: 700;
+  font-size: 0.9rem;
 }
 .billing-wrapper .table th,
 .billing-wrapper .table td {

@@ -388,45 +388,45 @@ $(document).ready(function () {
   //   $('.fa-calendar').click();
   // });
   $('.onepassDatepicker')
-  .datepicker({
-    showOn: 'both',
-    dateFormat: 'dd-mm-yy',
-  })
-  .next('button')
-  .button({
-    icons: {
-      primary: 'ui-icon-calendar',
-    },
-    text: false,
+    .datepicker({
+      showOn: 'both',
+      dateFormat: 'dd-mm-yy',
+    })
+    .next('button')
+    .button({
+      icons: {
+        primary: 'ui-icon-calendar',
+      },
+      text: false,
+    });
+
+  // forum like button
+  $('.engagement__button--like').click(function () {
+    $(this).toggleClass('is-active');
   });
 
-  // forum like button 
-  $('.engagement__button--like').click(function(){
-    $(this).toggleClass('is-active');
-})
-
- // story swiper
- var swiperTutorTopRated = new Swiper('.story-swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-  autoplay: true,
-  delay: 5000,
-  pauseOnMouseEnter: true,
-  slidesPerView: 1,
-  spaceBetween: 10,
-  breakpoints: {
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 15,
+  // story swiper
+  var swiperTutorTopRated = new Swiper('.story-swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    autoplay: true,
+    delay: 5000,
+    pauseOnMouseEnter: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 15,
+      },
     },
-    992: {
-      slidesPerView: 4,
-      spaceBetween: 15,
-    },
-  },
-  pagination: false,
-  /* If we need pagination
+    pagination: false,
+    /* If we need pagination
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -448,10 +448,61 @@ $(document).ready(function () {
     },
   },
   */
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  // dashboard home tabs by select options
+  // //hide all tabs first
+  // $('.dashboard__content-home .tab-content').hide();
+  // //show the first tab content
+  // $('#tab-1').show();
+
+  // $('#select-box').change(function () {
+  //   dropdown = $('#select-box').val();
+  //   //first hide all tabs again when a new option is selected
+  //   $('.dashboard__content-home  .tab-content').hide();
+  //   //then show the tab content of whatever option value was selected
+  //   $('#' + 'tab-' + dropdown).show();
+  // });
+
+  // Chart js for child progress
+  var ctx = $('#childName1Progress');
+var childName1Progress = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
 });
 });
