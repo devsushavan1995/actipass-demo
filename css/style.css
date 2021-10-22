@@ -4001,6 +4001,7 @@ margin: 1rem 0 0 0;
 /* Forum / Community page */
 .forum-wrapper .story__heading-text-container .input-file {
   height: 31px;
+  margin-bottom: -0.375rem;
 }
 .forum-wrapper .story__heading-text-container .input-file input[type='file'] {
   visibility: hidden;
