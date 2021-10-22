@@ -252,9 +252,13 @@ $(document).ready(function () {
     dashboardContentAreaEl.toggleClass('dashboard__content-area--fluid');
     dashboardTopbarEl.toggleClass('dashboard__topbar--fluid');
     if (dashboardOverlayEl.hasClass('dashboard__overlay--active')) {
+      if(window.innerWidth < 992) {
+        $('body').addClass('body--no-scroll');
+      }
       dashboardOverlayEl.on('click', function () {
         $(this).removeClass('dashboard__overlay--active');
         dashboardSidebarEl.removeClass('dashboard__sidebar--shrinked');
+        $('body').removeClass('body--no-scroll');
       });
     }
   }
