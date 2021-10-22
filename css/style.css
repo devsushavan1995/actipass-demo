@@ -336,6 +336,9 @@ h6 {
 .text--gray {
   color: var(--colorLightBg2);
 }
+.text--randomSkyblue {
+  color: var(--colorRandomSkyblue);
+}
 .box-shadow--custom {
   -webkit-box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
@@ -1188,6 +1191,7 @@ h6 {
 .toprated-tutor .section__content a.nav-link:hover,
 .toprated-tutor .section__content a.nav-link.active {
   border: none;
+  background: transparent;
 }
 .toprated-tutor .section__content a.nav-link:after {
   content: '';
