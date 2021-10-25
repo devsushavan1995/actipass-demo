@@ -3787,6 +3787,7 @@ margin: 1rem 0 0 0;
   -webkit-box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
+  background: #fff;
 }
 .booking-wrapper .booking-container .swiper-slide .course .course__vendor-title {
   font-size: 1.25rem;
