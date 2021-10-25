@@ -4292,6 +4292,9 @@ margin: 1rem 0 0 0;
   font-size: 0.75rem;
 }
 @media (min-width: 1200px) {
+  .forum-wrapper {
+    padding-left: 14%;
+  }
   .forum-wrapper .people-interaction-wrapper {
     width: 240px;
   }
