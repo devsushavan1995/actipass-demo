@@ -4470,7 +4470,7 @@ margin: 1rem 0 0 0;
   margin-right: auto;
 }
 
-..messagebox-wrapper .mMess {
+.messagebox-wrapper .mMess {
   margin-left: auto;
   overflow: hidden;
 }
