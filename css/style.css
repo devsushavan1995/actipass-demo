@@ -2934,6 +2934,10 @@ margin: 1rem 0 0 0;
   .modal-browse-vendors .browse-activities-wrapper .browse-activities__body.vendors-wrapper .vendor .vendor__button-cta-wrapper .button {
     font-size: 0.75rem;
   }
+  .modal-browse-vendors .browse-activities-wrapper .browse-activities__body.vendors-wrapper .vendor .vendor__fee .fee {
+    margin-left: 0.5rem;
+    display: inline-block;
+  }
 }
 @media (min-width: 1200px) {
   .vendor .vendor__title {
@@ -4345,22 +4349,24 @@ margin: 1rem 0 0 0;
 }
 
 /* Mewssage Page */
-input[type=text]:focus, input[type=password]:focus{
+.messagebox-wrapper input[type='text']:focus,
+.messagebox-wrapper input[type='password']:focus {
   background: rgb(238, 238, 238);
 }
 
-input[type=text]::placeholder, input[type=password]::placeholder{
+.messagebox-wrapper input[type='text']::placeholder,
+.messagebox-wrapper input[type='password']::placeholder {
   color: rgb(5, 5, 230);
   font-weight: 500;
 }
 
-.messageBox .textA{
+.messagebox-wrapper .messageBox .textA {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-#message{
+.messagebox-wrapper #message {
   resize: none;
   padding: 8px 10px;
   border-radius: 20px;
@@ -4375,7 +4381,7 @@ input[type=text]::placeholder, input[type=password]::placeholder{
   bottom: 0;
 }
 
-.button-s1 {
+.messagebox-wrapper .button-s1 {
   width: 40px;
   padding: 5px;
   border-radius: 6rem;
@@ -4389,15 +4395,15 @@ input[type=text]::placeholder, input[type=password]::placeholder{
   justify-content: center;
 }
 
-.button-s1 span{
+.messagebox-wrapper .button-s1 span {
   font-size: calc(40px / 1.5) !important;
 }
 
-#genMeetLink a{
+.messagebox-wrapper #genMeetLink a {
   color: rgb(5, 5, 230);
 }
 
-.messageBox{
+.messagebox-wrapper .messageBox {
   background-color: white;
   position: fixed;
   bottom: 0;
@@ -4409,7 +4415,7 @@ input[type=text]::placeholder, input[type=password]::placeholder{
   padding: 7px 27px;
 }
 
-.nameAlert{
+.messagebox-wrapper .nameAlert {
   display: none;
   position: absolute;
   top: 50%;
@@ -4419,14 +4425,14 @@ input[type=text]::placeholder, input[type=password]::placeholder{
   border-radius: 20px;
 }
 
-.chatArea{
+.messagebox-wrapper .chatArea {
   height: calc(100vh - var(--chatboxH));
   width: 100%;
   padding: 16px;
   overflow-y: scroll;
 }
 
-.prof{
+.messagebox-wrapper .prof {
   min-width: 35px;
   min-height: 35px;
   margin: auto 10px 0 10px;
@@ -4440,83 +4446,83 @@ input[type=text]::placeholder, input[type=password]::placeholder{
   justify-content: center;
 }
 
-.messArea{
+.messagebox-wrapper .messArea {
   display: grid;
   grid-row-gap: 10px;
   font-size: 14px;
 }
 
-#sname{
+.messagebox-wrapper #sname {
   margin-left: 11px;
   margin-bottom: -6px;
   color: rgb(87, 87, 87);
 }
 
-.message{
+.messagebox-wrapper .message {
   display: flex;
   width: fit-content;
   max-width: 40rem;
   margin-bottom: 35px;
 }
 
-.otherM{
+.messagebox-wrapper .otherM {
   margin-right: auto;
 }
 
-.mMess{
+..messagebox-wrapper .mMess {
   margin-left: auto;
   overflow: hidden;
 }
 
-.mMess .messArea .textM{
+.messagebox-wrapper .mMess .messArea .textM {
   background-color: blue;
   color: white;
   margin-left: auto;
-  transition: .6s cubic-bezier(.07,.76,.13,1.02);
+  transition: 0.6s cubic-bezier(0.07, 0.76, 0.13, 1.02);
 }
 
-.newMmess{
+.messagebox-wrapper .newMmess {
   transform: translateY(100px) scale(3);
 }
 
-.otherM .messArea .textM{
+.messagebox-wrapper .otherM .messArea .textM {
   background-color: white;
 }
 
-.mMess .messArea .textM a{
+.messagebox-wrapper .mMess .messArea .textM a {
   color: white;
 }
 
-.messArea .textM a{
+.messagebox-wrapper .messArea .textM a {
   font-weight: 500;
 }
 
-.message .textM{
+.messagebox-wrapper .message .textM {
   width: fit-content;
   border-radius: 10px;
   padding: 10px;
-  -webkit-box-shadow: 0px 5px 8px 5px rgba(0,0,0,0.03); 
-  box-shadow: 0px 5px 8px 5px rgba(0,0,0,0.03);
+  -webkit-box-shadow: 0px 5px 8px 5px rgba(0, 0, 0, 0.03);
+  box-shadow: 0px 5px 8px 5px rgba(0, 0, 0, 0.03);
   font-size: 17px;
 }
 
-.welcomeMess{
+.messagebox-wrapper .welcomeMess {
   text-align: center;
   margin-top: var(--headerH);
 }
 
-.welcomeMess h1{
+.messagebox-wrapper .welcomeMess h1 {
   font-weight: 600;
   font-size: 24px;
 }
 
-.welcomeMess .img video{
+.messagebox-wrapper .welcomeMess .img video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.welcomeMess .img{
+.messagebox-wrapper .welcomeMess .img {
   width: 4rem;
   border-radius: 10%;
   overflow: hidden;
@@ -4524,7 +4530,7 @@ input[type=text]::placeholder, input[type=password]::placeholder{
   margin: auto;
 }
 
-.shareLink{
+.messagebox-wrapper .shareLink {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4533,13 +4539,13 @@ input[type=text]::placeholder, input[type=password]::placeholder{
   background-color: white;
   text-align: center;
   border-radius: 15px;
-  transition: .4s;
+  transition: 0.4s;
   display: none;
   opacity: 0;
   z-index: 2;
 }
 
-.shareLink button{
+.messagebox-wrapper .shareLink button {
   font-weight: 600;
   color: blue;
   width: 6rem;
@@ -4550,87 +4556,89 @@ input[type=text]::placeholder, input[type=password]::placeholder{
   background: rgb(230, 227, 255);
 }
 
-.shareLink h1{
+.messagebox-wrapper .shareLink h1 {
   font-weight: 500;
 }
 
-.headerDet{
+.messagebox-wrapper .headerDet {
   width: 100%;
   height: var(--headerH);
   position: fixed;
   top: 0;
   background-color: white;
-  -webkit-box-shadow: 0px 5px 8px 5px rgba(0,0,0,0.03); 
-  box-shadow: 0px 5px 8px 5px rgba(0,0,0,0.03);
+  -webkit-box-shadow: 0px 5px 8px 5px rgba(0, 0, 0, 0.03);
+  box-shadow: 0px 5px 8px 5px rgba(0, 0, 0, 0.03);
   display: flex;
   align-items: center;
   padding: 10px;
   transition: top 0.5s;
 }
 
-.moveTop{
+.messagebox-wrapper .moveTop {
   top: -100px;
 }
 
-.headerDet .img{
+.messagebox-wrapper .headerDet .img {
   overflow: hidden;
   width: calc(var(--headerH) - 15px);
   height: calc(var(--headerH) - 15px);
   border-radius: 100%;
 }
 
-.chatDety{
+.messagebox-wrapper .chatDety {
   display: flex;
   align-items: center;
   flex: 1;
 }
 
-.headerDet .chatDety .img video{
+.messagebox-wrapper .headerDet .chatDety .img video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.headerDet .chatDety, .nameC p, input{
+.messagebox-wrapper .headerDet .chatDety,
+.nameC p,
+input {
   margin-left: 15px;
   font-weight: 500;
-  font-size: 18px
+  font-size: 18px;
 }
 
-.nameC{
+.messagebox-wrapper .nameC {
   position: relative;
   width: 193px;
 }
 
-#titleFirst{
+.messagebox-wrapper #titleFirst {
   width: 221px;
   text-overflow: ellipsis;
-  overflow: hidden; 
+  overflow: hidden;
   white-space: nowrap;
 }
 
-.headerDet .chatDety .nameC input{
+.messagebox-wrapper .headerDet .chatDety .nameC input {
   display: none;
   position: absolute;
   left: 0;
   top: 0;
-  transform :translate(-2px, -2px);
+  transform: translate(-2px, -2px);
 }
 
-.headerDet .tools{
+.messagebox-wrapper .headerDet .tools {
   display: grid;
   grid-template-columns: auto auto;
   grid-column-gap: 10px;
 }
 
-.headerDet .tools button{
+.headerDet .tools button {
   background: transparent;
   border: none;
   outline: none;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-#goToDown{
+.messagebox-wrapper #goToDown {
   height: 35px;
   position: fixed;
   bottom: var(--chatboxH);
@@ -4640,48 +4648,48 @@ input[type=text]::placeholder, input[type=password]::placeholder{
   transition: 0.5s;
 }
 
-.downDowny{
+.messagebox-wrapper .downDowny {
   bottom: -70px !important;
 }
 
-#goToDown span{
+.messagebox-wrapper #goToDown span {
   cursor: pointer;
   font-size: 30px;
 }
 
-.showItem{
+.messagebox-wrapper .showItem {
   transform: translate(-50%, -50%);
   opacity: 1;
 }
 
-.blackout{
+.messagebox-wrapper .blackout {
   display: none;
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
-  transition: .5s;
+  transition: 0.5s;
   z-index: 1;
 }
 
-.blackShow{
+.messagebox-wrapper .blackShow {
   opacity: 1;
 }
 
-.clickSettings{
+.messagebox-wrapper .clickSettings {
   transform: rotate(180deg);
 }
 
-.changeW{
-  transition: .7s;
+.messagebox-wrapper changeW {
+  transition: 0.7s;
 }
 
-.clickSettingsCont{
+.messagebox-wrapper .clickSettingsCont {
   width: 75%;
 }
 
-.settingsBar{
+.messagebox-wrapper .settingsBar {
   position: absolute;
   right: 0;
   top: 0;
@@ -4690,32 +4698,32 @@ input[type=text]::placeholder, input[type=password]::placeholder{
   overflow: hidden;
   width: 25%;
   transform: translateX(400px);
-  transition: .67s;
-  padding:  46px 10px 0px 10px;
+  transition: 0.67s;
+  padding: 46px 10px 0px 10px;
   overflow-y: scroll;
 }
 
-.blueTarget{
+.messagebox-wrapper .blueTarget {
   color: blue;
 }
 
-.clickSettingsBar{
+.messagebox-wrapper .clickSettingsBar {
   transform: translateX(0px);
 }
 
-.settingsBar .headerSet{
+.messagebox-wrapper .settingsBar .headerSet {
   border-bottom: 1px solid rgb(199, 199, 199);
   padding-bottom: 19px;
   margin-bottom: 15px;
 }
 
-.errorsSide{
+.messagebox-wrapper .errorsSide {
   position: absolute;
   bottom: 80px;
   right: 30px;
 }
 
-.errorsSide .bubble{
+.messagebox-wrapper .errorsSide .bubble {
   background: rgba(255, 0, 0, 0.7);
   color: white;
   padding: 10px;
@@ -4729,73 +4737,68 @@ input[type=text]::placeholder, input[type=password]::placeholder{
   z-index: 3;
 }
 
-.errorsSide #errorBubble{
+.messagebox-wrapper .errorsSide #errorBubble {
   background: rgba(255, 0, 0, 0.7);
 }
 
-.errorsSide #tipsBubble{
+.messagebox-wrapper .errorsSide #tipsBubble {
   background: rgba(47, 0, 255, 0.7);
 }
 
-
-.errorsSide .bubble h1{
+.messagebox-wrapper .errorsSide .bubble h1 {
   font-size: 20px;
   display: flex;
   align-items: center;
 }
 
-.errorsSide .bubble span{
+.messagebox-wrapper .errorsSide .bubble span {
   margin-right: 10px;
 }
 
-.errorsSide .bubble p{
+.messagebox-wrapper .errorsSide .bubble p {
   margin-right: 10px;
 }
 
-.bubbleAfter{
+.messagebox-wrapper .bubbleAfter {
   opacity: 1 !important;
-  transform: translateY(0px) !important; 
+  transform: translateY(0px) !important;
 }
 
-.bubbleGone{
+.messagebox-wrapper .bubbleGone {
   opacity: 0 !important;
-  transform: translateY(-50px) !important; 
+  transform: translateY(-50px) !important;
 }
 
-.timeId{
+.messagebox-wrapper .timeId {
   text-align: center;
   margin: 12px;
   font-size: 13px;
 }
 
-
-::-webkit-scrollbar {    
-width: 15px;
-height: 15px;
-border-left: #ededed solid 1px;
-background-color: #fcfcfc;
-border-top: #ededed solid 1px;
-  }
-
-::-webkit-scrollbar-thumb:hover{
-cursor: pointer;
-background: #c7c7c7;
-width: 15px;
-  background-clip: content-box;
-  border: 4px solid transparent;
-border-radius: 10px;
+.messagebox-wrapper::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+  border-left: #ededed solid 1px;
+  background-color: #fcfcfc;
+  border-top: #ededed solid 1px;
 }
 
-  ::-webkit-scrollbar-button {   
-display: none;
-  }
-
-  ::-webkit-scrollbar-thumb {
-background: #dbdbdb;
+.messagebox-wrapper::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background: #c7c7c7;
+  width: 15px;
   background-clip: content-box;
   border: 4px solid transparent;
-border-radius: 10px;
+  border-radius: 10px;
+}
 
-  }
+.messagebox-wrapper::-webkit-scrollbar-button {
+  display: none;
+}
 
-
+.messagebox-wrapper::-webkit-scrollbar-thumb {
+  background: #dbdbdb;
+  background-clip: content-box;
+  border: 4px solid transparent;
+  border-radius: 10px;
+}
