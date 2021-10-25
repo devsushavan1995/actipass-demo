@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../assets/vendors/lightbox2-2.11.3/dist/css/lightbox.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Actipass | Wallet</title>
+    <title>Actipass | Messages</title>
   </head>
   <body>
     <section class="dashboard-wrapper">
@@ -85,7 +85,7 @@
             <!-- single link item ends -->
             <!-- single link item starts -->
             <li class="menu__item">
-              <a href="#" class="menu__item--link">
+              <a href="../admin/messages.html" class="menu__item--link">
                 <span class="link__icon"><i class="uil uil-comment"></i></span>
                 <span class="link__title">Messages</span>
               </a>
@@ -191,192 +191,369 @@
         <!-- dashboard top navigation ends -->
         <!-- dashboard content starts -->
         <div class="dashboard__content">
-            <!-- messenger chatbox -->
-            <div class="messagebox-wrapper border-radius--custom-10 box-shadow--custom overflow-hidden">
-                <div class="row w-100">
-                    <div class="messagebox__sidebar bg--primary">
-                        <div class="message-search-container position-relative p-3">
-                            <input type="text" name="messageSearch" class="message-search__input" id="messageSearchInput" placeholder="Search Messages">
-                            <span class="message-search__icon"><i class="bi bi-search"></i></span>
+          <!-- messenger chatbox -->
+          <div class="messagebox-wrapper border-radius--custom-10 box-shadow--custom overflow-hidden">
+            <div class="row">
+              <!-- messagebox sidebar -->
+              <div class="messagebox__sidebar bg--primary">
+                <div class="message-search-container position-relative">
+                  <input type="text" name="messageSearch" class="message-search__input" id="messageSearchInput" placeholder="Search Messages" />
+                  <span class="message-search__icon"><i class="bi bi-search"></i></span>
+                </div>
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <a class="nav-link active d-flex align-items-center" id="v-pills-user-1-tab" data-toggle="pill" href="#v-pills-user-1" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                    <img src="../assets/images/user-1.jpg" alt="" class="user__image mr-2" />
+                    <h6 class="user__profile">User 1</h6>
+                  </a>
+                  <a class="nav-link d-flex align-items-center" id="v-pills-user-2-tab" data-toggle="pill" href="#v-pills-user-2" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                    <img src="../assets/images/user-2.jpg" alt="" class="user__image mr-2" />
+                    <h6 class="user__profile">User 2</h6>
+                  </a>
+                  <a class="nav-link d-flex align-items-center" id="v-pills-user-3-tab" data-toggle="pill" href="#v-pills-user-3" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                    <img src="../assets/images/user-3.jpg" alt="" class="user__image mr-2" />
+                    <h6 class="user__profile">User 3</h6>
+                  </a>
+                  <a class="nav-link d-flex align-items-center" id="v-pills-user-4-tab" data-toggle="pill" href="#v-pills-user-4" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                    <img src="../assets/images/user-4.jpg" alt="" class="user__image mr-2" />
+                    <h6 class="user__profile">User 4</h6>
+                  </a>
+                </div>
+              </div>
+              <!-- messagebox sidebar ends -->
+              <!-- messagebox main content -->
+              <div class="messagebox__main">
+                <div class="tab-content" id="v-pills-tabContent">
+                  <div class="tab-pane fade show active" id="v-pills-user-1" role="tabpanel" aria-labelledby="v-pills-user-1-tab">
+                    <div class="chat-wrapper position-relative">
+                      <!-- chat header -->
+                      <div class="chat__header bg--white box-shadow--custom p-3">
+                        <div class="chat__profile d-flex align-items-center">
+                          <div class="chat__profile-image-container">
+                            <img src="../assets/images/user-1.jpg" class="chat__profile-image" alt="" />
+                          </div>
+
+                          <div class="chat__profile-desc">
+                            <h6 class="chat__profile-title text--primary">John Doe</h6>
+                            <p class="chat__profile-online-status">Online</p>
+                          </div>
                         </div>
-                      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <a class="nav-link active" id="v-pills-user-1-tab" data-toggle="pill" href="#v-pills-user-1" role="tab" aria-controls="v-pills-home" aria-selected="true">User 1</a>
-                        <a class="nav-link" id="v-pills-user-2-tab" data-toggle="pill" href="#v-pills-user-2" role="tab" aria-controls="v-pills-profile" aria-selected="false">User 2</a>
-                        <a class="nav-link" id="v-pills-user-3-tab" data-toggle="pill" href="#v-pills-user-3" role="tab" aria-controls="v-pills-messages" aria-selected="false">User 3</a>
-                        <a class="nav-link" id="v-pills-user-4-tab" data-toggle="pill" href="#v-pills-user-4" role="tab" aria-controls="v-pills-settings" aria-selected="false">User 4</a>
                       </div>
-                    </div>
-                    <div class="messagebox__main">
-                      <div class="tab-content" id="v-pills-tabContent">
-                        <div class="tab-pane fade show active" id="v-pills-user-1" role="tabpanel" aria-labelledby="v-pills-user-1-tab">
-                            <div class="errorsSide">
-                            </div>
-                            <div class="shareLink">
-                                    <div class="welcomeMess" style="margin-top: 0;">
-                                        <div class="img"><video src="https://res.cloudinary.com/duw2s4w0s/video/upload/v1620962563/HO%20TV%20assets/ezgif-6-38fc0e6aefa8_owq33f.mp4" alt="brainstorm video" autoplay muted></video></div>
-                                        <h1 class="roomTitle" class="roomTitle">Error Pharsing</h1>
-                                        <p id="copyLinker2" class="copyLinker2">#4987720</p>
-                                    </div>
-                                <input id="copyvalue" type="text" value="#4987720">
-                                <button id="copyLinker">Copy Code</button>
-                            </div>
-                            <div class="nameAlert"><h1>Enter your Name</h1><input id="name" type="text" placeholder="Enter your Name"></div>
-                            
-                        <div class="mainChater">
-                            <div class="headerDet">
-                                <div class="chatDety">
-                                    <div class="img"><video src="https://res.cloudinary.com/duw2s4w0s/video/upload/v1620962563/HO%20TV%20assets/ezgif-6-38fc0e6aefa8_owq33f.mp4" alt="brainstorm video" autoplay></video></div>
-                                    <div class="nameC">
-                                        <p class="roomTitle" id='titleFirst' class="roomTitle">Error Pharsing</p>
-                                        <input type="text" name="room name" id="roomNameInput" class="roomTitle" value="Its BrainStorming">
-                                    </div>
-                                </div>
-                        
-                                <div class="tools">
-                                    <button id="groupEdit" tooltip="Google Meet" flow="left"><span class="material-icons blueClick">mode_edit</span></button>
-                                    <button id="settings" tooltip="Room Settings" flow="left"><span class="material-icons blueClick">settings</span></button>
-                                </div>
-                            </div>
-                        
-                        <div class="blackout"></div>
-                        
-                            <div class="chatArea changeW">
-                                <div class="chatMessages">
-                                      <!--Start of Chat cont-->
-                                <div class="welcomeMess">
-                                    <div class="img"><video src="https://res.cloudinary.com/duw2s4w0s/video/upload/v1620962563/HO%20TV%20assets/ezgif-6-38fc0e6aefa8_owq33f.mp4" alt="brainstorm video" autoplay></video></div>
-                                    <h1 class="roomTitle">Error Pharsing</h1>
-                                    <p id="copyLinker2" class="copyLinker2">#40</p>
-                                </div>
-                        
-                                <div class="message"><div class="prof"><p>L</p></div>
-                                <div class="messArea">
-                                    <p id="sname">Lance Francisco | Team Poster</p>
-                                    <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
-                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-                                </div>
-                        
-                                <div class="message mMess 1122334" data-number="1122334">
-                                <div class="messArea">
-                                    <p id="sname">James Ericson</p>
-                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-                                    <div class="prof" style="background-color: #ff7b54;"><p>J</p></div>
-                                </div>
-                        
-                                <div class="message"><div class="prof" style="background-color: #939b62;"><p>M</p></div>
-                                <div class="messArea">
-                                    <p id="sname">Marcus Dilinmer</p>
-                                    <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
-                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-                                </div>
-                        
-                                <div class="message"><div class="prof" style="background-color: #ffb26b;"><p>A</p></div>
-                                <div class="messArea">
-                                    <p id="sname">Alexandria Patkinson</p>
-                                    <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
-                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-                                </div>
-                        
-                                <div class="message"><div class="prof"><p>L</p></div>
-                                <div class="messArea">
-                                    <p id="sname">Lance Francisco</p>
-                                    <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
-                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-                                </div>
-                        
-                                <div class="message mMess 1122334" data-number="1122334">
-                                <div class="messArea">
-                                    <p id="sname">James Ericson</p>
-                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-                                    <div class="prof" style="background-color: #ff7b54;"><p>J</p></div>
-                                </div>
-                        
-                                <div class="message"><div class="prof" style="background-color: #939b62;"><p>M</p></div>
-                                <div class="messArea">
-                                    <p id="sname">Marcus Dilinmer</p>
-                                    <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
-                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-                                </div>
-                        
-                                <div class="message"><div class="prof" style="background-color: #ffb26b;"><p>A</p></div>
-                                <div class="messArea">
-                                    <p id="sname">Alexandria Patkinson</p>
-                                    <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
-                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-                                </div>
-                        
-                            <div class="message"><div class="prof"><p>L</p></div>
-                            <div class="messArea">
-                                <p id="sname">Lance Francisco</p>
-                                <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
-                                <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-                            </div>
-                        <p class="timeId">8:43pm | 12/05/2021</p>
-                            <div class="message mMess 1122334" data-number="1122334">
-                                <div class="messArea">
-                                    <p id="sname">James Ericson</p>
-                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
-                                    <div class="prof" style="background-color: #ff7b54;"><p>J</p></div>
-                            </div>
-                          <!--End of Chat cont-->
+                      <!-- chat body -->
+                      <div class="chat__body bg--white">
+                        <div class="message-container d-flex message-container--other-user">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-1.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
                         </div>
-                        
-                            <div class="messageBox">
-                                <button id="genMeetLink" class=" button-s1" tooltip="Google Docs" flow="right"><a href="https://docs.google.com/document/u/0/create" target="blank"><span class="material-icons">description</span></a></button>
-                                <button id="genMeetLink" class=" button-s1" tooltip="Google Meet" flow="right"><a href="https://meet.google.com/new" target="blank"><span class="material-icons">video_call</span></a></button>
-                                <button id="linkCopy" class="button-s1" tooltip="Copy Link" flow="up"><span class="material-icons">link</span></button>
-                                <div class="textA"><textarea id="message" name="message" rows="1" cols="30" placeholder="Type your message here"></textarea></div>
-                                <button id="send" class="button-s1" tooltip="Send" flow="left"><span class="material-icons headerIcon">send</span></button>
-                            </div>
-                            <div id="goToDown" class="downDowny"><span class="material-icons" >arrow_downward</span></div>
+                        <div class="message-container d-flex flex-row-reverse message-container--self">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-self.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                        <div class="message-container d-flex message-container--other-user">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-1.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                        <div class="message-container d-flex flex-row-reverse message-container--self">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-self.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                        <div class="message-container d-flex message-container--other-user">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-1.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                      </div>
+                      <!-- chat footer -->
+                      <div class="chat__footer bg--white p-3">
+                        <form action="#" class="chat-message-form d-flex">
+                          <div class="input__container bg--white d-flex mr-2 align-items-center">
+                            <input type="text" name="chatMessage" class="chat-message-form__input mr-2" placeholder="Type a message.." required></input>
+                            <div class="chat-message-media-container d-flex pr-3">
+                              <a href="javascript:void(0)" class="mr-2"><i class="bi bi-emoji-smile"></i></a>
+                              <a href="javascript:void(0)" class="mr-2"><i class="bi bi-mic"></i></a>
+                              <a href="javascript:void(0)"><i class="bi bi-image"></i></a>
+                              <!-- <span class="story__heading-upload-story">
+                                <div class="form-group mb-0">
+                                  <label for="file" class="sr-only">Select a file</label>
+                                  <input type="file" id="messageFileImageUpload">
+                              </div>
+                              
+                              </span> -->
                             </div>
                             
-                            <div class="settingsBar">
-                        
-                                <div class="headerSet">
-                                    <div class="welcomeMess">
-                                        <div class="img"><video src="https://res.cloudinary.com/duw2s4w0s/video/upload/v1620962563/HO%20TV%20assets/ezgif-6-38fc0e6aefa8_owq33f.mp4" alt="brainstorm video" alt="brainstorm video" autoplay></video></div>
-                                        <h1 class="roomTitle">Error Pharsing</h1>
-                                        <p id="copyLinker2">#4987720</p>
-                                    </div>     
-                                </div>
-                        
-                                <div class="membersSec">
-                                    <h1>Members</h1>
-                                    <ul id="membersList">
-                                        <li class="membersCont"><div class="prof" style="background-color: #ffb26b;"><p>A</p></div></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="tab-pane fade" id="v-pills-user-2" role="tabpanel" aria-labelledby="v-pills-user-2-tab">
-    
-                        </div>
-                        <div class="tab-pane fade" id="v-pills-user-3" role="tabpanel" aria-labelledby="v-pills-user-3-tab">...</div>
-                        <div class="tab-pane fade" id="v-pills-user-4" role="tabpanel" aria-labelledby="v-pills-user-4-tab">...</div>
+                          </div>
+                          <button type="submit" class="button button__primary chat-message-form__button--send"><i class="uil uil-message"></i></button>
+                        </form>
                       </div>
                     </div>
                   </div>
+                  <div class="tab-pane fade" id="v-pills-user-2" role="tabpanel" aria-labelledby="v-pills-user-2-tab">
+                    <div class="chat-wrapper position-relative">
+                      <!-- chat header -->
+                      <div class="chat__header bg--white box-shadow--custom p-3">
+                        <div class="chat__profile d-flex align-items-center">
+                          <div class="chat__profile-image-container">
+                            <img src="../assets/images/user-2.jpg" class="chat__profile-image" alt="" />
+                          </div>
+
+                          <div class="chat__profile-desc">
+                            <h6 class="chat__profile-title text--primary">John Doe</h6>
+                            <p class="chat__profile-online-status">Online</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- chat body -->
+                      <div class="chat__body bg--white">
+                        <div class="message-container d-flex message-container--other-user">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-2.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                        <div class="message-container d-flex flex-row-reverse message-container--self">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-self.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                        <div class="message-container d-flex message-container--other-user">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-2.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                        <div class="message-container d-flex flex-row-reverse message-container--self">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-self.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                        <div class="message-container d-flex message-container--other-user">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-2.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                      </div>
+                      <!-- chat footer -->
+                      <div class="chat__footer bg--white p-3">
+                        <form action="#" class="chat-message-form d-flex">
+                          <div class="input__container bg--white d-flex mr-2 align-items-center">
+                            <input type="text" name="chatMessage" class="chat-message-form__input mr-2" placeholder="Type a message.." required></input>
+                            <div class="chat-message-media-container d-flex pr-3">
+                              <a href="javascript:void(0)" class="mr-2"><i class="bi bi-emoji-smile"></i></a>
+                              <a href="javascript:void(0)" class="mr-2"><i class="bi bi-mic"></i></a>
+                              <a href="javascript:void(0)"><i class="bi bi-image"></i></a>
+                              <!-- <span class="story__heading-upload-story">
+                                <div class="form-group mb-0">
+                                  <label for="file" class="sr-only">Select a file</label>
+                                  <input type="file" id="messageFileImageUpload">
+                              </div>
+                              
+                              </span> -->
+                            </div>
+                            
+                          </div>
+                          <button type="submit" class="button button__primary chat-message-form__button--send"><i class="uil uil-message"></i></button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-user-3" role="tabpanel" aria-labelledby="v-pills-user-3-tab">
+                    <div class="chat-wrapper position-relative">
+                      <!-- chat header -->
+                      <div class="chat__header bg--white box-shadow--custom p-3">
+                        <div class="chat__profile d-flex align-items-center">
+                          <div class="chat__profile-image-container">
+                            <img src="../assets/images/user-3.jpg" class="chat__profile-image" alt="" />
+                          </div>
+
+                          <div class="chat__profile-desc">
+                            <h6 class="chat__profile-title text--primary">John Doe</h6>
+                            <p class="chat__profile-online-status">Online</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- chat body -->
+                      <div class="chat__body bg--white">
+                        <div class="message-container d-flex message-container--other-user">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-3.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                        <div class="message-container d-flex flex-row-reverse message-container--self">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-self.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                        <div class="message-container d-flex message-container--other-user">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-3.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                        <div class="message-container d-flex flex-row-reverse message-container--self">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-self.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                        <div class="message-container d-flex message-container--other-user">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-3.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                      </div>
+                      <!-- chat footer -->
+                      <div class="chat__footer bg--white p-3">
+                        <form action="#" class="chat-message-form d-flex">
+                          <div class="input__container bg--white d-flex mr-2 align-items-center">
+                            <input type="text" name="chatMessage" class="chat-message-form__input mr-2" placeholder="Type a message.." required></input>
+                            <div class="chat-message-media-container d-flex pr-3">
+                              <a href="javascript:void(0)" class="mr-2"><i class="bi bi-emoji-smile"></i></a>
+                              <a href="javascript:void(0)" class="mr-2"><i class="bi bi-mic"></i></a>
+                              <a href="javascript:void(0)"><i class="bi bi-image"></i></a>
+                              <!-- <span class="story__heading-upload-story">
+                                <div class="form-group mb-0">
+                                  <label for="file" class="sr-only">Select a file</label>
+                                  <input type="file" id="messageFileImageUpload">
+                              </div>
+                              
+                              </span> -->
+                            </div>
+                            
+                          </div>
+                          <button type="submit" class="button button__primary chat-message-form__button--send"><i class="uil uil-message"></i></button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-user-4" role="tabpanel" aria-labelledby="v-pills-user-4-tab">
+                    <div class="chat-wrapper position-relative">
+                      <!-- chat header -->
+                      <div class="chat__header bg--white box-shadow--custom p-3">
+                        <div class="chat__profile d-flex align-items-center">
+                          <div class="chat__profile-image-container">
+                            <img src="../assets/images/user-4.jpg" class="chat__profile-image" alt="" />
+                          </div>
+
+                          <div class="chat__profile-desc">
+                            <h6 class="chat__profile-title text--primary">John Doe</h6>
+                            <p class="chat__profile-online-status">Online</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- chat body -->
+                      <div class="chat__body bg--white">
+                        <div class="message-container d-flex message-container--other-user">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-4.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                        <div class="message-container d-flex flex-row-reverse message-container--self">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-self.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                        <div class="message-container d-flex message-container--other-user">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-4.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                        <div class="message-container d-flex flex-row-reverse message-container--self">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-self.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                        <div class="message-container d-flex message-container--other-user">
+                          <div class="message__user-container">
+                            <img src="../assets/images/user-4.jpg" alt="user-image" />
+                            <span class="message__user-letter-first d-none">S</span>
+                          </div>
+                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
+                        </div>
+                      </div>
+                      <!-- chat footer -->
+                      <div class="chat__footer bg--white p-3">
+                        <form action="#" class="chat-message-form d-flex">
+                          <div class="input__container bg--white d-flex mr-2 align-items-center">
+                            <input type="text" name="chatMessage" class="chat-message-form__input mr-2" placeholder="Type a message.." required></input>
+                            <div class="chat-message-media-container d-flex pr-3">
+                              <a href="javascript:void(0)" class="mr-2"><i class="bi bi-emoji-smile"></i></a>
+                              <a href="javascript:void(0)" class="mr-2"><i class="bi bi-mic"></i></a>
+                              <a href="javascript:void(0)"><i class="bi bi-image"></i></a>
+                              <!-- <span class="story__heading-upload-story">
+                                <div class="form-group mb-0">
+                                  <label for="file" class="sr-only">Select a file</label>
+                                  <input type="file" id="messageFileImageUpload">
+                              </div>
+                              
+                              </span> -->
+                            </div>
+                            
+                          </div>
+                          <button type="submit" class="button button__primary chat-message-form__button--send"><i class="uil uil-message"></i></button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- messagebox main content ends -->
             </div>
-        <!-- dashboard content ends -->
-        <!-- dashboard footer starts -->
-        <div class="dashboard__footer d-none">
-          <p class="footer__copyright-text text--para">©2021 Actipass Website. All rights reserved.</p>
-          <ul class="footer__menu">
-            <li class="menu__item">
-              <a href="#" class="menu__item--link">About</a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu__item--link">Support</a>
-            </li>
-            <li class="menu__item">
-              <a href="#" class="menu__item--link">Contact Us</a>
-            </li>
-          </ul>
+          </div>
+          <!-- dashboard content ends -->
+          <!-- dashboard footer starts -->
+          <div class="dashboard__footer d-none">
+            <p class="footer__copyright-text text--para">©2021 Actipass Website. All rights reserved.</p>
+            <ul class="footer__menu">
+              <li class="menu__item">
+                <a href="#" class="menu__item--link">About</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__item--link">Support</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__item--link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <!-- dashboard footer ends -->
         </div>
-        <!-- dashboard footer ends -->
-      </div>
       </div>
     </section>
     <!-- all vendors js scripts-->
