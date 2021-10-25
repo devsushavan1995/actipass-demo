@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="../assets/vendors/bootstrap-4.6.0-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../assets/vendors/animated-event-calender/dist/simple-calendar.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../assets/vendors/lightbox2-2.11.3/dist/css/lightbox.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Actipass | Wallet</title>
+  </head>
+  <body>
+    <section class="dashboard-wrapper">
+      <div class="dashboard__overlay d-lg-none"></div>
+      <div class="dashboard__sidebar">
+        <!-- sidebar logo starts -->
+        <div class="sidebar__logo-wrapper d-flex justify-content-between">
+          <a href="#" class="logo--linked">
+            <img src="/assets/images/actipass_logo.png" class="logo" alt="Actipass Logo" />
+          </a>
+          <button class="dashboard__sidebar--toggler d-none d-lg-inline-block" id="dashboardSidebarToggler1">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+        <!-- sidebar logo ends -->
+        <!-- sidebar menu starts -->
+        <nav class="sidebar__menu-wrapper">
+          <ul class="sidebar__menu">
+            <!-- single link item starts -->
+            <li class="menu__item">
+              <a href="../admin/index.html" class="menu__item--link">
+                <span class="link__icon"><i class="uil uil-estate"></i></span>
+                <span class="link__title">Home</span>
+              </a>
+            </li>
+            <!-- single link item ends -->
+            <!-- single link item starts -->
+            <li class="menu__item">
+              <a href="../admin/profile.html" class="menu__item--link">
+                <span class="link__icon"><i class="uil uil-user-circle"></i></span>
+                <span class="link__title">Profile</span>
+              </a>
+            </li>
+            <!-- single link item ends -->
+            <!-- single link item starts -->
+            <li class="menu__item">
+              <a href="../admin/booking.html" class="menu__item--link">
+                <span class="link__icon"><i class="uil uil-calendar-alt"></i></span>
+                <span class="link__title">Booking</span>
+              </a>
+            </li>
+            <!-- single link item ends -->
+            <!-- single link item starts -->
+            <li class="menu__item">
+              <a href="../admin/onepass.html" class="menu__item--link">
+                <span class="link__icon"><i class="uil uil-key-skeleton"></i></span>
+                <span class="link__title">One Pass</span>
+              </a>
+            </li>
+            <!-- single link item ends -->
+            <!-- single link item starts -->
+            <li class="menu__item">
+              <a href="#" class="menu__item--link">
+                <span class="link__icon"><i class="uil uil-award"></i></span>
+                <span class="link__title">Achievements</span>
+              </a>
+            </li>
+            <!-- single link item ends -->
+            <!-- single link item starts -->
+            <li class="menu__item">
+              <a href="../admin/browse.html" class="menu__item--link">
+                <span class="link__icon"><i class="uil uil-basketball"></i></span>
+                <span class="link__title">Browse Activities</span>
+              </a>
+            </li>
+            <!-- single link item ends -->
+            <!-- single link item starts -->
+            <li class="menu__item">
+              <a href="#" class="menu__item--link">
+                <span class="link__icon"><i class="uil uil-comment"></i></span>
+                <span class="link__title">Messages</span>
+              </a>
+            </li>
+            <!-- single link item ends -->
+            <!-- single link item starts -->
+            <li class="menu__item">
+              <a href="../admin/wallet.html" class="menu__item--link">
+                <span class="link__icon"><i class="uil uil-wallet"></i></span>
+                <span class="link__title">Wallet</span>
+              </a>
+            </li>
+            <!-- single link item ends -->
+            <!-- single link item starts -->
+            <li class="menu__item">
+              <a href="../admin/forum.html" class="menu__item--link">
+                <span class="link__icon"><i class="uil uil-users-alt"></i></span>
+                <span class="link__title">Forum/Community</span>
+              </a>
+            </li>
+            <!-- single link item ends -->
+            <!-- single link item starts -->
+            <li class="menu__item">
+              <a href="../admin/billing-information.html" class="menu__item--link">
+                <span class="link__icon"><i class="uil uil-invoice"></i></span>
+                <span class="link__title">Billing Information</span>
+              </a>
+            </li>
+            <!-- single link item ends -->
+            <!-- single link item starts -->
+            <li class="menu__item">
+              <a href="../admin/customer-support.html" class="menu__item--link">
+                <span class="link__icon"><i class="uil uil-envelope-question"></i></span>
+                <span class="link__title">Customer Support</span>
+              </a>
+            </li>
+            <!-- single link item ends -->
+            <!-- single link item starts -->
+            <li class="menu__item">
+              <a href="../admin/market-place.html" class="menu__item--link">
+                <span class="link__icon"><i class="uil uil-store"></i></span>
+                <span class="link__title">Market Place</span>
+              </a>
+            </li>
+            <!-- single link item ends -->
+          </ul>
+        </nav>
+        <!-- sidebar menu ends -->
+      </div>
+      <div class="dashboard__content-area bg--light1">
+        <!-- dashboard top navigation starts -->
+        <nav class="dashboard__topbar d-flex align-items-center justify-content-between">
+          <!-- alternative button toggler for sidebar-->
+          <button class="dashboard__sidebar--toggler d-lg-none" id="dashboardSidebarToggler2">
+            <i class="bi bi-list"></i>
+          </button>
+          <ul class="topbar__nav d-none d-lg-block">
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">Courses</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">Workshop</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">Events</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">Blog</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">Contact</a>
+            </li>
+          </ul>
+          <ul class="topbar__user-profile-wrapper d-flex align-items-center">
+            <!-- user profile starts -->
+            <li class="user-profile mr-3">
+              <a href="#" class="d-flex align-items-center">
+                <div class="user-profile__image">
+                  <img src="/assets/images/user-avatar.jpg" alt="avatar" />
+                </div>
+                <h6 class="user-profile__text mb-0">Hello <span class="user-profile__name">User</span></h6>
+              </a>
+            </li>
+            <!-- user profile ends -->
+            <!-- user notification -->
+            <li class="user-notification">
+              <button class="dropdown-toggle user-notification__button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="notification-badge">4</span>
+                <i class="bi bi-bell"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Notification 1</a>
+                <a class="dropdown-item" href="#">Notification 2</a>
+                <a class="dropdown-item" href="#">Notification 3</a>
+              </div>
+            </li>
+            <!-- user notification ends -->
+          </ul>
+        </nav>
+        <!-- dashboard top navigation ends -->
+        <!-- dashboard content starts -->
+        <div class="dashboard__content">
+            <!-- messenger chatbox -->
+            <div class="messagebox-wrapper border-radius--custom-10 box-shadow--custom overflow-hidden">
+                <div class="row w-100">
+                    <div class="messagebox__sidebar bg--primary">
+                        <div class="message-search-container position-relative p-3">
+                            <input type="text" name="messageSearch" class="message-search__input" id="messageSearchInput" placeholder="Search Messages">
+                            <span class="message-search__icon"><i class="bi bi-search"></i></span>
+                        </div>
+                      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="v-pills-user-1-tab" data-toggle="pill" href="#v-pills-user-1" role="tab" aria-controls="v-pills-home" aria-selected="true">User 1</a>
+                        <a class="nav-link" id="v-pills-user-2-tab" data-toggle="pill" href="#v-pills-user-2" role="tab" aria-controls="v-pills-profile" aria-selected="false">User 2</a>
+                        <a class="nav-link" id="v-pills-user-3-tab" data-toggle="pill" href="#v-pills-user-3" role="tab" aria-controls="v-pills-messages" aria-selected="false">User 3</a>
+                        <a class="nav-link" id="v-pills-user-4-tab" data-toggle="pill" href="#v-pills-user-4" role="tab" aria-controls="v-pills-settings" aria-selected="false">User 4</a>
+                      </div>
+                    </div>
+                    <div class="messagebox__main">
+                      <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-user-1" role="tabpanel" aria-labelledby="v-pills-user-1-tab">
+                            <div class="errorsSide">
+                            </div>
+                            <div class="shareLink">
+                                    <div class="welcomeMess" style="margin-top: 0;">
+                                        <div class="img"><video src="https://res.cloudinary.com/duw2s4w0s/video/upload/v1620962563/HO%20TV%20assets/ezgif-6-38fc0e6aefa8_owq33f.mp4" alt="brainstorm video" autoplay muted></video></div>
+                                        <h1 class="roomTitle" class="roomTitle">Error Pharsing</h1>
+                                        <p id="copyLinker2" class="copyLinker2">#4987720</p>
+                                    </div>
+                                <input id="copyvalue" type="text" value="#4987720">
+                                <button id="copyLinker">Copy Code</button>
+                            </div>
+                            <div class="nameAlert"><h1>Enter your Name</h1><input id="name" type="text" placeholder="Enter your Name"></div>
+                            
+                        <div class="mainChater">
+                            <div class="headerDet">
+                                <div class="chatDety">
+                                    <div class="img"><video src="https://res.cloudinary.com/duw2s4w0s/video/upload/v1620962563/HO%20TV%20assets/ezgif-6-38fc0e6aefa8_owq33f.mp4" alt="brainstorm video" autoplay></video></div>
+                                    <div class="nameC">
+                                        <p class="roomTitle" id='titleFirst' class="roomTitle">Error Pharsing</p>
+                                        <input type="text" name="room name" id="roomNameInput" class="roomTitle" value="Its BrainStorming">
+                                    </div>
+                                </div>
+                        
+                                <div class="tools">
+                                    <button id="groupEdit" tooltip="Google Meet" flow="left"><span class="material-icons blueClick">mode_edit</span></button>
+                                    <button id="settings" tooltip="Room Settings" flow="left"><span class="material-icons blueClick">settings</span></button>
+                                </div>
+                            </div>
+                        
+                        <div class="blackout"></div>
+                        
+                            <div class="chatArea changeW">
+                                <div class="chatMessages">
+                                      <!--Start of Chat cont-->
+                                <div class="welcomeMess">
+                                    <div class="img"><video src="https://res.cloudinary.com/duw2s4w0s/video/upload/v1620962563/HO%20TV%20assets/ezgif-6-38fc0e6aefa8_owq33f.mp4" alt="brainstorm video" autoplay></video></div>
+                                    <h1 class="roomTitle">Error Pharsing</h1>
+                                    <p id="copyLinker2" class="copyLinker2">#40</p>
+                                </div>
+                        
+                                <div class="message"><div class="prof"><p>L</p></div>
+                                <div class="messArea">
+                                    <p id="sname">Lance Francisco | Team Poster</p>
+                                    <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
+                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
+                                </div>
+                        
+                                <div class="message mMess 1122334" data-number="1122334">
+                                <div class="messArea">
+                                    <p id="sname">James Ericson</p>
+                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
+                                    <div class="prof" style="background-color: #ff7b54;"><p>J</p></div>
+                                </div>
+                        
+                                <div class="message"><div class="prof" style="background-color: #939b62;"><p>M</p></div>
+                                <div class="messArea">
+                                    <p id="sname">Marcus Dilinmer</p>
+                                    <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
+                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
+                                </div>
+                        
+                                <div class="message"><div class="prof" style="background-color: #ffb26b;"><p>A</p></div>
+                                <div class="messArea">
+                                    <p id="sname">Alexandria Patkinson</p>
+                                    <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
+                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
+                                </div>
+                        
+                                <div class="message"><div class="prof"><p>L</p></div>
+                                <div class="messArea">
+                                    <p id="sname">Lance Francisco</p>
+                                    <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
+                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
+                                </div>
+                        
+                                <div class="message mMess 1122334" data-number="1122334">
+                                <div class="messArea">
+                                    <p id="sname">James Ericson</p>
+                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
+                                    <div class="prof" style="background-color: #ff7b54;"><p>J</p></div>
+                                </div>
+                        
+                                <div class="message"><div class="prof" style="background-color: #939b62;"><p>M</p></div>
+                                <div class="messArea">
+                                    <p id="sname">Marcus Dilinmer</p>
+                                    <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
+                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
+                                </div>
+                        
+                                <div class="message"><div class="prof" style="background-color: #ffb26b;"><p>A</p></div>
+                                <div class="messArea">
+                                    <p id="sname">Alexandria Patkinson</p>
+                                    <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
+                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
+                                </div>
+                        
+                            <div class="message"><div class="prof"><p>L</p></div>
+                            <div class="messArea">
+                                <p id="sname">Lance Francisco</p>
+                                <div class="textM">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quasi quas aliquam commodi quaerat sit reiciendis dignissimos quam totam nemo.</div>
+                                <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. https://mi.com. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
+                            </div>
+                        <p class="timeId">8:43pm | 12/05/2021</p>
+                            <div class="message mMess 1122334" data-number="1122334">
+                                <div class="messArea">
+                                    <p id="sname">James Ericson</p>
+                                    <div class="textM">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos omnis illum voluptates sed provident saepe?.</div></div>
+                                    <div class="prof" style="background-color: #ff7b54;"><p>J</p></div>
+                            </div>
+                          <!--End of Chat cont-->
+                        </div>
+                        
+                            <div class="messageBox">
+                                <button id="genMeetLink" class=" button-s1" tooltip="Google Docs" flow="right"><a href="https://docs.google.com/document/u/0/create" target="blank"><span class="material-icons">description</span></a></button>
+                                <button id="genMeetLink" class=" button-s1" tooltip="Google Meet" flow="right"><a href="https://meet.google.com/new" target="blank"><span class="material-icons">video_call</span></a></button>
+                                <button id="linkCopy" class="button-s1" tooltip="Copy Link" flow="up"><span class="material-icons">link</span></button>
+                                <div class="textA"><textarea id="message" name="message" rows="1" cols="30" placeholder="Type your message here"></textarea></div>
+                                <button id="send" class="button-s1" tooltip="Send" flow="left"><span class="material-icons headerIcon">send</span></button>
+                            </div>
+                            <div id="goToDown" class="downDowny"><span class="material-icons" >arrow_downward</span></div>
+                            </div>
+                            
+                            <div class="settingsBar">
+                        
+                                <div class="headerSet">
+                                    <div class="welcomeMess">
+                                        <div class="img"><video src="https://res.cloudinary.com/duw2s4w0s/video/upload/v1620962563/HO%20TV%20assets/ezgif-6-38fc0e6aefa8_owq33f.mp4" alt="brainstorm video" alt="brainstorm video" autoplay></video></div>
+                                        <h1 class="roomTitle">Error Pharsing</h1>
+                                        <p id="copyLinker2">#4987720</p>
+                                    </div>     
+                                </div>
+                        
+                                <div class="membersSec">
+                                    <h1>Members</h1>
+                                    <ul id="membersList">
+                                        <li class="membersCont"><div class="prof" style="background-color: #ffb26b;"><p>A</p></div></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-user-2" role="tabpanel" aria-labelledby="v-pills-user-2-tab">
+    
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-user-3" role="tabpanel" aria-labelledby="v-pills-user-3-tab">...</div>
+                        <div class="tab-pane fade" id="v-pills-user-4" role="tabpanel" aria-labelledby="v-pills-user-4-tab">...</div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        <!-- dashboard content ends -->
+        <!-- dashboard footer starts -->
+        <div class="dashboard__footer d-none">
+          <p class="footer__copyright-text text--para">©2021 Actipass Website. All rights reserved.</p>
+          <ul class="footer__menu">
+            <li class="menu__item">
+              <a href="#" class="menu__item--link">About</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item--link">Support</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item--link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <!-- dashboard footer ends -->
+      </div>
+      </div>
+    </section>
+    <!-- all vendors js scripts-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="../assets/vendors/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendors/lightbox2-2.11.3/dist/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="../assets/vendors/animated-event-calender/dist/jquery.simple-calendar.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- custom js script -->
+    <script src="../js/script.js"></script>
+  </body>
+</html>
