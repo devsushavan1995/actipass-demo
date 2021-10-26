@@ -1,3 +1,4 @@
+
 :root {
   --colorPrimary: #0b1c39;
   --colorAccent: #febc38;
@@ -2485,8 +2486,11 @@ h6 {
 }
 .onepass-wrapper .onepass-activity .user-action__course-time-wrapper {
   margin: 0 0 1rem 0;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .onepass-wrapper .onepass-activity .user-action__course-time-wrapper label {
   margin: 0 0.25rem 0 0;
@@ -3205,19 +3209,29 @@ margin: 1rem 0 0 0;
 }
 /* adding order */
 .browse-activities-wrapper .browse-activities__body.vendors-wrapper .vendor .vendor__title {
-  order: 2;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 .browse-activities-wrapper .browse-activities__body.vendors-wrapper .vendor .vendor__eligibility-container {
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 .browse-activities-wrapper .browse-activities__body.vendors-wrapper .vendor .vendor__fee {
-  order: 3;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 .browse-activities-wrapper .browse-activities__body.vendors-wrapper .vendor .vendor__review-container {
-  order: 4;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
 }
 .browse-activities-wrapper .browse-activities__body.vendors-wrapper .vendor .vendor__specification {
-  order: 5;
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
 }
 /* adding order ends */
 .browse-activities-wrapper .browse-activities__body.vendors-wrapper .vendor .eligibility-list {
@@ -3336,23 +3350,33 @@ margin: 1rem 0 0 0;
   }
   /* adding order */
   .browse-activities-wrapper .browse-activities__body.vendors-wrapper .vendor .vendor__title {
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
   .browse-activities-wrapper .browse-activities__body.vendors-wrapper .vendor .vendor__eligibility-container {
-    order: 5;
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
   }
   .browse-activities-wrapper .browse-activities__body.vendors-wrapper .vendor .vendor__fee {
-    order: 2;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     font-size: 0.9rem;
     margin: 0 0 0.25rem 0;
   }
   .browse-activities-wrapper .browse-activities__body.vendors-wrapper .vendor .vendor__review-container {
-    order: 3;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
     margin: 0 0 0.5rem 0;
     font-size: 0.95rem;
   }
   .browse-activities-wrapper .browse-activities__body.vendors-wrapper .vendor .vendor__specification {
-    order: 4;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
     margin: 0 0 0.75rem 0;
   }
   /* adding order ends */
@@ -3972,6 +3996,7 @@ margin: 1rem 0 0 0;
   left: 10px;
 }
 .support-wrapper .support-direct-col {
+  background: -o-linear-gradient(45deg, var(--colorRandomSkyblue), #2e34ff);
   background: linear-gradient(45deg, var(--colorRandomSkyblue), #2e34ff);
 }
 @media (min-width: 576px) {
@@ -4356,34 +4381,24 @@ margin: 1rem 0 0 0;
 }
 
 /* Mewssage Page */
-/* custom row columns using float */
-/* .row-custom::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.col-custom {
-  float: left;
-}
-.col-custom--pad {
-  padding: 0 0.9375rem;
-} */
-/* .messagebox-wrapper {
-  height: 75vh;
-} */
 .messagebox-wrapper {
   background: #fff;
   max-width: 1320px;
   position: relative;
 }
 .messagebox-wrapper .messagebox {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   margin: 0;
   width: 200%;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 .messagebox-wrapper .messagebox.messagebox--slide-left {
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .messagebox-wrapper .messagebox__sidebar {
   width: 100%;
@@ -4400,6 +4415,18 @@ margin: 1rem 0 0 0;
   border: none;
   color: #fff;
   font-size: 0.85rem;
+}
+.messagebox-wrapper .messagebox__sidebar .message-search-container .message-search__input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.messagebox-wrapper .messagebox__sidebar .message-search-container .message-search__input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.messagebox-wrapper .messagebox__sidebar .message-search-container .message-search__input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.messagebox-wrapper .messagebox__sidebar .message-search-container .message-search__input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
 }
 .messagebox-wrapper .messagebox__sidebar .message-search-container .message-search__input::placeholder {
   color: rgba(255, 255, 255, 0.8);
@@ -4434,6 +4461,8 @@ margin: 1rem 0 0 0;
 .messagebox-wrapper .messagebox__main {
   width: 100%;
   height: 75vh;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .messagebox-wrapper .messagebox__main .chat__header {
@@ -4486,7 +4515,8 @@ margin: 1rem 0 0 0;
   font-size: 0.8rem;
   color: var(--colorPrimary);
   position: relative;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
 }
 .messagebox-wrapper .messagebox__main .chat__body .message-container.message-container--self .message__text {
   background: var(--colorPrimary);
@@ -4496,7 +4526,9 @@ margin: 1rem 0 0 0;
   content: '';
   width: 12px;
   height: 12px;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   position: absolute;
   background: var(--colorLightBg1);
   top: 12px;
@@ -4504,7 +4536,7 @@ margin: 1rem 0 0 0;
 }
 .messagebox-wrapper .messagebox__main .chat__body .message-container.message-container--self .message__text::before {
   background: var(--colorPrimary);
-  left: 96%;
+  left: 95.5%;
 }
 .messagebox-wrapper .messagebox__main .chat__body {
   height: 50vh;
@@ -4599,7 +4631,9 @@ margin: 1rem 0 0 0;
     width: 100%;
   }
   .messagebox-wrapper .messagebox.messagebox--slide-left {
-    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
   }
   .messagebox-wrapper .messagebox__sidebar {
     width: 24%;
