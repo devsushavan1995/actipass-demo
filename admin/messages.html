@@ -193,9 +193,9 @@
         <div class="dashboard__content">
           <!-- messenger chatbox -->
           <div class="messagebox-wrapper border-radius--custom-10 box-shadow--custom overflow-hidden">
-            <div class="row">
+            <div class="row messagebox" id="messagebox">
               <!-- messagebox sidebar -->
-              <div class="messagebox__sidebar bg--primary">
+              <div class="messagebox__sidebar bg--primary" id="messageboxSidebar">
                 <div class="message-search-container position-relative">
                   <input type="text" name="messageSearch" class="message-search__input" id="messageSearchInput" placeholder="Search Messages" />
                   <span class="message-search__icon"><i class="bi bi-search"></i></span>
@@ -221,23 +221,24 @@
               </div>
               <!-- messagebox sidebar ends -->
               <!-- messagebox main content -->
-              <div class="messagebox__main">
+              <div class="messagebox__main" id="messageboxMain">
+                <!-- chat header -->
+                <div class="chat__header bg--white box-shadow--custom p-3 d-flex align-items-center">
+                  <button class="chat__button--back mr-2 text--primary d-lg-none" id="chatBackButton"><i class="bi bi-arrow-left"></i></button>
+                  <div class="chat__profile d-flex align-items-center">
+                    <div class="chat__profile-image-container">
+                      <img src="../assets/images/user-1.jpg" class="chat__profile-image" alt="" />
+                    </div>
+
+                    <div class="chat__profile-desc">
+                      <h6 class="chat__profile-title text--primary">John Doe</h6>
+                      <p class="chat__profile-online-status">Online</p>
+                    </div>
+                  </div>
+                </div>
                 <div class="tab-content" id="v-pills-tabContent">
                   <div class="tab-pane fade show active" id="v-pills-user-1" role="tabpanel" aria-labelledby="v-pills-user-1-tab">
                     <div class="chat-wrapper position-relative">
-                      <!-- chat header -->
-                      <div class="chat__header bg--white box-shadow--custom p-3">
-                        <div class="chat__profile d-flex align-items-center">
-                          <div class="chat__profile-image-container">
-                            <img src="../assets/images/user-1.jpg" class="chat__profile-image" alt="" />
-                          </div>
-
-                          <div class="chat__profile-desc">
-                            <h6 class="chat__profile-title text--primary">John Doe</h6>
-                            <p class="chat__profile-online-status">Online</p>
-                          </div>
-                        </div>
-                      </div>
                       <!-- chat body -->
                       <div class="chat__body bg--white">
                         <div class="message-container d-flex message-container--other-user">
@@ -275,47 +276,12 @@
                           </div>
                           <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
                         </div>
-                      </div>
-                      <!-- chat footer -->
-                      <div class="chat__footer bg--white p-3">
-                        <form action="#" class="chat-message-form d-flex">
-                          <div class="input__container bg--white d-flex mr-2 align-items-center">
-                            <input type="text" name="chatMessage" class="chat-message-form__input mr-2" placeholder="Type a message.." required></input>
-                            <div class="chat-message-media-container d-flex pr-3">
-                              <a href="javascript:void(0)" class="mr-2"><i class="bi bi-emoji-smile"></i></a>
-                              <a href="javascript:void(0)" class="mr-2"><i class="bi bi-mic"></i></a>
-                              <a href="javascript:void(0)"><i class="bi bi-image"></i></a>
-                              <!-- <span class="story__heading-upload-story">
-                                <div class="form-group mb-0">
-                                  <label for="file" class="sr-only">Select a file</label>
-                                  <input type="file" id="messageFileImageUpload">
-                              </div>
-                              
-                              </span> -->
-                            </div>
-                            
-                          </div>
-                          <button type="submit" class="button button__primary chat-message-form__button--send"><i class="uil uil-message"></i></button>
-                        </form>
                       </div>
                     </div>
                   </div>
                   <div class="tab-pane fade" id="v-pills-user-2" role="tabpanel" aria-labelledby="v-pills-user-2-tab">
                     <div class="chat-wrapper position-relative">
-                      <!-- chat header -->
-                      <div class="chat__header bg--white box-shadow--custom p-3">
-                        <div class="chat__profile d-flex align-items-center">
-                          <div class="chat__profile-image-container">
-                            <img src="../assets/images/user-2.jpg" class="chat__profile-image" alt="" />
-                          </div>
-
-                          <div class="chat__profile-desc">
-                            <h6 class="chat__profile-title text--primary">John Doe</h6>
-                            <p class="chat__profile-online-status">Online</p>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- chat body -->
+                                                <!-- chat body -->
                       <div class="chat__body bg--white">
                         <div class="message-container d-flex message-container--other-user">
                           <div class="message__user-container">
@@ -353,187 +319,35 @@
                           <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
                         </div>
                       </div>
-                      <!-- chat footer -->
-                      <div class="chat__footer bg--white p-3">
-                        <form action="#" class="chat-message-form d-flex">
-                          <div class="input__container bg--white d-flex mr-2 align-items-center">
-                            <input type="text" name="chatMessage" class="chat-message-form__input mr-2" placeholder="Type a message.." required></input>
-                            <div class="chat-message-media-container d-flex pr-3">
-                              <a href="javascript:void(0)" class="mr-2"><i class="bi bi-emoji-smile"></i></a>
-                              <a href="javascript:void(0)" class="mr-2"><i class="bi bi-mic"></i></a>
-                              <a href="javascript:void(0)"><i class="bi bi-image"></i></a>
-                              <!-- <span class="story__heading-upload-story">
-                                <div class="form-group mb-0">
-                                  <label for="file" class="sr-only">Select a file</label>
-                                  <input type="file" id="messageFileImageUpload">
-                              </div>
-                              
-                              </span> -->
-                            </div>
-                            
-                          </div>
-                          <button type="submit" class="button button__primary chat-message-form__button--send"><i class="uil uil-message"></i></button>
-                        </form>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="v-pills-user-3" role="tabpanel" aria-labelledby="v-pills-user-3-tab">
-                    <div class="chat-wrapper position-relative">
-                      <!-- chat header -->
-                      <div class="chat__header bg--white box-shadow--custom p-3">
-                        <div class="chat__profile d-flex align-items-center">
-                          <div class="chat__profile-image-container">
-                            <img src="../assets/images/user-3.jpg" class="chat__profile-image" alt="" />
-                          </div>
 
-                          <div class="chat__profile-desc">
-                            <h6 class="chat__profile-title text--primary">John Doe</h6>
-                            <p class="chat__profile-online-status">Online</p>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- chat body -->
-                      <div class="chat__body bg--white">
-                        <div class="message-container d-flex message-container--other-user">
-                          <div class="message__user-container">
-                            <img src="../assets/images/user-3.jpg" alt="user-image" />
-                            <span class="message__user-letter-first d-none">S</span>
-                          </div>
-                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
-                        </div>
-                        <div class="message-container d-flex flex-row-reverse message-container--self">
-                          <div class="message__user-container">
-                            <img src="../assets/images/user-self.jpg" alt="user-image" />
-                            <span class="message__user-letter-first d-none">S</span>
-                          </div>
-                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
-                        </div>
-                        <div class="message-container d-flex message-container--other-user">
-                          <div class="message__user-container">
-                            <img src="../assets/images/user-3.jpg" alt="user-image" />
-                            <span class="message__user-letter-first d-none">S</span>
-                          </div>
-                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
-                        </div>
-                        <div class="message-container d-flex flex-row-reverse message-container--self">
-                          <div class="message__user-container">
-                            <img src="../assets/images/user-self.jpg" alt="user-image" />
-                            <span class="message__user-letter-first d-none">S</span>
-                          </div>
-                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
-                        </div>
-                        <div class="message-container d-flex message-container--other-user">
-                          <div class="message__user-container">
-                            <img src="../assets/images/user-3.jpg" alt="user-image" />
-                            <span class="message__user-letter-first d-none">S</span>
-                          </div>
-                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
-                        </div>
-                      </div>
+                    </div>
                       <!-- chat footer -->
-                      <div class="chat__footer bg--white p-3">
-                        <form action="#" class="chat-message-form d-flex">
-                          <div class="input__container bg--white d-flex mr-2 align-items-center">
-                            <input type="text" name="chatMessage" class="chat-message-form__input mr-2" placeholder="Type a message.." required></input>
-                            <div class="chat-message-media-container d-flex pr-3">
-                              <a href="javascript:void(0)" class="mr-2"><i class="bi bi-emoji-smile"></i></a>
-                              <a href="javascript:void(0)" class="mr-2"><i class="bi bi-mic"></i></a>
-                              <a href="javascript:void(0)"><i class="bi bi-image"></i></a>
-                              <!-- <span class="story__heading-upload-story">
-                                <div class="form-group mb-0">
-                                  <label for="file" class="sr-only">Select a file</label>
-                                  <input type="file" id="messageFileImageUpload">
-                              </div>
-                              
-                              </span> -->
-                            </div>
-                            
-                          </div>
-                          <button type="submit" class="button button__primary chat-message-form__button--send"><i class="uil uil-message"></i></button>
-                        </form>
+                <div class="chat__footer bg--white p-3">
+                  <form action="#" class="chat-message-form d-flex">
+                    <div class="input__container bg--white d-flex mr-2 align-items-center">
+                      <input type="text" name="chatMessage" class="chat-message-form__input mr-2" placeholder="Type a message.." required />
+                      <div class="chat-message-media-container d-flex pr-3">
+                        <a href="javascript:void(0)" class="mr-2"><i class="bi bi-emoji-smile"></i></a>
+                        <a href="javascript:void(0)" class="mr-2"><i class="bi bi-mic"></i></a>
+                        <a href="javascript:void(0)"><i class="bi bi-image"></i></a>
+                        <!-- <span class="story__heading-upload-story">
+                          <div class="form-group mb-0">
+                            <label for="file" class="sr-only">Select a file</label>
+                            <input type="file" id="messageFileImageUpload">
+                        </div>
+                        
+                        </span> -->
                       </div>
                     </div>
-                  </div>
-                  <div class="tab-pane fade" id="v-pills-user-4" role="tabpanel" aria-labelledby="v-pills-user-4-tab">
-                    <div class="chat-wrapper position-relative">
-                      <!-- chat header -->
-                      <div class="chat__header bg--white box-shadow--custom p-3">
-                        <div class="chat__profile d-flex align-items-center">
-                          <div class="chat__profile-image-container">
-                            <img src="../assets/images/user-4.jpg" class="chat__profile-image" alt="" />
-                          </div>
-
-                          <div class="chat__profile-desc">
-                            <h6 class="chat__profile-title text--primary">John Doe</h6>
-                            <p class="chat__profile-online-status">Online</p>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- chat body -->
-                      <div class="chat__body bg--white">
-                        <div class="message-container d-flex message-container--other-user">
-                          <div class="message__user-container">
-                            <img src="../assets/images/user-4.jpg" alt="user-image" />
-                            <span class="message__user-letter-first d-none">S</span>
-                          </div>
-                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
-                        </div>
-                        <div class="message-container d-flex flex-row-reverse message-container--self">
-                          <div class="message__user-container">
-                            <img src="../assets/images/user-self.jpg" alt="user-image" />
-                            <span class="message__user-letter-first d-none">S</span>
-                          </div>
-                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
-                        </div>
-                        <div class="message-container d-flex message-container--other-user">
-                          <div class="message__user-container">
-                            <img src="../assets/images/user-4.jpg" alt="user-image" />
-                            <span class="message__user-letter-first d-none">S</span>
-                          </div>
-                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
-                        </div>
-                        <div class="message-container d-flex flex-row-reverse message-container--self">
-                          <div class="message__user-container">
-                            <img src="../assets/images/user-self.jpg" alt="user-image" />
-                            <span class="message__user-letter-first d-none">S</span>
-                          </div>
-                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
-                        </div>
-                        <div class="message-container d-flex message-container--other-user">
-                          <div class="message__user-container">
-                            <img src="../assets/images/user-4.jpg" alt="user-image" />
-                            <span class="message__user-letter-first d-none">S</span>
-                          </div>
-                          <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, assumenda.</p>
-                        </div>
-                      </div>
-                      <!-- chat footer -->
-                      <div class="chat__footer bg--white p-3">
-                        <form action="#" class="chat-message-form d-flex">
-                          <div class="input__container bg--white d-flex mr-2 align-items-center">
-                            <input type="text" name="chatMessage" class="chat-message-form__input mr-2" placeholder="Type a message.." required></input>
-                            <div class="chat-message-media-container d-flex pr-3">
-                              <a href="javascript:void(0)" class="mr-2"><i class="bi bi-emoji-smile"></i></a>
-                              <a href="javascript:void(0)" class="mr-2"><i class="bi bi-mic"></i></a>
-                              <a href="javascript:void(0)"><i class="bi bi-image"></i></a>
-                              <!-- <span class="story__heading-upload-story">
-                                <div class="form-group mb-0">
-                                  <label for="file" class="sr-only">Select a file</label>
-                                  <input type="file" id="messageFileImageUpload">
-                              </div>
-                              
-                              </span> -->
-                            </div>
-                            
-                          </div>
-                          <button type="submit" class="button button__primary chat-message-form__button--send"><i class="uil uil-message"></i></button>
-                        </form>
-                      </div>
-                    </div>
+                    <button type="submit" class="button button__primary chat-message-form__button--send"><i class="uil uil-message"></i></button>
+                  </form>
+                </div>
                   </div>
                 </div>
               </div>
-              <!-- messagebox main content ends -->
+              
             </div>
           </div>
           <!-- dashboard content ends -->
@@ -553,7 +367,6 @@
             </ul>
           </div>
           <!-- dashboard footer ends -->
-        </div>
       </div>
     </section>
     <!-- all vendors js scripts-->

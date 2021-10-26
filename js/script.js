@@ -621,6 +621,16 @@ $('.chat-message-form .input-file .btn').click(function() {
     $(this).siblings('input[type="file"]').trigger('click');
 });
 
+// chat messagebox control 
+$('#messageboxSidebar a').on('click', function(){
+  $('#messagebox').addClass('messagebox--slide-left');
+  if($('#messagebox').hasClass('messagebox--slide-left')) {
+    $('#chatBackButton').on('click', function(){
+      $('#messagebox').removeClass('messagebox--slide-left');
+    })
+  }
+})
+
 });
  
 
