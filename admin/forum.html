@@ -164,13 +164,18 @@
           </ul>
           <ul class="topbar__user-profile-wrapper d-flex align-items-center">
             <!-- user profile starts -->
-            <li class="user-profile mr-3">
-              <a href="#" class="d-flex align-items-center">
+            <li class="user-profile mr-3 user-notification">
+              <a href="#" class="d-flex align-items-center dropdown-toggle" role="button" id="dropdownUserProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="user-profile__image">
                   <img src="/assets/images/user-avatar.jpg" alt="avatar" />
                 </div>
                 <h6 class="user-profile__text mb-0">Hello <span class="user-profile__name">User</span></h6>
               </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownUserProfile">
+                <a href="../admin/addchild.html" class="dropdown-item">Add/Select Child</a>
+                <a href="../admin/selectactivity.html" class="dropdown-item">Select Activity</a>
+                <a href="../admin/schedule.html" class="dropdown-item">Schedule</a>
+              </div>
             </li>
             <!-- user profile ends -->
             <!-- user notification -->

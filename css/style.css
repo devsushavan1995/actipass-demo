@@ -2069,7 +2069,8 @@ h6 {
   font-size: 0.9rem;
   color: var(--colorPrimary);
 }
-.dashboard-wrapper .dashboard__topbar .user-notification .dropdown-menu .dropdown-item:hover {
+.dashboard-wrapper .dashboard__topbar .user-notification .dropdown-menu .dropdown-item:hover,
+.dashboard-wrapper .dashboard__topbar .user-notification .dropdown-menu .dropdown-item.active {
   background: var(--colorAccent);
   color: #fff;
 }
@@ -2149,6 +2150,9 @@ h6 {
 .dashboard-wrapper .dashboard__content-area .dashboard__content .modal__child-add.modal__child-select .child-profile__image img {
   width: 40px;
   border-radius: 50%;
+}
+.dashboard-wrapper .dashboard__content-area .dashboard__content .modal__child-add.modal__child-select .child-profile__saved-item:hover {
+  color: var(--colorPrimary);
 }
 @media (min-width: 768px) {
   .dashboard-wrapper .dashboard__content-area .dashboard__content .modal__child-add .modal-dialog {
@@ -2347,10 +2351,10 @@ h6 {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 100%;
+  font-size: 0.9rem;
 }
 .dashboard__content-home .class-schedule .schedule__list .schedule__list-item .item__time {
   color: var(--colorRandomSkyblue);
-  font-size: 0.9375rem;
   width: 25%;
 }
 .dashboard__content-home .class-schedule .schedule__list .schedule__list-item .item__course-name {
@@ -2368,7 +2372,14 @@ h6 {
 .dashboard__content-home .class-schedule.class-schedule--later-this-week .schedule__list .schedule__list-item .item__course-name {
   width: 50%;
 }
-
+.dashboard__content-home .table th,
+.dashboard__content-home .table td {
+  vertical-align: middle;
+  text-align: center;
+}
+.dashboard__content-home .child-progress__certificate-table .certificate__button--download .button__text {
+  display: none;
+}
 /* Dashboard Leader board */
 .dashboard__content-home .child-progress__leaderboard .nav-tabs .nav-link {
   border: none;
@@ -2402,6 +2413,21 @@ h6 {
 .dashboard__content-home .child-progress__leaderboard .nav-tabs .nav-link:hover,
 .dashboard__content-home .child-progress__leaderboard .nav-tabs .nav-link.active {
   color: var(--colorRandomSkyblue);
+}
+@media (min-width: 576px) {
+  .dashboard__content-home .child-progress__certificate-table .certificate__button--download .button__text {
+    display: inline-block;
+  }
+}
+@media (min-width: 768px) {
+  .dashboard__content-home .child-progress__certificate-table .certificate__button--download .button__text {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .dashboard__content-home .child-progress__certificate-table .certificate__button--download .button__text {
+    display: inline-block;
+  }
 }
 
 /* Dasboard content - select activity */

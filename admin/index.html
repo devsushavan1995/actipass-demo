@@ -165,13 +165,18 @@
           </ul>
           <ul class="topbar__user-profile-wrapper d-flex align-items-center">
             <!-- user profile starts -->
-            <li class="user-profile mr-3">
-              <a href="#" class="d-flex align-items-center">
+            <li class="user-profile mr-3 user-notification">
+              <a href="#" class="d-flex align-items-center dropdown-toggle" role="button" id="dropdownUserProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="user-profile__image">
                   <img src="/assets/images/user-avatar.jpg" alt="avatar" />
                 </div>
                 <h6 class="user-profile__text mb-0">Hello <span class="user-profile__name">User</span></h6>
               </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownUserProfile">
+                <a href="../admin/addchild.html" class="dropdown-item">Add/Select Child</a>
+                <a href="../admin/selectactivity.html" class="dropdown-item">Select Activity</a>
+                <a href="../admin/schedule.html" class="dropdown-item">Schedule</a>
+              </div>
             </li>
             <!-- user profile ends -->
             <!-- user notification -->
@@ -192,99 +197,6 @@
         <!-- dashboard top navigation ends -->
         <!-- dashboard content starts -->
         <div class="dashboard__content">
-          <!-- Button trigger modal -->
-          <div class="d-none">
-            <button type="button" class="button button__primary mb-2" data-toggle="modal" data-target="#addChildModal">Add Child</button>
-            <button type="button" class="button button__primary ml-none ml-sm-2" data-toggle="modal" data-target="#selectChildModal">Select Child</button>
-          </div>
-
-          <!-- Add child Modal -->
-          <div class="modal fade modal__child-add" id="addChildModal" tabindex="-1" aria-labelledby="addChildModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content border-0">
-                <button type="button" class="close modal__button--close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="modal-body p-0">
-                  <div class="form__addChild--wrapper d-flex flex-wrap">
-                    <div class="form__addChild-container">
-                      <h4 class="addChild__title">Every Child Is Special</h4>
-                      <form action="#" class="form__addChild">
-                        <div class="input__container">
-                          <label for="Username">Child Name</label>
-                          <input type="text" name="username" placeholder="Username or email" required />
-                        </div>
-                        <div class="input__container input__container--for-date">
-                          <label for="dateofbirth">Date of Birth</label>
-                          <input type="text" name="dob" placeholder="01-01-2020" id="addChildDatePicker" required autocomplete="off" />
-                        </div>
-                        <button type="submit" class="button button__primary">Save</button>
-                      </form>
-                      <div class="child-profile__container">
-                        <button class="button button__primary child-profile__button--add">
-                          <span class="button__text">Add Child</span>
-                          <span class="icon"><i class="bi bi-plus"></i></span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="form__addChild-bg d-none d-md-block">
-                      <img src="/assets/images/undraw_children_4rtb.svg" alt="illustration1" />
-                    </div>
-                  </div>
-                </div>
-                <!-- <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div> -->
-              </div>
-            </div>
-          </div>
-          <!-- Add child Modal ends -->
-          <!-- Select Child Modal starts -->
-          <div class="modal fade modal__child-add modal__child-select" id="selectChildModal" tabindex="-1" aria-labelledby="addChildModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content border-0">
-                <button type="button" class="close modal__button--close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="modal-body p-0">
-                  <div class="form__addChild--wrapper d-flex flex-wrap">
-                    <div class="form__addChild-container">
-                      <h4 class="addChild__title mb-4">Every Child Is Special</h4>
-                      <div class="child-profile__saved mb-4">
-                        <a href="javascript:void(0)" class="child-profile__saved-item mb-3 d-flex align-items-center">
-                          <div class="child-profile__image mr-3">
-                            <img src="/assets/images/child1.jpg" alt="child1" />
-                          </div>
-                          <h6 class="child-profile__title m-0">Hiyaan Shah</h6>
-                        </a>
-                        <a href="javascript:void(0)" class="child-profile__saved-item mb-3 d-flex align-items-center">
-                          <div class="child-profile__image mr-3">
-                            <img src="/assets/images/child2.jpg" alt="child2" />
-                          </div>
-                          <h6 class="child-profile__title m-0">Sourav Shah</h6>
-                        </a>
-                      </div>
-                      <div class="child-profile__container">
-                        <button class="button button__primary child-profile__button--add">
-                          <span class="button__text">Add Child</span>
-                          <span class="icon"><i class="bi bi-plus"></i></span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="form__addChild-bg d-none d-md-block">
-                      <img src="/assets/images/selectchild-bg.svg" alt="illustration2" />
-                    </div>
-                  </div>
-                </div>
-                <!-- <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div> -->
-              </div>
-            </div>
-          </div>
-
           <!-- dashboard main content -->
           <div class="dashboard__content-home">
             <div class="content-home__header mb-5">
@@ -309,16 +221,6 @@
                 </div>
               </nav>
             </div>
-            <!-- <div id="tab-1" class="tab-content">
-                this is tab 1 content.
-              </div>
-              <div id="tab-2" class="tab-content">
-                This is tab 2 content.
-              </div>
-              <div id="tab-3" class="tab-content">
-                This is tab 3 content.
-              </div> -->
-            <!-- select child by tabs -->
             <div class="tab-content content-home__body" id="nav-tabContent">
               <div class="tab-pane fade show active" id="childName1" role="tabpanel" aria-labelledby="nav-childName1-tab">
                 <div class="child-progress-wrapper">
@@ -333,11 +235,19 @@
                         <h6 class="text--primary mb-3">Today's Class</h6>
                         <ul class="schedule__list">
                           <li class="schedule__list-item">
-                            <span class="item__time">5:15 PM</span>
-                            <span class="item__course-name">French By Nupur</span>
+                            <span class="item__time">5:15 AM</span>
+                            <span class="item__course-name">Cricket</span>
                           </li>
                           <li class="schedule__list-item">
-                            <span class="item__time">9:15 PM</span>
+                            <span class="item__time">9:15 AM</span>
+                            <span class="item__course-name">French Class</span>
+                          </li>
+                          <li class="schedule__list-item">
+                            <span class="item__time">03:00 PM</span>
+                            <span class="item__course-name">Cricket</span>
+                          </li>
+                          <li class="schedule__list-item">
+                            <span class="item__time">08:00 PM</span>
                             <span class="item__course-name">Chess</span>
                           </li>
                         </ul>
@@ -364,6 +274,21 @@
                           </li>
                           <li class="schedule__list-item">
                             <span class="item__day">Sat</span>
+                            <span class="item__time">9:15 PM</span>
+                            <span class="item__course-name">Cricket</span>
+                          </li>
+                          <li class="schedule__list-item">
+                            <span class="item__day">Sun</span>
+                            <span class="item__time">12:00 PM</span>
+                            <span class="item__course-name">Spanish Class</span>
+                          </li>
+                          <li class="schedule__list-item">
+                            <span class="item__day">Mon</span>
+                            <span class="item__time">10:00 PM</span>
+                            <span class="item__course-name">Tennis</span>
+                          </li>
+                          <li class="schedule__list-item">
+                            <span class="item__day">Tue</span>
                             <span class="item__time">9:15 PM</span>
                             <span class="item__course-name">Cricket</span>
                           </li>
@@ -825,11 +750,19 @@
                         <h6 class="text--primary mb-3">Today's Class</h6>
                         <ul class="schedule__list">
                           <li class="schedule__list-item">
-                            <span class="item__time">5:15 PM</span>
-                            <span class="item__course-name">French By Nupur</span>
+                            <span class="item__time">5:15 AM</span>
+                            <span class="item__course-name">Cricket</span>
                           </li>
                           <li class="schedule__list-item">
-                            <span class="item__time">9:15 PM</span>
+                            <span class="item__time">9:15 AM</span>
+                            <span class="item__course-name">French Class</span>
+                          </li>
+                          <li class="schedule__list-item">
+                            <span class="item__time">03:00 PM</span>
+                            <span class="item__course-name">Cricket</span>
+                          </li>
+                          <li class="schedule__list-item">
+                            <span class="item__time">08:00 PM</span>
                             <span class="item__course-name">Chess</span>
                           </li>
                         </ul>
@@ -845,12 +778,12 @@
                             <span class="item__course-name">French By Nupur</span>
                           </li>
                           <li class="schedule__list-item">
-                            <span class="item__day">Thrusday</span>
+                            <span class="item__day">Thu</span>
                             <span class="item__time">9:15 PM</span>
                             <span class="item__course-name">Chess</span>
                           </li>
                           <li class="schedule__list-item">
-                            <span class="item__day">Friday</span>
+                            <span class="item__day">Fri</span>
                             <span class="item__time">9:15 PM</span>
                             <span class="item__course-name">Badminton</span>
                           </li>
@@ -861,13 +794,18 @@
                           </li>
                           <li class="schedule__list-item">
                             <span class="item__day">Sun</span>
-                            <span class="item__time">10:15 PM</span>
-                            <span class="item__course-name">Painting</span>
+                            <span class="item__time">12:00 PM</span>
+                            <span class="item__course-name">Spanish Class</span>
                           </li>
                           <li class="schedule__list-item">
                             <span class="item__day">Mon</span>
-                            <span class="item__time">12:15 PM</span>
-                            <span class="item__course-name">Coding Class</span>
+                            <span class="item__time">10:00 PM</span>
+                            <span class="item__course-name">Tennis</span>
+                          </li>
+                          <li class="schedule__list-item">
+                            <span class="item__day">Tue</span>
+                            <span class="item__time">9:15 PM</span>
+                            <span class="item__course-name">Cricket</span>
                           </li>
                         </ul>
                       </div>

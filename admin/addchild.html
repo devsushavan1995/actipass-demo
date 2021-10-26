@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../assets/vendors/lightbox2-2.11.3/dist/css/lightbox.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Actipass | Billing Information</title>
+    <title>Actipass | Add Child or Select Child</title>
   </head>
   <body>
     <section class="dashboard-wrapper">
@@ -196,189 +196,96 @@
         <!-- dashboard top navigation ends -->
         <!-- dashboard content starts -->
         <div class="dashboard__content">
-          <div class="billing-wrapper">
-            <div class="table-responsive-lg">
-              <table class="table bg--white">
-                <thead class="bg--primary text--light border-0">
-                  <tr>
-                    <th scope="col">Sr No.</th>
-                    <th scope="col">Invoice No.</th>
-                    <th scope="col">Service Date</th>
-                    <th scope="col">Service Detail</th>
-                    <th scope="col">Amount</th>
-                    <th scope="col">Download</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td><p class="billing__invoice-no">INV-1-13343</p></td>
-                    <td>
-                      <p class="billing__service-date">
-                        <span class="day">dd</span>
-                        <span>/</span>
-                        <span class="month">mm</span>
-                        <span>/</span>
-                        <span class="year">yyyy</span>
-                      </p>
-                    </td>
-                    <td>
-                      <p class="billing__service-details">
-                        <span class="d-block service-details__activity-info-container">
-                          <span class="d-block service-details__activity-heading">Activity Name</span>
-                          <span class="service-details__activity-name">Football Coaching</span>
-                        </span>
-                        <span class="d-block service-details__activity-info-container">
-                          <span class="d-block service-details__activity-heading">Vendor Name</span>
-                          <span class="service-details__activity-name">John Doe</span>
-                        </span>
-                        <span class="d-block service-details__activity-info-container">
-                          <span class="d-block service-details__activity-heading">Child Name</span>
-                          <span class="service-details__activity-name">Jeenia Doe</span>
-                        </span>
-                      </p>
-                    </td>
-                    <td>
-                      <p class="billing__amount-container">
-                        <span class="billing__currency">Rs.</span>
-                        <span class="billing__amount">1000.00</span>
-                      </p>
-                    </td>
-                    <td>
-                      <a href="#" class="button button__secondary billing__button--download-invoice d-inline-block">
-                        <span class="button__text">Invoice</span>
-                        <span class="button__icon"><i class="bi bi-download"></i></span>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td><p class="billing__invoice-no">INV-1-13343</p></td>
-                    <td>
-                      <p class="billing__service-date">
-                        <span class="day">dd</span>
-                        <span>/</span>
-                        <span class="month">mm</span>
-                        <span>/</span>
-                        <span class="year">yyyy</span>
-                      </p>
-                    </td>
-                    <td>
-                      <p class="billing__service-details">
-                        <span class="d-block service-details__activity-info-container">
-                          <span class="d-block service-details__activity-heading">Activity Name</span>
-                          <span class="service-details__activity-name">Football Coaching</span>
-                        </span>
-                        <span class="d-block service-details__activity-info-container">
-                          <span class="d-block service-details__activity-heading">Vendor Name</span>
-                          <span class="service-details__activity-name">John Doe</span>
-                        </span>
-                        <span class="d-block service-details__activity-info-container">
-                          <span class="d-block service-details__activity-heading">Child Name</span>
-                          <span class="service-details__activity-name">Jeenia Doe</span>
-                        </span>
-                      </p>
-                    </td>
-                    <td>
-                      <p class="billing__amount-container">
-                        <span class="billing__currency">Rs.</span>
-                        <span class="billing__amount">1000.00</span>
-                      </p>
-                    </td>
-                    <td>
-                      <a href="#" class="button button__secondary billing__button--download-invoice d-inline-block">
-                        <span class="button__text">Invoice</span>
-                        <span class="button__icon"><i class="bi bi-download"></i></span>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td><p class="billing__invoice-no">INV-1-13343</p></td>
-                    <td>
-                      <p class="billing__service-date">
-                        <span class="day">dd</span>
-                        <span>/</span>
-                        <span class="month">mm</span>
-                        <span>/</span>
-                        <span class="year">yyyy</span>
-                      </p>
-                    </td>
-                    <td>
-                      <p class="billing__service-details">
-                        <span class="d-block service-details__activity-info-container">
-                          <span class="d-block service-details__activity-heading">Activity Name</span>
-                          <span class="service-details__activity-name">Football Coaching</span>
-                        </span>
-                        <span class="d-block service-details__activity-info-container">
-                          <span class="d-block service-details__activity-heading">Vendor Name</span>
-                          <span class="service-details__activity-name">John Doe</span>
-                        </span>
-                        <span class="d-block service-details__activity-info-container">
-                          <span class="d-block service-details__activity-heading">Child Name</span>
-                          <span class="service-details__activity-name">Jeenia Doe</span>
-                        </span>
-                      </p>
-                    </td>
-                    <td>
-                      <p class="billing__amount-container">
-                        <span class="billing__currency">Rs.</span>
-                        <span class="billing__amount">1000.00</span>
-                      </p>
-                    </td>
-                    <td>
-                      <a href="#" class="button button__secondary billing__button--download-invoice d-inline-block">
-                        <span class="button__text">Invoice</span>
-                        <span class="button__icon"><i class="bi bi-download"></i></span>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td><p class="billing__invoice-no">INV-1-13343</p></td>
-                    <td>
-                      <p class="billing__service-date">
-                        <span class="day">dd</span>
-                        <span>/</span>
-                        <span class="month">mm</span>
-                        <span>/</span>
-                        <span class="year">yyyy</span>
-                      </p>
-                    </td>
-                    <td>
-                      <p class="billing__service-details">
-                        <span class="d-block service-details__activity-info-container">
-                          <span class="d-block service-details__activity-heading">Activity Name</span>
-                          <span class="service-details__activity-name">Football Coaching</span>
-                        </span>
-                        <span class="d-block service-details__activity-info-container">
-                          <span class="d-block service-details__activity-heading">Vendor Name</span>
-                          <span class="service-details__activity-name">John Doe</span>
-                        </span>
-                        <span class="d-block service-details__activity-info-container">
-                          <span class="d-block service-details__activity-heading">Child Name</span>
-                          <span class="service-details__activity-name">Jeenia Doe</span>
-                        </span>
-                      </p>
-                    </td>
-                    <td>
-                      <p class="billing__amount-container">
-                        <span class="billing__currency">Rs.</span>
-                        <span class="billing__amount">1000.00</span>
-                      </p>
-                    </td>
-                    <td>
-                      <a href="#" class="button button__secondary billing__button--download-invoice d-inline-block">
-                        <span class="button__text">Invoice</span>
-                        <span class="button__icon"><i class="bi bi-download"></i></span>
-                      </a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <div>
+                <a href="#" class="button button__primary" data-toggle="modal" data-target="#addChildModal">Add Child</a>
+                <a class="button button__secondary" href="#" data-toggle="modal" data-target="#selectChildModal">Select Child</a>
+            </div>
+          <!-- Add child Modal -->
+          <div class="modal fade modal__child-add" id="addChildModal" tabindex="-1" aria-labelledby="addChildModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content border-0">
+                <button type="button" class="close modal__button--close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body p-0">
+                  <div class="form__addChild--wrapper d-flex flex-wrap">
+                    <div class="form__addChild-container">
+                      <h4 class="addChild__title">Every Child Is Special</h4>
+                      <form action="#" class="form__addChild">
+                        <div class="input__container">
+                          <label for="Username">Child Name</label>
+                          <input type="text" name="username" placeholder="Username or email" required />
+                        </div>
+                        <div class="input__container input__container--for-date">
+                          <label for="dateofbirth">Date of Birth</label>
+                          <input type="text" name="dob" placeholder="01-01-2020" id="addChildDatePicker" required autocomplete="off" />
+                        </div>
+                        <button type="submit" class="button button__primary">Save</button>
+                      </form>
+                      <div class="child-profile__container">
+                        <button class="button button__primary child-profile__button--add">
+                          <span class="button__text">Add Child</span>
+                          <span class="icon"><i class="bi bi-plus"></i></span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="form__addChild-bg d-none d-md-block">
+                      <img src="/assets/images/undraw_children_4rtb.svg" alt="illustration1" />
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+              </div>
             </div>
           </div>
-        </div>
+          <!-- Add child Modal ends -->
+          <!-- Select Child Modal starts -->
+          <div class="modal fade modal__child-add modal__child-select" id="selectChildModal" tabindex="-1" aria-labelledby="addChildModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content border-0">
+                <button type="button" class="close modal__button--close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body p-0">
+                  <div class="form__addChild--wrapper d-flex flex-wrap">
+                    <div class="form__addChild-container">
+                      <h4 class="addChild__title mb-4">Every Child Is Special</h4>
+                      <div class="child-profile__saved mb-4">
+                        <a href="javascript:void(0)" class="child-profile__saved-item mb-3 d-flex align-items-center">
+                          <div class="child-profile__image mr-3">
+                            <img src="/assets/images/child1.jpg" alt="child1" />
+                          </div>
+                          <h6 class="child-profile__title m-0">Hiyaan Shah</h6>
+                        </a>
+                        <a href="javascript:void(0)" class="child-profile__saved-item mb-3 d-flex align-items-center">
+                          <div class="child-profile__image mr-3">
+                            <img src="/assets/images/child2.jpg" alt="child2" />
+                          </div>
+                          <h6 class="child-profile__title m-0">Sourav Shah</h6>
+                        </a>
+                      </div>
+                      <div class="child-profile__container">
+                        <button class="button button__primary child-profile__button--add">
+                          <span class="button__text">Add Child</span>
+                          <span class="icon"><i class="bi bi-plus"></i></span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="form__addChild-bg d-none d-md-block">
+                      <img src="/assets/images/selectchild-bg.svg" alt="illustration2" />
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+              </div>
+            </div>
+          </div>
         <!-- dashboard content ends -->
         <!-- dashboard footer starts -->
         <div class="dashboard__footer d-none">
