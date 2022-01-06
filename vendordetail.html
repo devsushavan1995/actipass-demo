@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="height=device-height, 
+                      width=device-width, initial-scale=1.0, 
+                      minimum-scale=1.0, maximum-scale=1.0, 
+                      user-scalable=no, target-densitydpi=device-dpi"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="./assets/vendors/bootstrap-4.6.0-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../assets/vendors/animated-event-calender/dist/simple-calendar.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Actipass | Vendor Detail</title>
+  </head>
+  <body>
+    <!-- header-->
+    <header class="header">
+      <!-- header top starts -->
+      <div class="header__top bg--primary">
+        <div class="container">
+          <div class="header__top-wrapper d-flex justify-content-center justify-content-lg-between align-items-center">
+            <!--search for large screen -->
+            <div class="header__search d-none d-lg-block">
+              <form action="" class="search-form-lg">
+                <div class="form__container d-flex">
+                  <input type="text" name="activity" class="form__input--text" placeholder="Search activites" />
+                  <select class="search__category--activities">
+                    <option selected>All Activities</option>
+                    <option value="Activity 1">Activity 1</option>
+                    <option value="Activity 2">Activity 2</option>
+                    <option value="Activity 3">Activity 3</option>
+                  </select>
+                  <button type="submit" class="search-form__button--submit button__primary">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- user action links -->
+            <div class="header__user-actions text-right">
+              <ul class="user-actions__list d-flex align-items-center">
+                <!-- choose currency -->
+                <li class="list__item d-inline-block">
+                  <select class="user-action--currency">
+                    <option selected>INR</option>
+                    <option value="USD">USD</option>
+                  </select>
+                </li>
+                <!-- Choose location -->
+                <li class="list__item d-inline-block mx-2 mx-md-4">
+                  <select class="user-action--location">
+                    <option selected>Select City</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Chennai">Chennai</option>
+                  </select>
+                </li>
+                <!-- login or sign up -->
+                <li class="list__item d-inline-block">
+                  <button class="user-action--login" data-toggle="modal" data-target="#modalSignIn">
+                    <i class="bi bi-person-circle mr-2"></i>
+                    Login/Sign Up
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <!-- user action links ends -->
+          </div>
+        </div>
+      </div>
+      <!-- header top ends -->
+      <div class="header__bottom">
+        <div class="container">
+          <div class="nav__wrapper d-flex justify-content-between align-items-center">
+            <a href="" class="header__brand">
+              <img src="./assets/images/actipass_logo.png" alt="logo" class="brand__logo" />
+            </a>
+            <div class="d-flex align-items-center">
+              <!-- nav menu for desktop starts -->
+              <nav class="nav-main d-none d-lg-flex">
+                <ul class="nav-main__menu">
+                  <li class="menu__item">
+                    <a href="/index.html" class="menu__item--link active"><span class="link__wrapper">Home</span></a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__item--link"><span class="link__wrapper">Courses</span></a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__item--link"><span class="link__wrapper">Workshop</span></a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__item--link"><span class="link__wrapper">Events</span></a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__item--link"><span class="link__wrapper">Blog</span></a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__item--link"><span class="link__wrapper">Contact</span></a>
+                  </li>
+                  <li class="menu__item d-none">
+                    <button class="nav__button--mobile-search">
+                      <i class="bi bi-search"></i>
+                    </button>
+                  </li>
+                  <!-- <li class="menu__item">
+                    <a href="#" class="menu__item--link"><span class="link__wrapper">Book a Demo</span></a>
+                  </li> -->
+                </ul>
+              </nav>
+              <!-- nav menu for desktop ends -->
+              <!-- search button for mobile-->
+              <button class="nav__button--mobile-search mr-3 d-lg-none">
+                <i class="bi bi-search"></i>
+              </button>
+              <div class="header__cta-wrapper d-none d-lg-inline-block ml-3">
+                <a href="#" class="button button__primary cta__button--link">Book a Demo</a>
+              </div>
+              <button class="nav__button--toggler d-lg-none" id="mainNavToggler">
+                <i class="bi bi-list"></i>
+              </button>
+            </div>
+            <!---->
+            <div class="nav__bg-overlay"></div>
+            <!-- nav mobile menu starts -->
+            <nav class="nav-main__mobile">
+              <ul class="nav-main__menu pb-3">
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link active"><span class="link__wrapper">Home</span></a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link"><span class="link__wrapper">Courses</span></a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link"><span class="link__wrapper">Workshop</span></a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link"><span class="link__wrapper">Events</span></a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link"><span class="link__wrapper">Blog</span></a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link"><span class="link__wrapper">Contact</span></a>
+                </li>
+              </ul>
+              <div class="header__cta-wrapper d-lg-none">
+                <a href="#" class="button button__primary cta__button--link">Book a Demo</a>
+              </div>
+            </nav>
+            <!-- nav mobile menu ends -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- search form starts -->
+    <div class="search-form__wrapper">
+      <div class="search-form__wrapper-inner d-flex align-items-center justify-content-center">
+        <button class="search-form__button--close">
+          <i class="bi bi-x"></i>
+        </button>
+        <form action="#" class="search-form" id="searchFormMobile">
+          <div class="input__container d-flex">
+            <input type="text" name="search-input" placeholder="Search activities" required />
+            <select class="form-control search-form__select-mobile" id="searchFormMobileSelect">
+              <option selected>All Activities</option>
+              <option>Activity 1</option>
+              <option>Activity 2</option>
+              <option>Activity 3</option>
+              <option>Activity 4</option>
+            </select>
+            <button type="submit" class="search-form__button--submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- search form ends -->
+    <!-- Hero section -->
+    <section class="section page-title-section" style="background-image: url(/assets/images/vendor-about-pagetitle-bg.jpg);">
+      <div class="container">
+        <h3 class="page-title text--light text-center">Gymnastic By Jane Doe</h3>
+        <div class="page-title__breadcrumb">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb m-0">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Vendor Detail</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- about the vendor section -->
+    <section class="vendor-about-section section__padding--top">
+      <div class="vendor-about__overview pb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-8">
+              <div class="swiper swiper-vendor-about">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides - single tutor starts  -->
+                  <div class="swiper-slide border-radius--custom-10 overflow-hidden">
+                    <img src="./assets/images/vendor-about-detail-1.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide border-radius--custom-10 overflow-hidden">
+                    <img src="./assets/images/vendor-about-detail-2.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide border-radius--custom-10 overflow-hidden">
+                    <img src="./assets/images/vendor-about-detail-3.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide border-radius--custom-10 overflow-hidden">
+                    <img src="./assets/images/vendor-about-detail-4.jpg" alt="" />
+                  </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <div class="vendor-about__profile-card bg--light1 p-4 border-radius--custom-10">
+                <div class="profile-card__image mb-3">
+                  <img src="./assets/images/vendor-profile-image.png" alt="" />
+                </div>
+                <h5 class="profile__title text--primary text-center">Jane Doe</h5>
+                <p class="profile-card__about-short-desc text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, iure!</p>
+                <div class="d-flex justify-content-between mb-3 align-items-center">
+                  <div class="vendor-about__top-5 text--primary d-flex align-items-center">
+                    <span>Top 5</span>
+                    <span class="vendor-about__top-5-icon ml-2"><i class="bi bi-heart"></i></span>
+                    
+                  </div>
+                  <div class="vendor-about__verified">
+                    <span class="vendor-about__verified-icon"><i class="bi bi-hand-thumbs-up"></i></span>
+                    <span class="vendor-about__verified-text">Actipass Verified</span>
+                  </div>
+                </div>
+                <a href="#" class="button button__primary d-block">Book A Free Trial</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vendor-about__main section pt-4 pb-4">
+        <div class="container">
+          <div class="section__header text-center">
+            <h3 class="text--primary">About<span class="vendor-name ml-2">Jane Doe</span></h3>
+            <div class="section__title--divider">
+              <img src="./assets/images/divider-icon.png" class="mx-auto" alt="divider-icon" />
+            </div>
+          </div>
+          <div class="section__content">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint voluptatem suscipit voluptatibus, officia itaque sed earum quibusdam quae soluta natus esse non eos amet est, illum quis aut eligendi perspiciatis rerum dolore! Itaque non molestiae provident doloremque voluptatem aperiam suscipit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="vendor-about__courses mb-4">
+        <div class="container">
+          <div class="section__header text-center mb-5">
+            <h3 class="text--primary">Courses</h3>
+            <div class="section__title--divider">
+              <img src="./assets/images/divider-icon.png" class="mx-auto" alt="divider-icon" />
+            </div>
+          </div>
+          <div class="section__content">
+            <!-- vendor's courses filter-->
+            <div class="courses-filter-container mb-4">
+              <form action="/action_page.php">
+                <label for="cars" class="mr-2 text--primary">Filter By Category</label>
+                <select name="course-categories" id="courseCategories">
+                  <option value="All">All</option>
+                  <option value="Category 1">Category 1</option>
+                  <option value="Category 2">Category 2</option>
+                  <option value="Category 3">Category 3</option>
+                </select>
+              </form>
+            </div>
+            <!-- vendor's courses-->
+            <div class="courses-wrapper">
+              <div class="course border-radius--custom-10 bg--light1">
+                <div class="course__header d-flex flex-wrap flex-md-nowrap justify-content-between align-items-center">
+                  <div class="course__content">
+                    <ul class="course__category d-flex mb-2">
+                      <li class="course__category-item">
+                        <a href="#" class="course__category-item--link">Sports</a>
+                      </li>
+                      <li class="course__category-item">
+                        <a href="#" class="course__category-item--link">Cricket</a>
+                      </li>
+                    </ul>
+                    <h3 class="course__title text--primary">Course Title 1</h3>
+                    <ul class="course__spec d-flex flex-wrap">
+                      <li class="course__spec-item">
+                        <span class="course__spec-item-heading">Age Group:</span>
+                        <span class="course__spec-item-text">8-12</span>
+                      </li>
+                      <li class="course__spec-item">
+                        <span class="course__spec-item-heading">Duration:</span>
+                        <span class="course__spec-item-text">8 Weeks</span>
+                      </li>
+                      <li class="course__spec-item">
+                        <span class="course__spec-item-heading">No. Of Sessions:</span>
+                        <span class="course__spec-item-text">16</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="course__cta-container d-flex flex-column align-items-center">
+                    <h4 class="course__fee">
+                      <span class="course__fee-currency">Rs.</span>
+                      <span class="course__fee-value">2499</span>
+                    </h4>
+                    <a href="#bookNowModal" class="course__btn--book-now button button__secondary d-inline-block mb-2" data-toggle="modal">Book Now</a>
+                    <a class="course__btn--show-desc mb-1 d-inline-block" data-toggle="collapse" href="#CourseTitleDesc1" role="button" aria-expanded="false" aria-controls="CourseTitleDesc1">
+                      Show<span class="course-desc__toggler-state ml-1"></span>
+                      <span class="course-desc__toggler-icon"><i class="bi bi-chevron-down"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="course__desc">
+                  <div class="collapse" id="CourseTitleDesc1">
+                   <p class="text--para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolorum sequi tempore dolores nemo velit beatae cumque, doloremque consequatur enim fugit assumenda asperiores rerum nisi praesentium officia autem aspernatur architecto?</p>
+                  </div>
+                </div>
+              </div>
+              <div class="course border-radius--custom-10 bg--light1">
+                <div class="course__header d-flex flex-wrap flex-md-nowrap justify-content-between align-items-center">
+                  <div class="course__content">
+                    <ul class="course__category d-flex mb-2">
+                      <li class="course__category-item">
+                        <a href="#" class="course__category-item--link">Sports</a>
+                      </li>
+                      <li class="course__category-item">
+                        <a href="#" class="course__category-item--link">Cricket</a>
+                      </li>
+                    </ul>
+                    <h3 class="course__title text--primary">Course Title 2</h3>
+                    <ul class="course__spec d-flex flex-wrap">
+                      <li class="course__spec-item">
+                        <span class="course__spec-item-heading">Age Group:</span>
+                        <span class="course__spec-item-text">8-12</span>
+                      </li>
+                      <li class="course__spec-item">
+                        <span class="course__spec-item-heading">Duration:</span>
+                        <span class="course__spec-item-text">8 Weeks</span>
+                      </li>
+                      <li class="course__spec-item">
+                        <span class="course__spec-item-heading">No. Of Sessions:</span>
+                        <span class="course__spec-item-text">16</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="course__cta-container d-flex flex-column align-items-center">
+                    <h4 class="course__fee">
+                      <span class="course__fee-currency">Rs.</span>
+                      <span class="course__fee-value">2499</span>
+                    </h4>
+                    <a href="#bookNowModal" class="course__btn--book-now button button__secondary d-inline-block mb-2" data-toggle="modal">Book Now</a>
+                    <a class="course__btn--show-desc mb-1 d-inline-block" data-toggle="collapse" href="#CourseTitleDesc2" role="button" aria-expanded="false" aria-controls="CourseTitleDesc1">
+                      Show<span class="course-desc__toggler-state ml-1"></span>
+                      <span class="course-desc__toggler-icon"><i class="bi bi-chevron-down"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="course__desc">
+                  <div class="collapse" id="CourseTitleDesc2">
+                   <p class="text--para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolorum sequi tempore dolores nemo velit beatae cumque, doloremque consequatur enim fugit assumenda asperiores rerum nisi praesentium officia autem aspernatur architecto?</p>
+                  </div>
+                </div>
+              </div>
+              <div class="course border-radius--custom-10 bg--light1">
+                <div class="course__header d-flex flex-wrap flex-md-nowrap justify-content-between align-items-center">
+                  <div class="course__content">
+                    <ul class="course__category d-flex mb-2">
+                      <li class="course__category-item">
+                        <a href="#" class="course__category-item--link">Sports</a>
+                      </li>
+                      <li class="course__category-item">
+                        <a href="#" class="course__category-item--link">Cricket</a>
+                      </li>
+                    </ul>
+                    <h3 class="course__title text--primary">Course Title 3</h3>
+                    <ul class="course__spec d-flex flex-wrap">
+                      <li class="course__spec-item">
+                        <span class="course__spec-item-heading">Age Group:</span>
+                        <span class="course__spec-item-text">8-12</span>
+                      </li>
+                      <li class="course__spec-item">
+                        <span class="course__spec-item-heading">Duration:</span>
+                        <span class="course__spec-item-text">8 Weeks</span>
+                      </li>
+                      <li class="course__spec-item">
+                        <span class="course__spec-item-heading">No. Of Sessions:</span>
+                        <span class="course__spec-item-text">16</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="course__cta-container d-flex flex-column align-items-center">
+                    <h4 class="course__fee">
+                      <span class="course__fee-currency">Rs.</span>
+                      <span class="course__fee-value">2499</span>
+                    </h4>
+                    <a href="#bookNowModal" class="course__btn--book-now button button__secondary d-inline-block mb-2" data-toggle="modal">Book Now</a>
+                    <a class="course__btn--show-desc mb-1 d-inline-block" data-toggle="collapse" href="#CourseTitleDesc3" role="button" aria-expanded="false" aria-controls="CourseTitleDesc1">
+                      Show<span class="course-desc__toggler-state ml-1"></span>
+                      <span class="course-desc__toggler-icon"><i class="bi bi-chevron-down"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="course__desc">
+                  <div class="collapse" id="CourseTitleDesc3">
+                   <p class="text--para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolorum sequi tempore dolores nemo velit beatae cumque, doloremque consequatur enim fugit assumenda asperiores rerum nisi praesentium officia autem aspernatur architecto?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vendor-about__reviews mt-5">
+        <div class="container">
+          <div class="reviews-wrapper border-radius--custom-10">
+            <div class="review">
+              <div class="review-overview">
+                <span class="review-overview__stars-container"></span>
+                <span class="review-overview__stars-value"></span>
+                <span class="review-overview__total-count"></span>
+                <span class="review-overview__total-commets"></span>
+              </div>
+              <div class="review-section__main">
+                <div class="review-comment-wrapper">
+                  <div class="review-comment__header">
+                    <div class="review-main-comment__by-profile d-flex align-items-center">
+                      <div class="profile__image mr-3">
+                        <img src="./assets/images/client-review-profile.png" width="48" alt="" class="rounded-circle d-inline-block">
+                      </div>
+                      <div class="profile__title mr-3 text--primary">John Doe</div>
+                      <div class="profile__given-reviews">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review-comment__body">
+                    <p class="review-comment text--para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum repudiandae omnis quo nostrum tenetur aspernatur?</p>
+                    <div class="review-comment-wrapper review-comment-wrapper--by-vendor">
+                      <div class="review-comment__header">
+                        <div class="review-main-comment__by-profile d-flex align-items-center">
+                          <div class="profile__image mr-3">
+                            <img src="./assets/images/vendor-profile-image.png" width="48" alt="" class="rounded-circle d-inline-block">
+                          </div>
+                          <div class="profile__title">Jane Doe</div>
+                        </div>
+                      </div>
+                      <div class="review-comment__body">
+                        <p class="review-comment text--para">Thank you.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="review border-radius--custom-10">
+              <div class="review-overview">
+                <span class="review-overview__stars-container"></span>
+                <span class="review-overview__stars-value"></span>
+                <span class="review-overview__total-count"></span>
+                <span class="review-overview__total-commets"></span>
+              </div>
+              <div class="review-section__main">
+                <div class="review-comment-wrapper">
+                  <div class="review-comment__header">
+                    <div class="review-main-comment__by-profile d-flex align-items-center">
+                      <div class="profile__image mr-3">
+                        <img src="./assets/images/client-profile-2.png" width="48" alt="" class="rounded-circle d-inline-block">
+                      </div>
+                      <div class="profile__title mr-3 text--primary">John Doe</div>
+                      <div class="profile__given-reviews">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review-comment__body">
+                    <p class="review-comment text--para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum repudiandae omnis quo nostrum tenetur aspernatur?</p>
+                    <div class="review-comment-wrapper review-comment-wrapper--by-vendor">
+                      <div class="review-comment__header">
+                        <div class="review-main-comment__by-profile d-flex align-items-center">
+                          <div class="profile__image mr-3">
+                            <img src="./assets/images/vendor-profile-image.png" width="48" alt="" class="rounded-circle d-inline-block">
+                          </div>
+                          <div class="profile__title">Jane Doe</div>
+                        </div>
+                      </div>
+                      <div class="review-comment__body">
+                        <p class="review-comment text--para">Thank you.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Related Activities -->
+    <section class="section toprated-tutor bestsellers section__padding">
+      <div class="container">
+        <div class="section__header text-center">
+          <h2 class="section__title text--primary">Related Activities</h2>
+          <div class="section__title--divider">
+            <img src="./assets/images/divider-icon.png" class="mx-auto" alt="divider-icon" />
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="swiper swiper-top-rated-tutor">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides - single tutor starts  -->
+              <div class="swiper-slide">
+                <a href="#" class="d-block w-100">
+                  <div class="tutor">
+                    <div class="tutor__image">
+                      <img src="./assets/images/courses/course6.png" alt="tutor-image" />
+                    </div>
+                    <div class="tutor__content">
+                      <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                      <div class="tutor__feedback">
+                        <div class="tutor__reviews">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="tutor__top-5">
+                          <span>Top 5</span>
+                          <i class="bi bi-heart"></i>
+                        </div>
+                      </div>
+                      <div class="tutor__cta-wrapper">
+                        <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                      </div>
+                      <div class="tutor__badge--verified">
+                        <span>Actipass Verified</span>
+                        <i class="bi bi-hand-thumbs-up"></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- single tutor ends -->
+              <!-- Slides - single tutor starts  -->
+              <div class="swiper-slide">
+                <div class="tutor">
+                  <div class="tutor__image">
+                    <img src="./assets/images/courses/course1.png" alt="tutor-image" />
+                  </div>
+                  <div class="tutor__content">
+                    <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                    <div class="tutor__feedback">
+                      <div class="tutor__reviews">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                      </div>
+                      <div class="tutor__top-5">
+                        <span>Top 5</span>
+                        <i class="bi bi-heart"></i>
+                      </div>
+                    </div>
+                    <div class="tutor__cta-wrapper">
+                      <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                    </div>
+                    <div class="tutor__badge--verified">
+                      <span>Actipass Verified</span>
+                      <i class="bi bi-hand-thumbs-up"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- single tutor ends -->
+              <!-- Slides - single tutor starts  -->
+              <div class="swiper-slide">
+                <div class="tutor">
+                  <div class="tutor__image">
+                    <img src="./assets/images/courses/course2.png" alt="tutor-image" />
+                  </div>
+                  <div class="tutor__content">
+                    <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                    <div class="tutor__feedback">
+                      <div class="tutor__reviews">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                      </div>
+                      <div class="tutor__top-5">
+                        <span>Top 5</span>
+                        <i class="bi bi-heart"></i>
+                      </div>
+                    </div>
+                    <div class="tutor__cta-wrapper">
+                      <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                    </div>
+                    <div class="tutor__badge--verified">
+                      <span>Actipass Verified</span>
+                      <i class="bi bi-hand-thumbs-up"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- single tutor ends -->
+              <!-- Slides - single tutor starts  -->
+              <div class="swiper-slide">
+                <a href="#" class="d-block w-100">
+                  <div class="tutor">
+                    <div class="tutor__image">
+                      <img src="./assets/images/courses/course3.png" alt="tutor-image" />
+                    </div>
+                    <div class="tutor__content">
+                      <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                      <div class="tutor__feedback">
+                        <div class="tutor__reviews">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="tutor__top-5">
+                          <span>Top 5</span>
+                          <i class="bi bi-heart"></i>
+                        </div>
+                      </div>
+                      <div class="tutor__cta-wrapper">
+                        <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                      </div>
+                      <div class="tutor__badge--verified">
+                        <span>Actipass Verified</span>
+                        <i class="bi bi-hand-thumbs-up"></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- single tutor ends -->
+              <!-- Slides - single tutor starts  -->
+              <div class="swiper-slide">
+                <a href="#" class="d-block w-100">
+                  <div class="tutor">
+                    <div class="tutor__image">
+                      <img src="./assets/images/courses/course4.png" alt="tutor-image" />
+                    </div>
+                    <div class="tutor__content">
+                      <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                      <div class="tutor__feedback">
+                        <div class="tutor__reviews">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="tutor__top-5">
+                          <span>Top 5</span>
+                          <i class="bi bi-heart"></i>
+                        </div>
+                      </div>
+                      <div class="tutor__cta-wrapper">
+                        <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                      </div>
+                      <div class="tutor__badge--verified">
+                        <span>Actipass Verified</span>
+                        <i class="bi bi-hand-thumbs-up"></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- single tutor ends -->
+              <!-- Slides - single tutor starts  -->
+              <div class="swiper-slide">
+                <a href="#" class="d-block w-100">
+                  <div class="tutor">
+                    <div class="tutor__image">
+                      <img src="./assets/images/courses/course5.png" alt="tutor-image" />
+                    </div>
+                    <div class="tutor__content">
+                      <h5 class="tutor__title">Gymnastic By Abhisek</h5>
+                      <div class="tutor__feedback">
+                        <div class="tutor__reviews">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="tutor__top-5">
+                          <span>Top 5</span>
+                          <i class="bi bi-heart"></i>
+                        </div>
+                      </div>
+                      <div class="tutor__cta-wrapper">
+                        <a href="#" class="tutor__cta--book-a-demo button button__primary">Book a Free Demo</a>
+                      </div>
+                      <div class="tutor__badge--verified">
+                        <span>Actipass Verified</span>
+                        <i class="bi bi-hand-thumbs-up"></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- single tutor ends -->
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+      <div class="random__icons-wrapper d-none">
+        <img src="./assets/images/random-icons/Trophy.png" alt="" class="random__icons pos--right-bottom" data-aos="zoom-in-right" />
+        <img src="./assets/images/random-icons/Medal.png" alt="" class="random__icons pos--left-top" data-aos="zoom-in-left" />
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer bg--primary">
+      <!-- <div class="footer__top bg--skyblue">
+        <div class="container">
+          <div class="subscribe-form__wrapper text-center">
+            <h3 class="subscribe-form__heading mb-2">Join now and get<br />30% off on your first course</h3>
+            <h6 class="subscribe-form__description mb-4">Subscribe to the weekly newsletter for all the latest updates</h6>
+            <form action="#" class="subscribe-form">
+              <div class="input__container d-md-flex align-items-center">
+                <input type="email" name="email" placeholder="Your Email" required />
+                <button class="button button__primary">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="subscribe__bg">
+          <img src="./assets/images/email-box.png" alt="email-box" />
+        </div>
+      </div> -->
+      <div class="footer__main">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-6">
+              <h4 class="footer__block-heading text--light text-center">Quick Links</h4>
+              <div class="row">
+                <div class="col-12 col-md-4 col-lg-4 pl-md-0">
+                  <ul class="footer__menu text-center text-md-left">
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Basket Ball Coaching</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Art & Craft Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Music Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Ballet Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Tabla Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Guitar Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Yoga Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Cricket Coaching</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                  <ul class="footer__menu text-center text-md-left">
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Basket Ball Coaching</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Art & Craft Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Music Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Ballet Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Tabla Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Guitar Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Yoga Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Cricket Coaching</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4 pr-md-0">
+                  <ul class="footer__menu text-center text-md-left">
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Basket Ball Coaching</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Art & Craft Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Music Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Ballet Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Tabla Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Guitar Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Yoga Classes</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#" class="menu__item--link">Cricket Coaching</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-6 mt-5 mt-lg-0">
+              <div class="footer__about">
+                <div class="about__logo d-flex justify-content-center">
+                  <a href="#" class="d-inline-block">
+                    <img src="./assets/images/actipass_logo.png" alt="logo-light" />
+                  </a>
+                </div>
+                <p class="about__description text--gray text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet iure qui blanditiis consequatur unde architecto repudiandae at amet nam aperiam?</p>
+                <div class="about__social d-flex align-items-center justify-content-center">
+                  <ul class="social-icons d-flex justify-content-center">
+                    <li class="social-icons__item">
+                      <a href="#" class="social-icons__item--link">
+                        <i class="bi bi-facebook"></i>
+                      </a>
+                    </li>
+                    <li class="social-icons__item">
+                      <a href="#" class="social-icons__item--link">
+                        <i class="bi bi-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="social-icons__item">
+                      <a href="#" class="social-icons__item--link">
+                        <i class="bi bi-instagram"></i>
+                      </a>
+                    </li>
+                    <!-- <li class="social-icons__item">
+                      <a href="#" class="social-icons__item--link">
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                    </li> -->
+                  </ul>
+                  <a href="#" class="button button__primary">Know More</a>
+                </div>
+              </div>
+              <div class="subscribe-form__wrapper text-center">
+                <h6 class="subscribe-form__description text--white mb-3">Get Quick Updates From Actipass</h6>
+                <form action="#" class="subscribe-form">
+                  <div class="input__container d-md-flex align-items-center">
+                    <input type="email" name="email" placeholder="Your Email" required />
+                    <button class="button button__subscribe">
+                      <i class="uil uil-message"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-6 pl-lg-0 order-1 order-lg-0">
+              <p class="footer__copyright-text text-center text-lg-left text--gray m-0">©2021 Actipass Website. All rights reserved.</p>
+            </div>
+            <div class="col-12 col-md-12 col-lg-6 d-flex justify-content-center justify-content-lg-end order-0 order-lg-1">
+              <ul class="footer__menu-bottom text-center text-lg-right">
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">About Us</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">Contact Us</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">Terms & Conditions</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__item--link">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Login or sign up modal -->
+    <div class="modal fade modal__sign-in" id="modalSignIn" tabindex="-1" aria-labelledby="modalSignInLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0">
+          <button type="button" class="close modal__sign-in--close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12 col-md-12 col-lg-6 overflow-hidden">
+                <div class="user-action-wrapper d-flex">
+                  <!-- sign in box starts -->
+                  <div class="user-action user-action--sign-in">
+                    <h3 class="user-action__heading">Sign In</h3>
+                    <p class="user-action__text"><span>New user?</span> <button class="user-action__button user-action__button--sign-up">Create an account</button></p>
+                    <form action="" class="user-action__form user-action__form--sign-in">
+                      <div class="input__container">
+                        <input type="text" name="signInUsername" placeholder="Username or email" required />
+                      </div>
+                      <div class="input__container">
+                        <input type="password" name="signInPassword" placeholder="Password" required />
+                      </div>
+                      <div class="form-group form-check input__container">
+                        <input type="checkbox" class="form-check-input input__checkbox" id="exampleCheck1" />
+                        <label class="form-check-label ml-2" for="signedin">Keep me signed in</label>
+                      </div>
+                      <button type="submit" class="button button__primary form__button--submit">Sign In</button>
+                    </form>
+                    <!-- sign in with google or facebook-->
+                    <div class="additonal-sign-in-wrapper">
+                      <div class="additonal-sign-in__heading d-flex justify-content-center">
+                        <div class="heading__divider"></div>
+                        <div class="heading__text">Or Sign in with</div>
+                      </div>
+                      <!-- google and facebook login -->
+                      <div class="additonal-sign-in__button-wrapper d-flex justify-content-center">
+                        <button class="additonal-sign-in__button additonal-sign-in__button--google">
+                          <i class="bi bi-google"></i>
+                        </button>
+                        <button class="additonal-sign-in__button additonal-sign-in__button--facebook">
+                          <i class="bi bi-facebook"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- sign in box ends -->
+                  <!-- sign up box starts -->
+                  <div class="user-action user-action--sign-up">
+                    <h3 class="user-action__heading">Create an account</h3>
+                    <p class="user-action__text"><span>Already have an account?</span> <button class="user-action__button user-action__button--sign-in">Login</button></p>
+
+                    <form action="" class="user-action__form user-action__form--sign-up">
+                      <div class="input__container">
+                        <input type="text" name="signUpfullName" placeholder="Full Name" required />
+                      </div>
+                      <div class="input__container">
+                        <input type="text" name="signUpUserName" placeholder="Username" required />
+                      </div>
+                      <div class="input__container">
+                        <input type="password" name="signUpPassword" placeholder="Password" required />
+                      </div>
+                      <div class="input__container">
+                        <input type="password" name="signUpConPassword" placeholder="Confirm Password" required />
+                      </div>
+                      <button type="submit" class="button button__primary form__button--submit">Sign Up</button>
+                    </form>
+                  </div>
+                  <!-- sign up box ends-->
+                </div>
+              </div>
+              <div class="col-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-center">
+                <div class="sign-in__image-container">
+                  <img src="./assets/images/sign-in-bg.png" alt="Sign-in Background" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- book now modal -->
+    <!-- Modal -->
+<div class="modal fade vendor-about__book-now-modal" id="bookNowModal" tabindex="-1" role="dialog" aria-labelledby="bookNowModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-7">
+            <ul class="course__category d-flex mb-2">
+              <li class="course__category-item">
+                <a href="#" class="course__category-item--link">Sports</a>
+              </li>
+              <li class="course__category-item">
+                <a href="#" class="course__category-item--link">Cricket</a>
+              </li>
+            </ul>
+            <h3 class="course__title text--primary mb-4">Course Title 1</h3>
+              <div class="batch-selection-block mb-4 bg--light1 p-4 border-radius--custom-10">
+                <div class="batch-select-block__header d-flex justify-content-between mb-3">
+                  <h5 class="text--primary m-0">Select Batch</h5>
+                  <div class="courses-filter-container">
+                    <form action="" class="select-batch-by-level-form">
+                      <label for="filterByLevel" class="mr-2 text--primary">Filter By Level</label>
+                      <select name="course-by-level" id="selectBatchByLevel">
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermedia</option>
+                        <option value="Expert">Expert</option>
+                      </select>
+                    </form>
+                  </div>
+                </div>
+                <form action="" class="select-batch-by-time-form">
+                  <div class="input-container">
+                    <input type="radio" id="selectBatch1" name="courseSelect" value="batch1">
+                      <label for="selectBatch">Batch 1: Monday, Wednesday | 5:30PM to 6:30PM</label>
+                  </div>
+                  <div class="input-container">
+                    <input type="radio" id="selectBatch2" name="courseSelect" value="batch2">
+                      <label for="selectBatch">Batch 1: Monday, Wednesday | 5:30PM to 6:30PM</label>
+                  </div>
+                  <div class="input-container">
+                    <input type="radio" id="selectBatch3" name="courseSelect" value="batch3">
+                      <label for="selectBatch">Batch 1: Monday, Wednesday | 5:30PM to 6:30PM</label>
+                  </div>
+                  <div class="input-container">
+                    <input type="radio" id="selectBatch4" name="courseSelect" value="batch4">
+                      <label for="selectBatch">Batch 1: Monday, Wednesday | 5:30PM to 6:30PM</label>
+                  </div>
+                  <div class="input__container input__container--for-date">
+                    <label for="startBatchDate" class="mr-2">Start Date</label>
+                    <input type="text" name="startBatch" placeholder="01-01-2020" id="batchStartDatePicker" required autocomplete="off" class="hasDatepicker">
+                    <button type="button" class="ui-datepicker-trigger ui-button ui-corner-all ui-widget ui-button-icon-only" title="..."><span class="ui-button-icon ui-icon ui-icon-calendar"></span><span class="ui-button-icon-space"> </span></button>
+                  </div>
+                </form>
+
+              </div>
+              <div class="profile-child-list-wrapper bg--light2 p-4 border-radius--custom-10">
+                <ul class="profile-child-list">
+                  <!--single child profile -->
+                  <li class="child-list__item-wrapper">
+                    <a href="javascript:void(0)" class="list__item d-flex w-100 align-items-center text--primary">
+                      <h5 class="item__icon">
+                        <i class="bi bi-person-check"></i>
+                      </h5>
+                      <h5 class="item__title">Child 1</h5>
+                    </a>
+                  </li>
+                  <!--single child profile -->
+                  <li class="child-list__item-wrapper">
+                    <a href="javascript:void(0)" class="list__item d-flex w-100 align-items-center text--primary">
+                      <h5 class="item__icon">
+                        <i class="bi bi-person-check"></i>
+                      </h5>
+                      <h5 class="item__title">Child 2</h5>
+                    </a>
+                  </li>
+                </ul>
+                <div class="d-flex justify-content-center pt-4">
+                  <a href="#" class="button button__secondary profile-child-list__button--add">
+                    Add
+                    <i class="bi bi-plus"></i>
+                  </a>
+                </div>
+              </div>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-5">
+            <div class="vendor-about__profile-card bg--light1 p-4 border-radius--custom-10">
+              <div class="profile-card__image mb-4">
+                <img src="./assets/images/vendor-profile-image.png" alt="" width="200" class="rounded-circle mx-auto">
+              </div>
+              <h4 class="text--primary text-center">Course Title by <span class="vendor-title">Vendor Name</span></h4>
+              <div class="course-payment-details-wrapper">
+                <table class="table table-borderless">
+                  <tbody>
+                    <tr>
+                      <td>Class 1 Title</td>
+                      <td>Rs. 2599</td>
+                    </tr>
+                    <tr>
+                      <td>GST</td>
+                      <td>Rs. 599</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="coupon-code-block">
+                <input type="text" class="coupon-code__input d-block w-100 mb-3" placeholder="Apply coupan code here...">
+                <input type="checkbox" class="coupon-code__checkbox mb-4" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="coupanCodeCheck">Redeem from Actipoint</label>
+              </div>
+              <a href="#" class="button button__primary d-block">Pay Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- all vendors js scripts-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./assets/vendors/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendors/lightbox2-2.11.3/dist/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./assets/vendors/animated-event-calender/dist/jquery.simple-calendar.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- custom js script -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
