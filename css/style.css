@@ -1,3 +1,5 @@
+
+
 :root {
   --colorPrimary: #0b1c39;
   --colorAccent: #febc38;
@@ -411,9 +413,15 @@ h6 {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .page-title-section::before {
   content: "";
@@ -429,7 +437,9 @@ h6 {
   z-index: 5;
 }
 .page-title-section .container .breadcrumb {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: transparent;
 }
 .page-title-section .container .breadcrumb li a {
@@ -2231,7 +2241,11 @@ h6 {
   .dashboard-wrapper .dashboard__sidebar.dashboard__sidebar--shrinked .sidebar__logo-wrapper {
     width: 250px;
 
-    justify-content: space-between !important;
+    -webkit-box-pack: justify !important;
+
+        -ms-flex-pack: justify !important;
+
+            justify-content: space-between !important;
   }
   .dashboard__sidebar .logo--linked,
   .dashboard__sidebar .logo--linked .logo {
@@ -2304,7 +2318,9 @@ h6 {
   }
   .dashboard-wrapper .dashboard__sidebar.dashboard__sidebar--shrinked .sidebar__logo-wrapper {
     width: 70px;
-    justify-content: center !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
   }
   .dashboard__sidebar .logo--linked,
   .dashboard__sidebar .logo--linked .logo {
@@ -4817,9 +4833,15 @@ margin: 1rem 0 0 0;
 .vendor-about-section .vendor-about__overview .vendor-about__profile-card .vendor-about__top-5-icon {
   width: 30px;
   height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: var(--colorRandomSkyblue);
   color: #fff;
   border-radius: 50%;
@@ -4878,27 +4900,39 @@ margin: 1rem 0 0 0;
   font-weight: 600;
 }
 .vendor-about-section .vendor-about__courses .course .course__desc .collapse {
+  -webkit-transition: padding 0.3s ease;
+  -o-transition: padding 0.3s ease;
   transition: padding 0.3s ease;
 }
 .vendor-about-section .vendor-about__courses .course .course__btn--show-desc .course-desc__toggler-icon i::before {
   vertical-align: -0.2em !important;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .vendor-about-section .vendor-about__courses .course .course__btn--show-desc[aria-expanded="false"] .course-desc__toggler-icon i::before {
-  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 .vendor-about-section .vendor-about__courses .course__btn--show-desc[aria-expanded="true"] .course-desc__toggler-icon i::before {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .vendor-about-section .vendor-about__courses .course .course__desc .collapse.show {
   padding: 2rem 0 0 0;
 }
 .vendor-about-section .vendor-about__courses .course .course__btn--show-desc[aria-expanded="false"] .course-desc__toggler-state::before {
   content: "More";
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 .vendor-about-section .vendor-about__courses .course .course__btn--show-desc[aria-expanded="true"] .course-desc__toggler-state::before {
   content: "Less";
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 .vendor-about-section .vendor-about__reviews .reviews-wrapper {
@@ -5005,10 +5039,23 @@ margin: 1rem 0 0 0;
 }
 .vendor-about__book-now-modal .modal-dialog .modal-body .input__container.input__container--for-date  {
   position: relative;
-  width: 290px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .vendor-about__book-now-modal .modal-dialog .modal-body .input__container--for-date input {
-  width: 200px;
+  width: 100%;
   border: 1px solid #ddd;
   background: #fff;
   padding: 0.75rem;
@@ -5016,8 +5063,8 @@ margin: 1rem 0 0 0;
 }
 .vendor-about__book-now-modal .modal-dialog .modal-body .input__container.input__container--for-date .ui-button {
   position: absolute;
-  top: 18px;
-  right: 12px;
+  top: 10px;
+  right: 16px;
   padding: 0;
   border: none;
   /* font-size: 1.5rem; */
@@ -5035,10 +5082,17 @@ margin: 1rem 0 0 0;
   font-size: 1.25rem;
 }
 .vendor-about__book-now-modal .modal-dialog .modal-body .select-batch-by-time-form .input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .vendor-about__book-now-modal .modal-dialog .modal-body .select-batch-by-time-form .input-container label {
   margin: -0.25rem 0 0 0.75rem;
+}
+@media (min-width: 576px) {
+  .vendor-about__book-now-modal .modal-dialog .modal-body .input__container--for-date input {
+    width: 250px;
+  }
 }
 @media (min-width: 768px) {
   .vendor-about__book-now-modal .modal-dialog {
@@ -5055,6 +5109,14 @@ margin: 1rem 0 0 0;
   }
   .vendor-about__book-now-modal .modal-dialog .modal-body .select-batch-by-time-form .input-container {
     margin: 0 0 0.625rem 0;
+}
+.vendor-about__book-now-modal .modal-dialog .modal-body .input__container.input__container--for-date  {
+  position: relative;
+  width: 290px;
+  display: block;
+}
+.vendor-about__book-now-modal .modal-dialog .modal-body .input__container--for-date input {
+  width: 200px;
 }
 }
 @media (min-width: 992px) {
