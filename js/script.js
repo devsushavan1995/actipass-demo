@@ -450,7 +450,7 @@ $(document).ready(function () {
   });
 
    // datepicker for add child date of birth input
-   $("#batchStartDatePicker")
+   $("#selectBatchDatePicker")
    .datepicker({
      showOn: "both",
      dateFormat: "dd-mm-yy",
