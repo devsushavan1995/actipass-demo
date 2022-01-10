@@ -1,5 +1,3 @@
-
-
 :root {
   --colorPrimary: #0b1c39;
   --colorAccent: #febc38;
@@ -417,11 +415,11 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .page-title-section::before {
   content: "";
@@ -438,8 +436,8 @@ h6 {
 }
 .page-title-section .container .breadcrumb {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background: transparent;
 }
 .page-title-section .container .breadcrumb li a {
@@ -450,6 +448,64 @@ h6 {
 }
 .page-title-section .container .breadcrumb li.active {
   color: var(--colorRandomGreen);
+}
+/* Jquery datepicker calender styles */
+.ui-widget.ui-widget-content {
+  padding: 0.5rem;
+  box-shadow: 0 6px 30px rgb(0, 0, 0, 0.15);
+  border-width: 0;
+}
+.ui-datepicker .ui-datepicker-header {
+  background: var(--colorRandomSkyblue);
+  color: #fff;
+  border-width: 0;
+}
+.ui-widget-header .ui-icon {
+  filter: brightness(0) invert(1);
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+  border: 0px solid #c5c5c5;
+  background: transparent;
+  text-align: center;
+}
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  background: var(--colorRandomPink);
+  border: none;
+  color: #fff;
+}
+.ui-datepicker th {
+  color: var(--colorPrimary);
+  font-weight: 500;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  position: relative;
+  color: var(--colorPrimary);
+}
+.ui-datepicker td.ui-datepicker-today span:hover,
+.ui-datepicker td.ui-datepicker-today a:hover {
+  background: var(--colorRandomPink);
+}
+.ui-datepicker td span:hover,
+.ui-datepicker td a:hover {
+  background: var(--colorSkyblue);
+}
+.ui-datepicker td a.ui-state-active {
+  background: var(--colorRandomGreen);
 }
 @media (min-width: 768px) {
   .section .random__icons {
@@ -2243,9 +2299,9 @@ h6 {
 
     -webkit-box-pack: justify !important;
 
-        -ms-flex-pack: justify !important;
+    -ms-flex-pack: justify !important;
 
-            justify-content: space-between !important;
+    justify-content: space-between !important;
   }
   .dashboard__sidebar .logo--linked,
   .dashboard__sidebar .logo--linked .logo {
@@ -2319,8 +2375,8 @@ h6 {
   .dashboard-wrapper .dashboard__sidebar.dashboard__sidebar--shrinked .sidebar__logo-wrapper {
     width: 70px;
     -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
   }
   .dashboard__sidebar .logo--linked,
   .dashboard__sidebar .logo--linked .logo {
@@ -4819,7 +4875,7 @@ margin: 1rem 0 0 0;
 .vendor-about-section .vendor-about__overview .swiper-button-next:after,
 .vendor-about-section .vendor-about__overview .swiper-button-prev:after {
   font-size: 1.5rem;
-  background: rgba(0,0,0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   padding: 0.5rem 0.75rem;
   border-radius: 4px;
   color: #fff;
@@ -4837,11 +4893,11 @@ margin: 1rem 0 0 0;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background: var(--colorRandomSkyblue);
   color: #fff;
   border-radius: 50%;
@@ -4912,13 +4968,13 @@ margin: 1rem 0 0 0;
 }
 .vendor-about-section .vendor-about__courses .course .course__btn--show-desc[aria-expanded="false"] .course-desc__toggler-icon i::before {
   -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 .vendor-about-section .vendor-about__courses .course__btn--show-desc[aria-expanded="true"] .course-desc__toggler-icon i::before {
   -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .vendor-about-section .vendor-about__courses .course .course__desc .collapse.show {
   padding: 2rem 0 0 0;
@@ -5037,7 +5093,7 @@ margin: 1rem 0 0 0;
   border: 1px solid #ddd;
   border-radius: 30px;
 }
-.vendor-about__book-now-modal .modal-dialog .modal-body .input__container.input__container--for-date  {
+.vendor-about__book-now-modal .modal-dialog .modal-body .input__container.input__container--for-date {
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -5045,14 +5101,14 @@ margin: 1rem 0 0 0;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .vendor-about__book-now-modal .modal-dialog .modal-body .input__container--for-date input {
   width: 100%;
@@ -5097,7 +5153,7 @@ margin: 1rem 0 0 0;
 @media (min-width: 768px) {
   .vendor-about__book-now-modal .modal-dialog {
     max-width: 720px;
-}
+  }
   .vendor-about__book-now-modal .modal-dialog .modal-body {
     padding: 2rem;
   }
@@ -5109,24 +5165,23 @@ margin: 1rem 0 0 0;
   }
   .vendor-about__book-now-modal .modal-dialog .modal-body .select-batch-by-time-form .input-container {
     margin: 0 0 0.625rem 0;
-}
-.vendor-about__book-now-modal .modal-dialog .modal-body .input__container.input__container--for-date  {
-  position: relative;
-  width: 290px;
-  display: block;
-}
-.vendor-about__book-now-modal .modal-dialog .modal-body .input__container--for-date input {
-  width: 200px;
-}
+  }
+  .vendor-about__book-now-modal .modal-dialog .modal-body .input__container.input__container--for-date {
+    position: relative;
+    width: 290px;
+    display: block;
+  }
+  .vendor-about__book-now-modal .modal-dialog .modal-body .input__container--for-date input {
+    width: 200px;
+  }
 }
 @media (min-width: 992px) {
   .vendor-about__book-now-modal .modal-dialog {
     max-width: 960px;
-}
+  }
 }
 @media (min-width: 1200px) {
   .vendor-about__book-now-modal .modal-dialog {
     max-width: 1140px;
+  }
 }
-}
-
